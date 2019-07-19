@@ -17,6 +17,7 @@ from SimpleConvNet import SimpleConvNet, SimpleConvNetWithEmbedding
 from resnet import resnet20, resnet20_with_embedding
 from utils import get_data, train_model, get_accuracy, get_accuracy_per_class, visualize_model
 import argparse
+import random
 
 # plt.ion()  # interactive mode
 
@@ -53,7 +54,7 @@ def main(net_type='ResNet20', learning_rate=0.1, momentum=0.9, num_epochs=5,
         optimizer = optim.SGD(model.parameters(), lr=learning_rate, momentum=momentum)
 
         # Decay LR by a factor of 0.1 every 1 epochs
-        exp_lr_scheduler = lr_scheduler.StepLR(optimizer, step_size=1, gamma=0.1)
+        exp_lr_scheduler = lr_scheduler.StepLR(optimizer, step_size=10, gamma=0.5)
 
         # Train the network and save the best model
         model = train_model(model, criterion, optimizer, exp_lr_scheduler,
@@ -69,9 +70,9 @@ def main(net_type='ResNet20', learning_rate=0.1, momentum=0.9, num_epochs=5,
     for class_name, class_accuracy in acc_per_cls.items():
         print('Accuracy of {:5} : {:.2f}'.format(class_name, class_accuracy))
 
-    visualize_model(model, dataloaders, device, classes, num_images=6)
+    #visualize_model(model, dataloaders, device, classes, num_images=6)
 
-    plt.show()
+    #plt.show()
 
     # Will be changed to False if the current checkpoint accuracy is better.
     save_checkpoint = True

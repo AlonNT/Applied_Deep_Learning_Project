@@ -1,0 +1,56 @@
+Using device: cuda:0
+Files already downloaded and verified
+Files already downloaded and verified
+Epoch 1/10
+----------
+train Loss: 2.3002 Acc: 0.1164
+test  Loss: 2.2604 Acc: 0.1369
+Epoch 2/10
+----------
+train Loss: 2.2345 Acc: 0.1568
+test  Loss: 2.2141 Acc: 0.1656
+Epoch 3/10
+----------
+train Loss: 2.2025 Acc: 0.1707
+test  Loss: 2.2016 Acc: 0.1702
+Epoch 4/10
+----------
+train Loss: 2.1786 Acc: 0.1831
+test  Loss: 2.1949 Acc: 0.1781
+Epoch 5/10
+----------
+train Loss: 2.1599 Acc: 0.1895
+test  Loss: 2.1862 Acc: 0.1879
+Epoch 6/10
+----------
+train Loss: 2.1428 Acc: 0.2020
+test  Loss: 2.1767 Acc: 0.1915
+Epoch 7/10
+----------
+train Loss: 2.1242 Acc: 0.2091
+test  Loss: 2.1844 Acc: 0.1852
+Epoch 8/10
+----------
+train Loss: 2.1067 Acc: 0.2176
+test  Loss: 2.1846 Acc: 0.1862
+Epoch 9/10
+----------
+train Loss: 2.0851 Acc: 0.2266
+test  Loss: 2.1985 Acc: 0.1898
+Epoch 10/10
+----------
+train Loss: 2.0167 Acc: 0.2567
+test  Loss: 2.2106 Acc: 0.1883
+Training complete in 12m 4s
+Best val Acc: 0.191500
+Accuracy of the network on the 10000 test images: 19.00
+Accuracy of horse : 13.30
+Accuracy of car   : 14.50
+Accuracy of deer  : 52.10
+Accuracy of dog   : 22.20
+Accuracy of frog  : 5.40
+Accuracy of cat   : 0.80
+Accuracy of plane : 32.20
+Accuracy of truck : 17.20
+Accuracy of ship  : 25.50
+Accuracy of bird  : 8.30

@@ -39,7 +39,7 @@ def get_data(is_int=False):
     dataset_sizes = {x: len(image_datasets[x]) for x in ['train', 'test']}
 
     dataloaders = {x: torch.utils.data.DataLoader(image_datasets[x],
-                                                  batch_size=4,
+                                                  batch_size=32,
                                                   shuffle=True,
                                                   num_workers=2)
                    for x in ['train', 'test']}
@@ -113,7 +113,7 @@ def train_model(model, criterion, optimizer, scheduler,
                 running_corrects += torch.sum(preds == labels.data)
 
                 if verbose:
-                    pbar.update(4)
+                    pbar.update(32)
 
             epoch_loss = running_loss / dataset_sizes[phase]
             epoch_acc = running_corrects.double() / dataset_sizes[phase]
@@ -126,7 +126,7 @@ def train_model(model, criterion, optimizer, scheduler,
                 best_acc = epoch_acc
                 best_model_wts = copy.deepcopy(model.state_dict())
 
-        print()
+        #print()
 
     time_elapsed = time.time() - since
     print('Training complete in {:.0f}m {:.0f}s'.format(

@@ -286,7 +286,6 @@ class ResNetWithEmbedding(nn.Module):
         return nn.Sequential(*layers)
 
     def forward(self, x):
-
         N, C, H, W = x.shape
         # Flatten the input tensor x to be in the shape of (batch, 32^2, 3)
         # in order to perform matrix multiplication with the vector

@@ -6,6 +6,7 @@ import numpy as np
 import time
 import copy
 from tqdm import tqdm as tqdm
+import datetime
 
 
 class ToTensorWithoutScaling(object):
@@ -14,7 +15,7 @@ class ToTensorWithoutScaling(object):
         return torch.ByteTensor(np.array(picture)).permute(2, 0, 1)
 
 
-def get_data(is_int=False):
+def get_data(bs=32, is_int=False):
     # transform = transforms.Compose(
     #     [transforms.ToTensor(),
     #      transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))])
@@ -27,8 +28,9 @@ def get_data(is_int=False):
     else:
         # The output of torchvision datasets are PILImage images of range [0, 1].
         # We transform them to Tensors of normalized range [-1, 1].
-        transform = transforms.Compose([transforms.ToTensor(),
-                                        transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))])
+        transform = transforms.ToTensor()
+        # transform = transforms.Compose([transforms.ToTensor(),
+        #                                 transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))])
 
     image_datasets = {x: torchvision.datasets.CIFAR10(root='./data',
                                                       train=(x == 'train'),
@@ -39,7 +41,7 @@ def get_data(is_int=False):
     dataset_sizes = {x: len(image_datasets[x]) for x in ['train', 'test']}
 
     dataloaders = {x: torch.utils.data.DataLoader(image_datasets[x],
-                                                  batch_size=32,
+                                                  batch_size=bs,
                                                   shuffle=True,
                                                   num_workers=2)
                    for x in ['train', 'test']}
@@ -113,7 +115,7 @@ def train_model(model, criterion, optimizer, scheduler,
                 running_corrects += torch.sum(preds == labels.data)
 
                 if verbose:
-                    pbar.update(32)
+                    pbar.update(dataloaders[phase].batch_size)
 
             epoch_loss = running_loss / dataset_sizes[phase]
             epoch_acc = running_corrects.double() / dataset_sizes[phase]
@@ -146,7 +148,7 @@ def visualize_model(model, dataloaders, device, classes, num_images=6):
     was_training = model.training
     model.eval()
     images_so_far = 0
-    fig = plt.figure()
+    plt.figure()
 
     with torch.no_grad():
         for i, (inputs, labels) in enumerate(dataloaders['test']):
@@ -160,7 +162,9 @@ def visualize_model(model, dataloaders, device, classes, num_images=6):
                 images_so_far += 1
                 ax = plt.subplot(num_images // 2, 2, images_so_far)
                 ax.axis('off')
-                ax.set_title('Prediction: {} Truth: {}'.format(classes[preds[j]], classes[labels.cpu().data[j]]))
+                ax.set_title('Prediction:{} Truth: {}'.
+                             format(classes[preds[j]],
+                                    classes[labels.cpu().data[j]]))
                 imshow(inputs.cpu().data[j])
 
                 if images_so_far == num_images:
@@ -213,3 +217,21 @@ def get_accuracy_per_class(dataloaders, device, model, classes):
     return {classes[i]: 100 * class_correct[i] / class_total[i]
             for i in range(len(classes))}
 
+
+def evaluate_model(model, net_type, device, dataloaders, classes):
+    accuracy = get_accuracy(dataloaders, device, model)
+
+    print('Accuracy of the network on the 10000 test images: {:.2f}'.format(accuracy))
+
+    acc_per_cls = get_accuracy_per_class(dataloaders, device, model, classes)
+
+    for class_name, class_accuracy in acc_per_cls.items():
+        print('Accuracy of {:5} : {:.2f}'.format(class_name, class_accuracy))
+
+    visualize_model(model, dataloaders, device, classes, num_images=6)
+    curr_dt = datetime.datetime.now()
+    fig_path = './logs/{}/{}_visual_samples.png'. \
+        format(net_type, curr_dt.strftime("%Y-%m-%d_%H-%M-%S"))
+    plt.savefig(fig_path)
+
+    return accuracy

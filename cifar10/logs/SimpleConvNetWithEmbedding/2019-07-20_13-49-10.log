@@ -1,0 +1,416 @@
+Using device: cuda:0
+Files already downloaded and verified
+Files already downloaded and verified
+Epoch 1/100
+----------
+train Loss: 2.3061 Acc: 0.1011
+test  Loss: 2.3114 Acc: 0.1000
+Epoch 2/100
+----------
+train Loss: 2.3063 Acc: 0.0986
+test  Loss: 2.3067 Acc: 0.1000
+Epoch 3/100
+----------
+train Loss: 2.3051 Acc: 0.1016
+test  Loss: 2.3018 Acc: 0.1033
+Epoch 4/100
+----------
+train Loss: 2.2941 Acc: 0.1165
+test  Loss: 2.3039 Acc: 0.1157
+Epoch 5/100
+----------
+train Loss: 2.2884 Acc: 0.1189
+test  Loss: 2.2882 Acc: 0.1211
+Epoch 6/100
+----------
+train Loss: 2.2883 Acc: 0.1179
+test  Loss: 2.2917 Acc: 0.1254
+Epoch 7/100
+----------
+train Loss: 2.2882 Acc: 0.1176
+test  Loss: 2.2856 Acc: 0.1196
+Epoch 8/100
+----------
+train Loss: 2.2900 Acc: 0.1154
+test  Loss: 2.2928 Acc: 0.1087
+Epoch 9/100
+----------
+train Loss: 2.2873 Acc: 0.1170
+test  Loss: 2.2853 Acc: 0.1213
+Epoch 10/100
+----------
+train Loss: 2.2807 Acc: 0.1248
+test  Loss: 2.2840 Acc: 0.1228
+Epoch 11/100
+----------
+train Loss: 2.2754 Acc: 0.1274
+test  Loss: 2.2780 Acc: 0.1229
+Epoch 12/100
+----------
+train Loss: 2.2766 Acc: 0.1266
+test  Loss: 2.2848 Acc: 0.1190
+Epoch 13/100
+----------
+train Loss: 2.2747 Acc: 0.1244
+test  Loss: 2.2801 Acc: 0.1264
+Epoch 14/100
+----------
+train Loss: 2.2729 Acc: 0.1285
+test  Loss: 2.2740 Acc: 0.1327
+Epoch 15/100
+----------
+train Loss: 2.2716 Acc: 0.1311
+test  Loss: 2.2772 Acc: 0.1212
+Epoch 16/100
+----------
+train Loss: 2.2703 Acc: 0.1310
+test  Loss: 2.2751 Acc: 0.1292
+Epoch 17/100
+----------
+train Loss: 2.2663 Acc: 0.1333
+test  Loss: 2.2742 Acc: 0.1312
+Epoch 18/100
+----------
+train Loss: 2.2683 Acc: 0.1335
+test  Loss: 2.2819 Acc: 0.1325
+Epoch 19/100
+----------
+train Loss: 2.2673 Acc: 0.1358
+test  Loss: 2.2733 Acc: 0.1364
+Epoch 20/100
+----------
+train Loss: 2.2539 Acc: 0.1422
+test  Loss: 2.2609 Acc: 0.1360
+Epoch 21/100
+----------
+train Loss: 2.2457 Acc: 0.1446
+test  Loss: 2.2702 Acc: 0.1442
+Epoch 22/100
+----------
+train Loss: 2.2423 Acc: 0.1465
+test  Loss: 2.2611 Acc: 0.1469
+Epoch 23/100
+----------
+train Loss: 2.2370 Acc: 0.1503
+test  Loss: 2.2675 Acc: 0.1437
+Epoch 24/100
+----------
+train Loss: 2.2345 Acc: 0.1520
+test  Loss: 2.2587 Acc: 0.1429
+Epoch 25/100
+----------
+train Loss: 2.2288 Acc: 0.1528
+test  Loss: 2.2554 Acc: 0.1395
+Epoch 26/100
+----------
+train Loss: 2.2230 Acc: 0.1553
+test  Loss: 2.2630 Acc: 0.1462
+Epoch 27/100
+----------
+train Loss: 2.2199 Acc: 0.1558
+test  Loss: 2.2693 Acc: 0.1435
+Epoch 28/100
+----------
+train Loss: 2.2136 Acc: 0.1615
+test  Loss: 2.2719 Acc: 0.1392
+Epoch 29/100
+----------
+train Loss: 2.2078 Acc: 0.1627
+test  Loss: 2.2638 Acc: 0.1413
+Epoch 30/100
+----------
+train Loss: 2.1834 Acc: 0.1735
+test  Loss: 2.2677 Acc: 0.1440
+Epoch 31/100
+----------
+train Loss: 2.1701 Acc: 0.1817
+test  Loss: 2.2859 Acc: 0.1437
+Epoch 32/100
+----------
+train Loss: 2.1591 Acc: 0.1870
+test  Loss: 2.2966 Acc: 0.1447
+Epoch 33/100
+----------
+train Loss: 2.1486 Acc: 0.1941
+test  Loss: 2.2727 Acc: 0.1462
+Epoch 34/100
+----------
+train Loss: 2.1384 Acc: 0.2008
+test  Loss: 2.3014 Acc: 0.1451
+Epoch 35/100
+----------
+train Loss: 2.1257 Acc: 0.2070
+test  Loss: 2.3136 Acc: 0.1395
+Epoch 36/100
+----------
+train Loss: 2.1117 Acc: 0.2132
+test  Loss: 2.3393 Acc: 0.1413
+Epoch 37/100
+----------
+train Loss: 2.0986 Acc: 0.2188
+test  Loss: 2.3345 Acc: 0.1414
+Epoch 38/100
+----------
+train Loss: 2.0842 Acc: 0.2274
+test  Loss: 2.3408 Acc: 0.1462
+Epoch 39/100
+----------
+train Loss: 2.0682 Acc: 0.2333
+test  Loss: 2.4079 Acc: 0.1395
+Epoch 40/100
+----------
+train Loss: 1.9895 Acc: 0.2670
+test  Loss: 2.4959 Acc: 0.1391
+Epoch 41/100
+----------
+train Loss: 1.9519 Acc: 0.2833
+test  Loss: 2.4695 Acc: 0.1448
+Epoch 42/100
+----------
+train Loss: 1.9227 Acc: 0.2977
+test  Loss: 2.5627 Acc: 0.1394
+Epoch 43/100
+----------
+train Loss: 1.9001 Acc: 0.3074
+test  Loss: 2.6620 Acc: 0.1367
+Epoch 44/100
+----------
+train Loss: 1.8786 Acc: 0.3154
+test  Loss: 2.5997 Acc: 0.1350
+Epoch 45/100
+----------
+train Loss: 1.8537 Acc: 0.3276
+test  Loss: 2.5985 Acc: 0.1309
+Epoch 46/100
+----------
+train Loss: 1.8328 Acc: 0.3362
+test  Loss: 2.7686 Acc: 0.1327
+Epoch 47/100
+----------
+train Loss: 1.8107 Acc: 0.3431
+test  Loss: 2.6884 Acc: 0.1362
+Epoch 48/100
+----------
+train Loss: 1.7834 Acc: 0.3538
+test  Loss: 2.8053 Acc: 0.1337
+Epoch 49/100
+----------
+train Loss: 1.7637 Acc: 0.3619
+test  Loss: 2.8750 Acc: 0.1324
+Epoch 50/100
+----------
+train Loss: 1.6238 Acc: 0.4182
+test  Loss: 3.0627 Acc: 0.1339
+Epoch 51/100
+----------
+train Loss: 1.5659 Acc: 0.4384
+test  Loss: 3.1201 Acc: 0.1340
+Epoch 52/100
+----------
+train Loss: 1.5322 Acc: 0.4536
+test  Loss: 3.2249 Acc: 0.1369
+Epoch 53/100
+----------
+train Loss: 1.5024 Acc: 0.4621
+test  Loss: 3.3901 Acc: 0.1339
+Epoch 54/100
+----------
+train Loss: 1.4725 Acc: 0.4725
+test  Loss: 3.4099 Acc: 0.1342
+Epoch 55/100
+----------
+train Loss: 1.4416 Acc: 0.4849
+test  Loss: 3.5726 Acc: 0.1341
+Epoch 56/100
+----------
+train Loss: 1.4148 Acc: 0.4942
+test  Loss: 3.6264 Acc: 0.1372
+Epoch 57/100
+----------
+train Loss: 1.3908 Acc: 0.5033
+test  Loss: 3.7901 Acc: 0.1312
+Epoch 58/100
+----------
+train Loss: 1.3656 Acc: 0.5108
+test  Loss: 3.8906 Acc: 0.1290
+Epoch 59/100
+----------
+train Loss: 1.3364 Acc: 0.5219
+test  Loss: 4.0109 Acc: 0.1289
+Epoch 60/100
+----------
+train Loss: 1.2055 Acc: 0.5766
+test  Loss: 4.2344 Acc: 0.1294
+Epoch 61/100
+----------
+train Loss: 1.1489 Acc: 0.5984
+test  Loss: 4.3552 Acc: 0.1291
+Epoch 62/100
+----------
+train Loss: 1.1212 Acc: 0.6069
+test  Loss: 4.6054 Acc: 0.1270
+Epoch 63/100
+----------
+train Loss: 1.0943 Acc: 0.6182
+test  Loss: 4.7072 Acc: 0.1297
+Epoch 64/100
+----------
+train Loss: 1.0715 Acc: 0.6262
+test  Loss: 4.6937 Acc: 0.1299
+Epoch 65/100
+----------
+train Loss: 1.0492 Acc: 0.6350
+test  Loss: 5.0218 Acc: 0.1297
+Epoch 66/100
+----------
+train Loss: 1.0283 Acc: 0.6423
+test  Loss: 5.0174 Acc: 0.1276
+Epoch 67/100
+----------
+train Loss: 1.0042 Acc: 0.6527
+test  Loss: 5.2270 Acc: 0.1324
+Epoch 68/100
+----------
+train Loss: 0.9846 Acc: 0.6596
+test  Loss: 5.3853 Acc: 0.1327
+Epoch 69/100
+----------
+train Loss: 0.9633 Acc: 0.6644
+test  Loss: 5.5351 Acc: 0.1323
+Epoch 70/100
+----------
+train Loss: 0.8899 Acc: 0.6986
+test  Loss: 5.7130 Acc: 0.1306
+Epoch 71/100
+----------
+train Loss: 0.8626 Acc: 0.7101
+test  Loss: 5.8501 Acc: 0.1308
+Epoch 72/100
+----------
+train Loss: 0.8482 Acc: 0.7154
+test  Loss: 5.8966 Acc: 0.1303
+Epoch 73/100
+----------
+train Loss: 0.8338 Acc: 0.7211
+test  Loss: 6.0292 Acc: 0.1315
+Epoch 74/100
+----------
+train Loss: 0.8222 Acc: 0.7250
+test  Loss: 6.0991 Acc: 0.1311
+Epoch 75/100
+----------
+train Loss: 0.8098 Acc: 0.7312
+test  Loss: 6.2260 Acc: 0.1297
+Epoch 76/100
+----------
+train Loss: 0.7981 Acc: 0.7352
+test  Loss: 6.3343 Acc: 0.1293
+Epoch 77/100
+----------
+train Loss: 0.7869 Acc: 0.7394
+test  Loss: 6.3468 Acc: 0.1310
+Epoch 78/100
+----------
+train Loss: 0.7758 Acc: 0.7430
+test  Loss: 6.5738 Acc: 0.1303
+Epoch 79/100
+----------
+train Loss: 0.7648 Acc: 0.7473
+test  Loss: 6.6366 Acc: 0.1320
+Epoch 80/100
+----------
+train Loss: 0.7340 Acc: 0.7597
+test  Loss: 6.7625 Acc: 0.1304
+Epoch 81/100
+----------
+train Loss: 0.7240 Acc: 0.7633
+test  Loss: 6.8089 Acc: 0.1311
+Epoch 82/100
+----------
+train Loss: 0.7176 Acc: 0.7660
+test  Loss: 6.8526 Acc: 0.1290
+Epoch 83/100
+----------
+train Loss: 0.7118 Acc: 0.7681
+test  Loss: 6.9180 Acc: 0.1284
+Epoch 84/100
+----------
+train Loss: 0.7063 Acc: 0.7696
+test  Loss: 7.0358 Acc: 0.1299
+Epoch 85/100
+----------
+train Loss: 0.7011 Acc: 0.7718
+test  Loss: 7.0774 Acc: 0.1294
+Epoch 86/100
+----------
+train Loss: 0.6962 Acc: 0.7741
+test  Loss: 7.1497 Acc: 0.1285
+Epoch 87/100
+----------
+train Loss: 0.6910 Acc: 0.7755
+test  Loss: 7.1725 Acc: 0.1282
+Epoch 88/100
+----------
+train Loss: 0.6862 Acc: 0.7775
+test  Loss: 7.2347 Acc: 0.1292
+Epoch 89/100
+----------
+train Loss: 0.6812 Acc: 0.7794
+test  Loss: 7.3257 Acc: 0.1296
+Epoch 90/100
+----------
+train Loss: 0.6677 Acc: 0.7845
+test  Loss: 7.3547 Acc: 0.1284
+Epoch 91/100
+----------
+train Loss: 0.6640 Acc: 0.7856
+test  Loss: 7.3828 Acc: 0.1281
+Epoch 92/100
+----------
+train Loss: 0.6612 Acc: 0.7863
+test  Loss: 7.4011 Acc: 0.1293
+Epoch 93/100
+----------
+train Loss: 0.6587 Acc: 0.7870
+test  Loss: 7.4653 Acc: 0.1284
+Epoch 94/100
+----------
+train Loss: 0.6563 Acc: 0.7881
+test  Loss: 7.4688 Acc: 0.1290
+Epoch 95/100
+----------
+train Loss: 0.6540 Acc: 0.7889
+test  Loss: 7.4790 Acc: 0.1276
+Epoch 96/100
+----------
+train Loss: 0.6516 Acc: 0.7904
+test  Loss: 7.5524 Acc: 0.1294
+Epoch 97/100
+----------
+train Loss: 0.6494 Acc: 0.7906
+test  Loss: 7.5713 Acc: 0.1295
+Epoch 98/100
+----------
+train Loss: 0.6471 Acc: 0.7915
+test  Loss: 7.6014 Acc: 0.1288
+Epoch 99/100
+----------
+train Loss: 0.6449 Acc: 0.7919
+test  Loss: 7.6226 Acc: 0.1281
+Epoch 100/100
+----------
+train Loss: 0.6386 Acc: 0.7939
+test  Loss: 7.6493 Acc: 0.1285
+Training complete in 33m 7s
+Best val Acc: 0.146900
+Accuracy of the network on the 10000 test images: 14.00
+Accuracy of horse : 0.00
+Accuracy of car   : 3.10
+Accuracy of deer  : 51.80
+Accuracy of dog   : 11.50
+Accuracy of frog  : 4.40
+Accuracy of cat   : 22.90
+Accuracy of plane : 33.30
+Accuracy of truck : 5.40
+Accuracy of ship  : 10.20
+Accuracy of bird  : 4.30

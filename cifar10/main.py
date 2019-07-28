@@ -20,12 +20,13 @@ from utils import get_data, train_model, get_accuracy, \
 import argparse
 import datetime
 from itertools import product
+from ContinuousnessLoss import ContinuousnessLoss
 
 # plt.ion()  # interactive mode
 
 
 def main(net_type='ResNet20', lr=None, bs=None, momentum=None, epochs=5,
-         use_checkpoint=False, verbose=False):
+         use_checkpoint=False, verbose=False, embedding_continuousness_loss=False):
     # Set arguments with their default values. Since it's a list which is mutable,
     # it needs to be constructed this way and not in the function definition...
     if momentum is None:
@@ -75,6 +76,8 @@ def main(net_type='ResNet20', lr=None, bs=None, momentum=None, epochs=5,
             # Define a Loss function and optimizer.
             # Let's use a Classification Cross-Entropy loss and SGD with momentum.
             criterion = nn.CrossEntropyLoss()
+            embedding_loss = ContinuousnessLoss() if embedding_continuousness_loss else None
+
             optimizer = optim.SGD(model.parameters(), curr_lr, curr_momentum)
 
             # Decay LR by a factor of 0.1 every 1 epochs
@@ -83,6 +86,7 @@ def main(net_type='ResNet20', lr=None, bs=None, momentum=None, epochs=5,
             # Train the network and save the best model
             model = train_model(model, criterion, optimizer, exp_lr_scheduler,
                                 dataloaders, dataset_sizes, device,
+                                embedding_loss,
                                 num_epochs=epochs, verbose=verbose)
 
             accuracy = evaluate_model(model, net_type, device, dataloaders, classes)
@@ -92,7 +96,7 @@ def main(net_type='ResNet20', lr=None, bs=None, momentum=None, epochs=5,
             # checkpoint) then no need to save)
             save_checkpoint = True
 
-            # If there already exists a checkpoint, check if we are better...
+            # If there is already exists a checkpoint, check if we are better...
             if os.path.isfile(checkpoint_path):
                 checkpoint_model = copy.deepcopy(model)
                 checkpoint_model.load_state_dict(torch.load(checkpoint_path, map_location=device.type))
@@ -103,6 +107,8 @@ def main(net_type='ResNet20', lr=None, bs=None, momentum=None, epochs=5,
 
             if save_checkpoint:
                 torch.save(model.state_dict(), checkpoint_path)
+                print("Checkpoint saved\nAccuracy = {:.2f}\nPrevious accuracy = {:.2f}".format(
+                    accuracy, checkpoint_acc))
 
     # # If Embedding layer is in the model,
     # # save it as numpy binary file and as a text file.
@@ -129,10 +135,13 @@ def parse_args():
                         help="If indicated and ./checkpoints/net_type.pth exists, use it")
     parser.add_argument('--verbose', action='store_true', 
                         help='progress bar and extra information')
+    parser.add_argument('--embedding_continuousness_loss', action='store_true',
+                        help='adds a loss for the embedding layer to be continuous')
 
     return parser.parse_args()
 
 
 if __name__ == '__main__':
     args = parse_args()
-    main(args.net_type, args.lr, args.bs, args.momentum, args.epochs, args.use_checkpoint, args.verbose)
+    main(args.net_type, args.lr, args.bs, args.momentum, args.epochs,
+         args.use_checkpoint, args.verbose, args.embedding_continuousness_loss)

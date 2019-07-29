@@ -6,10 +6,11 @@ from itertools import product
 
 class ContinuousnessLoss(nn.Module):
 
-    def __init__(self):
+    def __init__(self, n_samples=1, p=2):
         super(ContinuousnessLoss, self).__init__()
-        self.n_samples = 1
-        # self.connectivity = 4
+        self.n_samples = n_samples
+        self.p = p
+        self.device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
     def forward(self, embeds):
         loss = 0
@@ -38,17 +39,31 @@ class ContinuousnessLoss(nn.Module):
             indices = list()
 
             for d_r, d_g, d_b in product(*[[-1, 0, 1]] * 3):
-                idx = (r + d_r) * 256 ** 2 + \
-                      (g + d_g) * 256 ** 1 + \
-                      (b + d_b) * 256 ** 0
-                indices += [idx]
+                bad_idx = False
+                # prevent overflow - if any of the R,G,B coordinate are out-of-bounds
+                # mark this idx as invalid to prevent adding it to the indices list
+                for value, d_value in [(r, d_r), (g, d_b), (b, d_b)]:
+                    if value + d_value < 0 or value + d_value > 255:
+                        bad_idx = True
 
-            indices = torch.tensor(indices).long()
+                if not bad_idx:
+                    idx = (r + d_r) * 256 ** 2 + \
+                          (g + d_g) * 256 ** 1 + \
+                          (b + d_b) * 256 ** 0
+                    indices += [idx]
 
-            color_embedding = embeds(torch.tensor([rgb_idx]).long())
-            neighbors_embeddings = embeds(indices)
+            rgb_idx_tensor = torch.tensor([rgb_idx]).long().to(self.device)
+            indices = torch.tensor(indices).long().to(self.device)
 
-            distance = torch.dist(color_embedding, neighbors_embeddings, p=2)
+            try:
+                color_embedding = embeds(rgb_idx_tensor)
+                neighbors_embeddings = embeds(indices)
+                distance = torch.dist(color_embedding, neighbors_embeddings, p=2)
+            except RuntimeError:
+                # Figure out why there was a RuntimeError...
+                # Maybe out-of-bounds indices?
+                import pdb; pdb.set_trace()
+                s = "stop here"
 
             loss += distance
 

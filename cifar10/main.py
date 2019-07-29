@@ -25,8 +25,9 @@ from ContinuousnessLoss import ContinuousnessLoss
 # plt.ion()  # interactive mode
 
 
-def main(net_type='ResNet20', lr=None, bs=None, momentum=None, epochs=5,
-         use_checkpoint=False, verbose=False, embedding_continuousness_loss=False):
+def main(net_type='ResNet20', lr=None, bs=None, momentum=None, weight_decay=None,
+         epochs=20, use_checkpoint=False, verbose=False,
+         embedding_continuousness_loss=False):
     # Set arguments with their default values. Since it's a list which is mutable,
     # it needs to be constructed this way and not in the function definition...
     if momentum is None:
@@ -35,6 +36,8 @@ def main(net_type='ResNet20', lr=None, bs=None, momentum=None, epochs=5,
         bs = [32]
     if lr is None:
         lr = [0.1]
+    if weight_decay is None:
+        weight_decay = [0.001]
 
     device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
     print("Using device: {}".format(device))
@@ -65,11 +68,13 @@ def main(net_type='ResNet20', lr=None, bs=None, momentum=None, epochs=5,
         evaluate_model(model, net_type, device, dataloaders, classes)
 
     else:
-        for curr_lr, curr_bs, curr_momentum in product(lr, bs, momentum):
-            print("Training with the following hyper-patameters:")
+        for curr_lr, curr_bs, curr_momentum, curr_weight_decay in product(
+                lr, bs, momentum, weight_decay):
+            print("Training with the following hyper-parameters:")
             print("learning-rate = {}".format(curr_lr))
             print("batch-size = {}".format(curr_bs))
             print("momentum = {}".format(curr_momentum))
+            print("weight-decay = {}".format(curr_weight_decay))
 
             image_datasets, dataloaders, dataset_sizes, classes = get_data(curr_bs, is_int)
 
@@ -78,7 +83,7 @@ def main(net_type='ResNet20', lr=None, bs=None, momentum=None, epochs=5,
             criterion = nn.CrossEntropyLoss()
             embedding_loss = ContinuousnessLoss() if embedding_continuousness_loss else None
 
-            optimizer = optim.SGD(model.parameters(), curr_lr, curr_momentum)
+            optimizer = optim.SGD(model.parameters(), curr_lr, curr_momentum, curr_weight_decay)
 
             # Decay LR by a factor of 0.1 every 1 epochs
             exp_lr_scheduler = lr_scheduler.StepLR(optimizer, step_size=10, gamma=0.5)
@@ -95,6 +100,7 @@ def main(net_type='ResNet20', lr=None, bs=None, momentum=None, epochs=5,
             # Also, if the current execution did not train (only loaded a pre-trained
             # checkpoint) then no need to save)
             save_checkpoint = True
+            checkpoint_acc = 0
 
             # If there is already exists a checkpoint, check if we are better...
             if os.path.isfile(checkpoint_path):
@@ -129,7 +135,9 @@ def parse_args():
                         help='batch-size [default 32]')
     parser.add_argument('--momentum', default=[0.9], type=float, nargs='+',
                         help='momentum [default 0.9]')
-    parser.add_argument('--epochs', default=5, type=int,
+    parser.add_argument('--weight_decay', default=[0], type=float, nargs='+',
+                        help='momentum [default 0, which means no weight-decay]')
+    parser.add_argument('--epochs', default=20, type=int,
                         help='number of epochs [default 5]')
     parser.add_argument('--use_checkpoint', action='store_true',
                         help="If indicated and ./checkpoints/net_type.pth exists, use it")
@@ -143,5 +151,5 @@ def parse_args():
 
 if __name__ == '__main__':
     args = parse_args()
-    main(args.net_type, args.lr, args.bs, args.momentum, args.epochs,
+    main(args.net_type, args.lr, args.bs, args.momentum, args.weight_decay, args.epochs,
          args.use_checkpoint, args.verbose, args.embedding_continuousness_loss)

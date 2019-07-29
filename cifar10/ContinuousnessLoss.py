@@ -42,7 +42,7 @@ class ContinuousnessLoss(nn.Module):
                 bad_idx = False
                 # prevent overflow - if any of the R,G,B coordinate are out-of-bounds
                 # mark this idx as invalid to prevent adding it to the indices list
-                for value, d_value in [(r, d_r), (g, d_b), (b, d_b)]:
+                for value, d_value in [(r, d_r), (g, d_g), (b, d_b)]:
                     if value + d_value < 0 or value + d_value > 255:
                         bad_idx = True
 

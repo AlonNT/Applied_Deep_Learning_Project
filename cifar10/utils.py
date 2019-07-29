@@ -87,6 +87,8 @@ def train_model(model, criterion, optimizer, scheduler,
                 model.eval()  # Set model to evaluate mode
 
             running_loss = 0.0
+            running_embeds_loss = 0.0
+            running_classification_loss = 0.0
             running_corrects = 0
 
             if verbose:
@@ -106,10 +108,14 @@ def train_model(model, criterion, optimizer, scheduler,
                     _, preds = torch.max(outputs, 1)
                     loss = criterion(outputs, labels)
 
+                    running_classification_loss += loss.item() * inputs.size(0)
+
                     # If there was given an embedding_loss, calculate it.
                     if embedding_loss is not None:
                         embeds_loss = embedding_loss(model.embeds)
                         loss += embeds_loss
+
+                        running_embeds_loss += embeds_loss.item() * inputs.size(0)
 
                     # backward + optimize only if in training phase
                     if phase == 'train':
@@ -124,10 +130,12 @@ def train_model(model, criterion, optimizer, scheduler,
                     pbar.update(dataloaders[phase].batch_size)
 
             epoch_loss = running_loss / dataset_sizes[phase]
+            epoch_embeds_loss = running_embeds_loss / dataset_sizes[phase]
+            epoch_classification_loss = running_classification_loss / dataset_sizes[phase]
             epoch_acc = running_corrects.double() / dataset_sizes[phase]
 
-            print('{:5} Loss: {:.4f} Acc: {:.4f}'.format(
-                phase, epoch_loss, epoch_acc))
+            print('{:5} Loss: {:.4f} Acc: {:.4f} Embedding-Loss: {:.4f} Classification-Loss: {:.4f}'.format(
+                phase, epoch_loss, epoch_acc, epoch_embeds_loss, epoch_classification_loss))
 
             # deep copy the model
             if phase == 'test' and epoch_acc > best_acc:

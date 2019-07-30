@@ -16,7 +16,8 @@ import copy
 from SimpleConvNet import SimpleConvNet, SimpleConvNetWithEmbedding
 from resnet import resnet20, resnet20_with_embedding
 from utils import get_data, train_model, get_accuracy, \
-    get_accuracy_per_class, visualize_model, evaluate_model
+    get_accuracy_per_class, visualize_model, evaluate_model, \
+    init_embedding_as_rgb_mapping
 import argparse
 import datetime
 from itertools import product
@@ -27,7 +28,8 @@ from ContinuousnessLoss import ContinuousnessLoss
 
 def main(net_type='ResNet20', lr=None, bs=None, momentum=None, weight_decay=None,
          epochs=20, use_checkpoint=False, verbose=False,
-         embedding_continuousness_loss=False, embedding_loss_n_samples=1):
+         embedding_continuousness_loss=False, embedding_loss_n_samples=1,
+         init_embedding_as_rgb=False):
     # Set arguments with their default values. Since it's a list which is mutable,
     # it needs to be constructed this way and not in the function definition...
     if momentum is None:
@@ -42,23 +44,22 @@ def main(net_type='ResNet20', lr=None, bs=None, momentum=None, weight_decay=None
     device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
     print("Using device: {}".format(device))
 
-    if net_type == 'ResNet20':
-        model = resnet20().to(device)
-        is_int = False  # This model receive float input scaled between 0 and 1
-    elif net_type == 'ResNet20WithEmbedding':
-        model = resnet20_with_embedding().to(device)
-        is_int = True  # This model receive float input scaled between 0 and 1
-    elif net_type == 'SimpleConvNet':
-        model = SimpleConvNet().to(device)
-        is_int = False  # This model receive float input scaled between 0 and 1
-    elif net_type == 'SimpleConvNetWithEmbedding':
-        model = SimpleConvNetWithEmbedding().to(device)
-        is_int = True  # This model receive original uint8 input scaled between 0 and 255
-    else:
-        raise ValueError("net_type given was is not a proper type\t{}".format(net_type))
+    # models with is_int=False receive float input scaled between 0 and 1
+    # models with is_int=True receive original uint8 input (between 0 and 255)
+    str_to_model = {'ResNet20': (resnet20, False),
+                    'ResNet20WithEmbedding': (resnet20_with_embedding, True),
+                    'SimpleConvNet': (SimpleConvNet, False),
+                    'SimpleConvNetWithEmbedding': (SimpleConvNetWithEmbedding, True)}
+
+    if net_type not in str_to_model:
+        raise ValueError("net_type given is not a proper type\t{}".format(net_type))
+
+    model_constructor = str_to_model[net_type][0]
+    is_int = str_to_model[net_type][1]
 
     checkpoint_path = './checkpoints/{}.pth'.format(net_type)
     if use_checkpoint and os.path.isfile(checkpoint_path):
+        model = model_constructor().to(device)
         image_datasets, dataloaders, dataset_sizes, classes = get_data(bs=32, is_int=is_int)
 
         model.load_state_dict(torch.load(checkpoint_path, map_location=device.type))
@@ -76,10 +77,22 @@ def main(net_type='ResNet20', lr=None, bs=None, momentum=None, weight_decay=None
             print("momentum = {}".format(curr_momentum))
             print("weight-decay = {}".format(curr_weight_decay))
 
+            # Initialize the model
+            model = model_constructor().to(device)
+
+            if init_embedding_as_rgb:
+                if 'embeds.weight' not in model.state_dict().keys():
+                    raise ValueError("init_embedding_as_rgb flag was given, but the " +
+                                     "model does not include an Embedding layer!")
+
+                init_embedding_as_rgb_mapping(model, device)
+
+            # Initialize the data (data-loaders, classes names, etc...)
             image_datasets, dataloaders, dataset_sizes, classes = get_data(curr_bs, is_int)
 
             # Define a Loss function and optimizer.
-            # Let's use a Classification Cross-Entropy loss and SGD with momentum.
+            # W use a Classification Cross-Entropy loss
+            # and SGD with momentum and weight_decay.
             criterion = nn.CrossEntropyLoss()
 
             if embedding_continuousness_loss:
@@ -130,7 +143,10 @@ def main(net_type='ResNet20', lr=None, bs=None, momentum=None, weight_decay=None
 
 
 def parse_args():
-    parser = argparse.ArgumentParser(description='CIFAR-10 Training')
+    parser = argparse.ArgumentParser(
+        description='CIFAR-10 Training, with the ability to add embedding layer in the '
+                    'beginning of the network, to enable learning the \"best\" color-space.'
+    )
 
     parser.add_argument('--net_type', default='ResNet20', type=str)
     parser.add_argument('--lr', default=[0.1], type=float, nargs='+',
@@ -152,6 +168,9 @@ def parse_args():
     parser.add_argument('--embedding_loss_n_samples', type=int, default=1,
                         help='How many samples to draw randomly to punish the ' +
                              'embedding-layer for being not-continuous')
+    parser.add_argument('--init_embedding_as_rgb', action='store_true',
+                        help='Initialize the embedding layer to be RGB ' +
+                             '(i.e. the identity mapping)')
 
     return parser.parse_args()
 
@@ -160,4 +179,5 @@ if __name__ == '__main__':
     args = parse_args()
     main(args.net_type, args.lr, args.bs, args.momentum, args.weight_decay, args.epochs,
          args.use_checkpoint, args.verbose,
-         args.embedding_continuousness_loss, args.embedding_loss_n_samples)
+         args.embedding_continuousness_loss, args.embedding_loss_n_samples,
+         args.init_embedding_as_rgb)

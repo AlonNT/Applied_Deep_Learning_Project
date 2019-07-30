@@ -55,15 +55,9 @@ class ContinuousnessLoss(nn.Module):
             rgb_idx_tensor = torch.tensor([rgb_idx]).long().to(self.device)
             indices = torch.tensor(indices).long().to(self.device)
 
-            try:
-                color_embedding = embeds(rgb_idx_tensor)
-                neighbors_embeddings = embeds(indices)
-                distance = torch.dist(color_embedding, neighbors_embeddings, p=2)
-            except RuntimeError:
-                # Figure out why there was a RuntimeError...
-                # Maybe out-of-bounds indices?
-                import pdb; pdb.set_trace()
-                s = "stop here"
+            color_embedding = embeds(rgb_idx_tensor)
+            neighbors_embeddings = embeds(indices)
+            distance = torch.dist(color_embedding, neighbors_embeddings, p=2)
 
             loss += distance
 

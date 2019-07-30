@@ -27,7 +27,7 @@ from ContinuousnessLoss import ContinuousnessLoss
 
 def main(net_type='ResNet20', lr=None, bs=None, momentum=None, weight_decay=None,
          epochs=20, use_checkpoint=False, verbose=False,
-         embedding_continuousness_loss=False):
+         embedding_continuousness_loss=False, embedding_loss_n_samples=1):
     # Set arguments with their default values. Since it's a list which is mutable,
     # it needs to be constructed this way and not in the function definition...
     if momentum is None:
@@ -81,7 +81,11 @@ def main(net_type='ResNet20', lr=None, bs=None, momentum=None, weight_decay=None
             # Define a Loss function and optimizer.
             # Let's use a Classification Cross-Entropy loss and SGD with momentum.
             criterion = nn.CrossEntropyLoss()
-            embedding_loss = ContinuousnessLoss() if embedding_continuousness_loss else None
+
+            if embedding_continuousness_loss:
+                embedding_loss = ContinuousnessLoss(n_samples=embedding_loss_n_samples)
+            else:
+                embedding_loss = None
 
             optimizer = optim.SGD(model.parameters(), curr_lr, curr_momentum, curr_weight_decay)
 
@@ -145,6 +149,9 @@ def parse_args():
                         help='progress bar and extra information')
     parser.add_argument('--embedding_continuousness_loss', action='store_true',
                         help='adds a loss for the embedding layer to be continuous')
+    parser.add_argument('--embedding_loss_n_samples', type=int, default=1,
+                        help='How many samples to draw randomly to punish the ' +
+                             'embedding-layer for being not-continuous')
 
     return parser.parse_args()
 
@@ -152,4 +159,5 @@ def parse_args():
 if __name__ == '__main__':
     args = parse_args()
     main(args.net_type, args.lr, args.bs, args.momentum, args.weight_decay, args.epochs,
-         args.use_checkpoint, args.verbose, args.embedding_continuousness_loss)
+         args.use_checkpoint, args.verbose,
+         args.embedding_continuousness_loss, args.embedding_loss_n_samples)

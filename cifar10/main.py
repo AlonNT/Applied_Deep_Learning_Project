@@ -124,7 +124,7 @@ def main(net_type='ResNet20', lr=None, bs=None, momentum=None, weight_decay=None
                 print("Checkpoint saved\nAccuracy = {:.2f}\nPrevious accuracy = {:.2f}".format(
                     accuracy, checkpoint_acc))
                 if 'embeds.weight' in model.state_dict():
-                    np.save('./checkpoints/{}_embedding'.format(net_type),
+                    np.save('./embeddings/{}_embedding'.format(net_type),
                             model.embeds.weight.detach().cpu().numpy())
 
     # # If Embedding layer is in the model,

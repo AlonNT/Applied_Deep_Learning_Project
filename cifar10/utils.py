@@ -248,32 +248,3 @@ def evaluate_model(model, net_type, device, dataloaders, classes):
     # plt.savefig(fig_path)
 
     return accuracy
-
-
-def get_rgb_float_vec_from_idx(row):
-    idx = row.name
-
-    r = idx % 256  # R in the RGB representation
-    quotient = idx // 256
-    g = quotient % 256  # G in the RGB representation
-    quotient = quotient // 256
-    b = quotient % 256  # B in the RGB representation
-
-    return pd.Series(data=np.array([r, g, b], dtype=np.float32) / 255.0)
-
-
-def init_embedding_as_rgb_mapping(model, device):
-    # Extract the original weights of the embedding layer
-    orig_w = model.embeds.weight.detach().cpu().numpy()
-
-    # Working the pandas DataFrame is easier
-    df = pd.DataFrame(orig_w)
-
-    # tqdm.pandas()
-    # df.progress_apply(get_rgb_float_vec_from_idx, axis=1)
-
-    df = df.apply(get_rgb_float_vec_from_idx, axis=1)
-
-    # Build a new numpy array that will contain the new weights
-    new_w = torch.tensor(df.to_numpy(), device=device)
-    model.embeds.load_state_dict({'weight': new_w})

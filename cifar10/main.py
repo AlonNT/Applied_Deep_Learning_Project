@@ -2,28 +2,17 @@ from __future__ import print_function, division
 
 import torch
 import torch.nn as nn
-# import torch.nn.functional as F
 import torch.optim as optim
 from torch.optim import lr_scheduler
-# import torchvision
-# from torchvision import datasets, models, transforms
 import numpy as np
-import matplotlib.pyplot as plt
-# import time
 import os
 import copy
-# from tqdm import tqdm as tqdm
 from SimpleConvNet import SimpleConvNet, SimpleConvNetWithEmbedding
 from resnet import resnet20, resnet20_with_embedding
-from utils import get_data, train_model, get_accuracy, \
-    get_accuracy_per_class, visualize_model, evaluate_model, \
-    init_embedding_as_rgb_mapping
+from utils import get_data, train_model, get_accuracy, evaluate_model
 import argparse
-import datetime
 from itertools import product
 from ContinuousnessLoss import ContinuousnessLoss
-
-# plt.ion()  # interactive mode
 
 
 def main(net_type='ResNet20', lr=None, bs=None, momentum=None, weight_decay=None,
@@ -59,18 +48,21 @@ def main(net_type='ResNet20', lr=None, bs=None, momentum=None, weight_decay=None
 
     checkpoint_path = './checkpoints/{}.pth'.format(net_type)
     if use_checkpoint and os.path.isfile(checkpoint_path):
+        # Build the model, weights are initialized randomly
         model = model_constructor().to(device)
+
+        # Initialize the data-loaders to evaluate
         image_datasets, dataloaders, dataset_sizes, classes = get_data(bs=32, is_int=is_int)
 
+        # Load the saved model from the checkpoint and evaluate the model
         model.load_state_dict(torch.load(checkpoint_path, map_location=device.type))
-
-        # TODO export the following to a function to avoid code repetition
-
         evaluate_model(model, net_type, device, dataloaders, classes)
-
     else:
-        for curr_lr, curr_bs, curr_momentum, curr_weight_decay in product(
-                lr, bs, momentum, weight_decay):
+        if init_embedding_as_rgb:
+            rgb_embedding = np.load("./embeddings/RGB.npy")
+            rgb_embedding_tensor = torch.tensor(rgb_embedding, device=device)
+
+        for curr_lr, curr_bs, curr_momentum, curr_weight_decay in product(lr, bs, momentum, weight_decay):
             print("Training with the following hyper-parameters:")
             print("learning-rate = {}".format(curr_lr))
             print("batch-size = {}".format(curr_bs))
@@ -79,13 +71,12 @@ def main(net_type='ResNet20', lr=None, bs=None, momentum=None, weight_decay=None
 
             # Initialize the model
             model = model_constructor().to(device)
-
             if init_embedding_as_rgb:
                 if 'embeds.weight' not in model.state_dict().keys():
                     raise ValueError("init_embedding_as_rgb flag was given, but the " +
                                      "model does not include an Embedding layer!")
 
-                init_embedding_as_rgb_mapping(model, device)
+                model.embeds.load_state_dict({'weight': rgb_embedding_tensor})
 
             # Initialize the data (data-loaders, classes names, etc...)
             image_datasets, dataloaders, dataset_sizes, classes = get_data(curr_bs, is_int)
@@ -132,6 +123,9 @@ def main(net_type='ResNet20', lr=None, bs=None, momentum=None, weight_decay=None
                 torch.save(model.state_dict(), checkpoint_path)
                 print("Checkpoint saved\nAccuracy = {:.2f}\nPrevious accuracy = {:.2f}".format(
                     accuracy, checkpoint_acc))
+                if 'embeds.weight' in model.state_dict():
+                    np.save('./checkpoints/{}_embedding'.format(net_type),
+                            model.embeds.weight.detach().cpu().numpy())
 
     # # If Embedding layer is in the model,
     # # save it as numpy binary file and as a text file.

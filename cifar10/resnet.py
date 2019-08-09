@@ -336,11 +336,11 @@ def _resnet_with_embedding(block, layers, device, **kwargs):
     return model
 
 
-def resnet20_with_embedding(**kwargs):
+def resnet20_with_embedding(device, **kwargs):
     """
     Constructs a ResNet-20 model.
     """
-    return _resnet_with_embedding(BasicBlock, [3, 3, 3], **kwargs)
+    return _resnet_with_embedding(BasicBlock, [3, 3, 3], device, **kwargs)
 
 
 # def resnet18(pretrained=False, progress=True, **kwargs):

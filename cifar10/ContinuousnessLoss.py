@@ -6,11 +6,11 @@ from itertools import product
 
 class ContinuousnessLoss(nn.Module):
 
-    def __init__(self, n_samples=1, p=2):
+    def __init__(self, device, n_samples=1, p=2):
         super(ContinuousnessLoss, self).__init__()
         self.n_samples = n_samples
         self.p = p
-        self.device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+        self.device = device
 
     def forward(self, embeds):
         loss = 0

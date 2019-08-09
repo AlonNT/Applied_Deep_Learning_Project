@@ -36,7 +36,7 @@ class SimpleConvNetWithEmbedding(nn.Module):
     Conv-Relu-Pool-Conv-Relu-Pool-Affn-Relu-Affn-Relu-Affn
     """
 
-    def __init__(self):
+    def __init__(self, device):
         super(SimpleConvNetWithEmbedding, self).__init__()
         self.embeds = nn.Embedding(256**3, 3)
         self.conv1 = nn.Conv2d(3, 6, 5)
@@ -46,7 +46,7 @@ class SimpleConvNetWithEmbedding(nn.Module):
         self.fc2 = nn.Linear(120, 84)
         self.fc3 = nn.Linear(84, 10)
 
-        self.device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+        self.device = device
         self.monomials = torch.tensor(data=[256**0, 256**1, 256**2], device=self.device)
 
     def forward(self, x):

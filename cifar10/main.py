@@ -11,34 +11,40 @@ from SimpleConvNet import SimpleConvNet, SimpleConvNetWithEmbedding
 from resnet import resnet20, resnet20_with_embedding
 from utils import get_data, train_model, get_accuracy, evaluate_model
 import argparse
+from tqdm import tqdm
 from itertools import product
 from ContinuousnessLoss import ContinuousnessLoss
 
 
 def main(net_type='ResNet20', lr=None, bs=None, momentum=None, weight_decay=None,
-         epochs=20, use_checkpoint=False, verbose=False,
+         epochs=20, device_num=0,
+         use_checkpoint=False, verbose=False,
          embedding_continuousness_loss=False, embedding_loss_n_samples=1,
          init_embedding_as_rgb=False):
+    """
+    The main function. arguments description are given in the argparse help.
+    """
     # Set arguments with their default values. Since it's a list which is mutable,
     # it needs to be constructed this way and not in the function definition...
-    if momentum is None:
-        momentum = [0.9]
     if bs is None:
         bs = [32]
     if lr is None:
         lr = [0.1]
+    if momentum is None:
+        momentum = [0.9]
     if weight_decay is None:
         weight_decay = [0.001]
 
-    device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
-    print("Using device: {}".format(device))
+    device = torch.device("cuda:{}".format(device_num)
+                          if torch.cuda.is_available() else "cpu")
+    tqdm.write("Using device: {}".format(device))
 
     # models with is_int=False receive float input scaled between 0 and 1
     # models with is_int=True receive original uint8 input (between 0 and 255)
     str_to_model = {'ResNet20': (resnet20, False),
-                    'ResNet20WithEmbedding': (resnet20_with_embedding, True),
+                    'ResNet20WithEmbedding': (lambda: resnet20_with_embedding(device), True),
                     'SimpleConvNet': (SimpleConvNet, False),
-                    'SimpleConvNetWithEmbedding': (SimpleConvNetWithEmbedding, True)}
+                    'SimpleConvNetWithEmbedding': (lambda: SimpleConvNetWithEmbedding(device), True)}
 
     if net_type not in str_to_model:
         raise ValueError("net_type given is not a proper type\t{}".format(net_type))
@@ -46,7 +52,13 @@ def main(net_type='ResNet20', lr=None, bs=None, momentum=None, weight_decay=None
     model_constructor = str_to_model[net_type][0]
     is_int = str_to_model[net_type][1]
 
+    # This is the path of the checkpoint of this model.
+    # Will be used to load the compare results to the current results, and to finally
+    # save the results.
     checkpoint_path = './checkpoints/{}.pth'.format(net_type)
+
+    # Check if the run mode is to use checkpoint and evaluate
+    # (and thus the checkpoint file must exists).
     if use_checkpoint and os.path.isfile(checkpoint_path):
         # Build the model, weights are initialized randomly
         model = model_constructor().to(device)
@@ -57,17 +69,21 @@ def main(net_type='ResNet20', lr=None, bs=None, momentum=None, weight_decay=None
         # Load the saved model from the checkpoint and evaluate the model
         model.load_state_dict(torch.load(checkpoint_path, map_location=device.type))
         evaluate_model(model, net_type, device, dataloaders, classes)
+
+    # This mode is training mode, and afterwards the results will be saved if they
+    # are better than the checkpoint results.
     else:
         if init_embedding_as_rgb:
             rgb_embedding = np.load("./embeddings/RGB.npy")
             rgb_embedding_tensor = torch.tensor(rgb_embedding, device=device)
 
         for curr_lr, curr_bs, curr_momentum, curr_weight_decay in product(lr, bs, momentum, weight_decay):
-            print("Training with the following hyper-parameters:")
-            print("learning-rate = {}".format(curr_lr))
-            print("batch-size = {}".format(curr_bs))
-            print("momentum = {}".format(curr_momentum))
-            print("weight-decay = {}".format(curr_weight_decay))
+            tqdm.write("################################################################")
+            tqdm.write("Training with the following hyper-parameters:")
+            tqdm.write("learning-rate = {}".format(curr_lr))
+            tqdm.write("batch-size = {}".format(curr_bs))
+            tqdm.write("momentum = {}".format(curr_momentum))
+            tqdm.write("weight-decay = {}".format(curr_weight_decay))
 
             # Initialize the model
             model = model_constructor().to(device)
@@ -82,12 +98,13 @@ def main(net_type='ResNet20', lr=None, bs=None, momentum=None, weight_decay=None
             image_datasets, dataloaders, dataset_sizes, classes = get_data(curr_bs, is_int)
 
             # Define a Loss function and optimizer.
-            # W use a Classification Cross-Entropy loss
+            # We use a Classification Cross-Entropy loss,
             # and SGD with momentum and weight_decay.
             criterion = nn.CrossEntropyLoss()
 
             if embedding_continuousness_loss:
-                embedding_loss = ContinuousnessLoss(n_samples=embedding_loss_n_samples)
+                embedding_loss = ContinuousnessLoss(device,
+                                                    n_samples=embedding_loss_n_samples)
             else:
                 embedding_loss = None
 
@@ -121,19 +138,11 @@ def main(net_type='ResNet20', lr=None, bs=None, momentum=None, weight_decay=None
 
             if save_checkpoint:
                 torch.save(model.state_dict(), checkpoint_path)
-                print("Checkpoint saved\nAccuracy = {:.2f}\nPrevious accuracy = {:.2f}".format(
+                tqdm.write("Checkpoint saved\nAccuracy = {:.2f}\nPrevious accuracy = {:.2f}".format(
                     accuracy, checkpoint_acc))
                 if 'embeds.weight' in model.state_dict():
                     np.save('./embeddings/{}_embedding'.format(net_type),
                             model.embeds.weight.detach().cpu().numpy())
-
-    # # If Embedding layer is in the model,
-    # # save it as numpy binary file and as a text file.
-    # if 'embeds.weight' in model.state_dict():
-    #     np.save('./checkpoints/{}_embedding'.format(net_type),
-    #             model.embeds.weight.detach().cpu().numpy())
-    #     np.savetxt('./checkpoints/{}_embedding.txt'.format(net_type),
-    #                model.embeds.weight.detach().cpu().numpy())
 
 
 def parse_args():
@@ -165,6 +174,9 @@ def parse_args():
     parser.add_argument('--init_embedding_as_rgb', action='store_true',
                         help='Initialize the embedding layer to be RGB ' +
                              '(i.e. the identity mapping)')
+    parser.add_argument('--device_num', type=int, default=0,
+                        help='which device to train on ' +
+                             '(will be used if CUDA is available)')
 
     return parser.parse_args()
 
@@ -172,6 +184,6 @@ def parse_args():
 if __name__ == '__main__':
     args = parse_args()
     main(args.net_type, args.lr, args.bs, args.momentum, args.weight_decay, args.epochs,
-         args.use_checkpoint, args.verbose,
+         args.device_num, args.use_checkpoint, args.verbose,
          args.embedding_continuousness_loss, args.embedding_loss_n_samples,
          args.init_embedding_as_rgb)

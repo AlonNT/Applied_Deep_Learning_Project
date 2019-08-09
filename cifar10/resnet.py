@@ -205,12 +205,12 @@ def resnet20(**kwargs):
 
 class ResNetWithEmbedding(nn.Module):
 
-    def __init__(self, block, layers, num_classes=10, zero_init_residual=False,
+    def __init__(self, block, layers, device, num_classes=10, zero_init_residual=False,
                  groups=1, width_per_group=64, replace_stride_with_dilation=None,
                  norm_layer=None):
         super(ResNetWithEmbedding, self).__init__()
 
-        self.device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+        self.device = device
         self.monomials = torch.tensor(data=[256 ** 0, 256 ** 1, 256 ** 2], device=self.device)
         self.embeds = nn.Embedding(256 ** 3, 3)
 
@@ -331,8 +331,8 @@ class ResNetWithEmbedding(nn.Module):
         return x
 
 
-def _resnet_with_embedding(block, layers, **kwargs):
-    model = ResNetWithEmbedding(block, layers, **kwargs)
+def _resnet_with_embedding(block, layers, device, **kwargs):
+    model = ResNetWithEmbedding(block, layers, device, **kwargs)
     return model
 
 

@@ -1,6 +1,5 @@
 import torch
 import torch.nn as nn
-import random
 from itertools import product
 
 
@@ -11,54 +10,66 @@ class ContinuousnessLoss(nn.Module):
         self.n_samples = n_samples
         self.p = p
         self.device = device
+        self.monomials = torch.tensor(data=[256 ** 0, 256 ** 1, 256 ** 2],
+                                      dtype=torch.int64, device=self.device)
 
     def forward(self, embeds):
-        loss = 0
+        # Generate n_samples random triplets of (R,G,B) values (in range 0,1,...,255)
+        # A tensor of shape (n_samples, 3) where each row is a triplet representing
+        # a specific (R,G,B) color to punish its distance from its neighbors.
+        rgb_values = torch.randint(low=0, high=256, size=(self.n_samples, 3),
+                                   dtype=torch.int64, device=self.device)
 
-        num_embeddings, embedding_dim = embeds.num_embeddings, embeds.embedding_dim
+        # Repeat the rgb_values 27 times to obtain a tensor of shape (27, n_samples, 3)
+        # where each channel will be a neighbor of a specific kind
+        # (i.e. (-1,-1,-1) or (1,-1,0) etc...)
+        # Currently it's the same values 27 times but the differences will be added later.
+        rgb_values_repeat = rgb_values.flatten().repeat(27).reshape(27, self.n_samples, 3)
 
-        # Draw n_samples of colors (i.e. triplets of (R,G,B) values).
-        # For each color sampled, calculate the difference between its embedding vector
-        # and its neighbors' embeddings
-        for i in range(self.n_samples):
-            # Generate a random index in the embedding layer, corresponds to a (R,G,B color)
-            rgb_idx = random.randint(0, num_embeddings - 1)
+        # There are 27 possible differences, for each diff in {-1,0,1}
+        # it can be added to each of the R,G,B values
+        diffs = torch.tensor(list(product(*[[-1, 0, 1]] * 3)),
+                             dtype=torch.int64, device=self.device)
 
-            # Calculate the R,G,B values from the index
-            b = rgb_idx % 256  # B in the RGB representation
-            quotient = rgb_idx // 256
-            g = quotient % 256  # G in the RGB representation
-            quotient = quotient // 256
-            r = quotient % 256  # R in the RGB representation
+        # Add the diffs to the rgb_values to obtain the neighbors.
+        neighbors = rgb_values_repeat + diffs.reshape(27, 1, 3)
 
-            assert r * 256 ** 2 + \
-                   g * 256 ** 1 + \
-                   b * 256 ** 0 == rgb_idx, \
-                "Bad Calculation of RGB from index"
+        # clamp the values between 0 and 255 because the addition of 1 or -1 might
+        # be out-of-bounds
+        neighbors.clamp_(min=0, max=255)
 
-            indices = list()
+        # Multiplying rgb_values with the monomials (256^0, 256^1, 256^2)
+        # gives n_samples indices (in the range [0,...,256^3 - 1])
+        # and this is the index of the (R,G,B) color in the range [0,...,256^3 - 1]
+        # in order to extract the proper embedding row.
+        # Conversion to float is necessary to perform matmul in CUDA device.
+        rgb_indices = torch.matmul(rgb_values.float(), self.monomials.float()).long()
 
-            for d_r, d_g, d_b in product(*[[-1, 0, 1]] * 3):
-                bad_idx = False
-                # prevent overflow - if any of the R,G,B coordinate are out-of-bounds
-                # mark this idx as invalid to prevent adding it to the indices list
-                for value, d_value in [(r, d_r), (g, d_g), (b, d_b)]:
-                    if value + d_value < 0 or value + d_value > 255:
-                        bad_idx = True
+        # Multiplying neighbors with the monomials (256^0, 256^1, 256^2)
+        # gives a tensor of shape (27, n_samples) containing indices
+        # (in the range [0,...,256^3 - 1]) which are the indices of the (R,G,B) colors
+        # in order to extract the proper embedding rows.
+        # The i-th row contain the n_samples neighbors all of a specific kind (e.g. -1,1,0)
+        # Conversion to float is necessary to perform matmul in CUDA device.
+        neighbors_indices = torch.matmul(neighbors.float(), self.monomials.float()).long()
 
-                if not bad_idx:
-                    idx = (r + d_r) * 256 ** 2 + \
-                          (g + d_g) * 256 ** 1 + \
-                          (b + d_b) * 256 ** 0
-                    indices += [idx]
+        # Get the embedding of the n_samples RGB colors.
+        # Will be a tensor of shape (n_samples, embedding_dim)
+        # (embedding_dim = 3)
+        rgb_embeddings = embeds(rgb_indices)
 
-            rgb_idx_tensor = torch.tensor([rgb_idx]).long().to(self.device)
-            indices = torch.tensor(indices).long().to(self.device)
+        # Get the embedding of the neighbors of the RGB colors.
+        # Will be a tensor of shape (27, n_samples, embedding_dim)
+        # (embedding_dim = 3)
+        neighbors_embeddings = embeds(neighbors_indices)
 
-            color_embedding = embeds(rgb_idx_tensor)
-            neighbors_embeddings = embeds(indices)
-            distance = torch.dist(color_embedding, neighbors_embeddings, p=2)
+        # rgb_embeddings is a tensor of shape (n_samples, embedding_dim) and contain
+        # the embeddings of the randomly chosen RGB colors.
+        # neighbors_embeddings a tensor of shape (27, n_samples, embedding_dim)
+        # which contain the embeddings of their neighbors.
+        # torch.dist will broadcast rgb_embeddings to be of shape
+        # (27, n_samples, embedding_dim) and then calculate the p-norm
+        # of the difference between the two tensors.
+        distance = torch.dist(rgb_embeddings, neighbors_embeddings, self.p)
 
-            loss += distance
-
-        return loss
+        return distance

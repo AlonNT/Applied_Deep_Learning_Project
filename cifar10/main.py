@@ -151,7 +151,11 @@ def parse_args():
                     'beginning of the network, to enable learning the \"best\" color-space.'
     )
 
-    parser.add_argument('--net_type', default='ResNet20', type=str)
+    parser.add_argument('--net_type', default='ResNet20', type=str,
+                        help='Network type [default ResNet20]. ' +
+                             'Must be one of the following: ' +
+                             'ResNet20, ResNet20WithEmbedding, '
+                             'ResNet20WithEmbedding, SimpleConvNetWithEmbedding.')
     parser.add_argument('--lr', default=[0.1], type=float, nargs='+',
                         help='learning-rate [default 0.1]')
     parser.add_argument('--bs', default=[32], type=int, nargs='+',
@@ -160,7 +164,7 @@ def parse_args():
                         help='momentum [default 0.9]')
     parser.add_argument('--weight_decay', default=[0], type=float, nargs='+',
                         help='momentum [default 0, which means no weight-decay]')
-    parser.add_argument('--epochs', default=20, type=int,
+    parser.add_argument('--epochs', default=5, type=int,
                         help='number of epochs [default 5]')
     parser.add_argument('--use_checkpoint', action='store_true',
                         help="If indicated and ./checkpoints/net_type.pth exists, use it")

@@ -10,6 +10,7 @@ import copy
 from SimpleConvNet import SimpleConvNet, SimpleConvNetWithEmbedding
 from resnet import resnet20, resnet20_with_embedding
 from utils import get_data, train_model, get_accuracy, evaluate_model
+from create_embedding import create_rgb, create_random_poly
 import argparse
 from tqdm import tqdm
 from itertools import product
@@ -20,7 +21,7 @@ def main(net_type='ResNet20', lr=None, bs=None, momentum=None, weight_decay=None
          epochs=20, device_num=0,
          use_checkpoint=False, verbose=False,
          embedding_continuousness_loss=False, embedding_loss_n_samples=1,
-         init_embedding_as_rgb=False):
+         init_embedding_as_rgb=False, init_embedding_as_random_poly=False):
     """
     The main function. arguments description are given in the argparse help.
     """
@@ -74,8 +75,9 @@ def main(net_type='ResNet20', lr=None, bs=None, momentum=None, weight_decay=None
     # are better than the checkpoint results.
     else:
         if init_embedding_as_rgb:
-            rgb_embedding = np.load("./embeddings/RGB.npy")
-            rgb_embedding_tensor = torch.tensor(rgb_embedding, device=device)
+            initial_embedding = torch.tensor(create_rgb(), device=device)
+        elif init_embedding_as_random_poly:
+            initial_embedding = torch.tensor(create_random_poly(), device=device)
 
         for curr_lr, curr_bs, curr_momentum, curr_weight_decay in product(lr, bs, momentum, weight_decay):
             tqdm.write("################################################################")
@@ -87,12 +89,12 @@ def main(net_type='ResNet20', lr=None, bs=None, momentum=None, weight_decay=None
 
             # Initialize the model
             model = model_constructor().to(device)
-            if init_embedding_as_rgb:
+            if init_embedding_as_rgb or init_embedding_as_random_poly:
                 if 'embeds.weight' not in model.state_dict().keys():
                     raise ValueError("init_embedding_as_rgb flag was given, but the " +
                                      "model does not include an Embedding layer!")
 
-                model.embeds.load_state_dict({'weight': rgb_embedding_tensor})
+                model.embeds.load_state_dict({'weight': initial_embedding})
 
             # Initialize the data (data-loaders, classes names, etc...)
             image_datasets, dataloaders, dataset_sizes, classes = get_data(curr_bs, is_int)
@@ -178,6 +180,7 @@ def parse_args():
     parser.add_argument('--init_embedding_as_rgb', action='store_true',
                         help='Initialize the embedding layer to be RGB ' +
                              '(i.e. the identity mapping)')
+    parser.add_argument('--init_embedding_as_random_poly', action='store_true')
     parser.add_argument('--device_num', type=int, default=0,
                         help='which device to train on ' +
                              '(will be used if CUDA is available)')
@@ -190,4 +193,4 @@ if __name__ == '__main__':
     main(args.net_type, args.lr, args.bs, args.momentum, args.weight_decay, args.epochs,
          args.device_num, args.use_checkpoint, args.verbose,
          args.embedding_continuousness_loss, args.embedding_loss_n_samples,
-         args.init_embedding_as_rgb)
+         args.init_embedding_as_rgb, args.init_embedding_as_random_poly)

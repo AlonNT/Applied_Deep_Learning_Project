@@ -4,7 +4,7 @@ import numpy as np
 import os
 
 
-def main(embedding_type, output_dir):
+def create_rgb():
     # Get the R,G,B per index
     quotient = np.arange(256 ** 3)
 
@@ -17,7 +17,40 @@ def main(embedding_type, output_dir):
     rgb_vectors = rgb_vectors.astype(np.float32)
     rgb_vectors /= 255
 
-    np.save(os.path.join(output_dir, embedding_type), rgb_vectors)
+    return rgb_vectors
+
+
+def create_random_poly():
+    max_degree = 10
+    n_coefficients = 10
+
+    rgb_vectors = create_rgb()
+
+    # # powers contain the powers for the three variables of the polynomial,
+    # # for each one of the n_coefficients (which are also chosen randomly).
+    # powers = np.random.randint(low=0, high=max_degree+1, size=(n_coefficients, 3))
+    # coefficients = np.random.uniform(low=0, high=1, size=n_coefficients)
+
+    embedding = np.empty_like(rgb_vectors)
+
+    for i in range(3):
+        coefficients = np.random.uniform(low=-1, high=1, size=(3, 3, 3))
+        embedding[:, i] = np.polynomial.polynomial.polyval3d(rgb_vectors[:, 0], rgb_vectors[:, 1], rgb_vectors[:, 2],
+                                                             coefficients)
+
+    return embedding
+
+
+def main(embedding_type, output_dir):
+    if embedding_type == "RGB":
+        embedding_func = create_rgb
+    elif embedding_type == "random_poly":
+        embedding_func = create_random_poly
+    else:
+        raise ValueError("embedding_type given is not supported!")
+
+    embedding = embedding_func()
+    np.save(os.path.join(output_dir, embedding_type), embedding)
 
 
 def parse_args():

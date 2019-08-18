@@ -3,10 +3,10 @@ import torch.nn as nn
 from itertools import product
 
 
-class ContinuousnessLoss(nn.Module):
+class ContinuityLoss(nn.Module):
 
     def __init__(self, device, n_samples=1, p=2):
-        super(ContinuousnessLoss, self).__init__()
+        super(ContinuityLoss, self).__init__()
         self.n_samples = n_samples
         self.p = p
         self.device = device

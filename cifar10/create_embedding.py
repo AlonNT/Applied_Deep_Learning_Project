@@ -1,10 +1,17 @@
-from __future__ import print_function, division
 import argparse
 import numpy as np
+from numpy.polynomial import polynomial as P
 import os
 
 
 def create_rgb():
+    """
+    Create an embedding containing the RGB.
+    Each coordinate i in 0,...,256^3-1 will be the (R,G,B) of the same integers in
+    basis of 256.
+    The vectors are finally divided by 255 to be floats in [0,1].
+    :return: the RGB embedding
+    """
     # Get the R,G,B per index
     quotient = np.arange(256 ** 3)
 
@@ -20,25 +27,30 @@ def create_rgb():
     return rgb_vectors
 
 
-def create_random_poly():
-    max_degree = 10
-    n_coefficients = 10
+def create_random_poly(coefficients=None, dim=3):
+    """
+    Create a polynomial embedding of the RGB vectors.
+    If the coefficients are given then it is that polynomial, if not - some uniformly random
+    polynomial is chosen, such that each variable is up to the given 'dim' degree
+    :param coefficients: a 4D array, such that the 3D array coefficients[i] contains the
+                         coefficients of the 3D polynomial of the i-th coordinate of
+                         the 3D function (from (R,G,B) to another 3D space).
+    :param dim: maximal power of the variables in the polynomial.
+                i.e. if the dim is 3 than the monomial of the
+                maximal degree will be x^3 * y^3 * z^3
+    :return: polynomial mapping of the RGB vectors.
+    """
+    if coefficients is None:
+        coefficients = np.random.uniform(low=-1, high=1, size=(3, dim, dim, dim))
 
     rgb_vectors = create_rgb()
-
-    # # powers contain the powers for the three variables of the polynomial,
-    # # for each one of the n_coefficients (which are also chosen randomly).
-    # powers = np.random.randint(low=0, high=max_degree+1, size=(n_coefficients, 3))
-    # coefficients = np.random.uniform(low=0, high=1, size=n_coefficients)
-
     embedding = np.empty_like(rgb_vectors)
 
     for i in range(3):
-        coefficients = np.random.uniform(low=-1, high=1, size=(3, 3, 3))
-        embedding[:, i] = np.polynomial.polynomial.polyval3d(rgb_vectors[:, 0], rgb_vectors[:, 1], rgb_vectors[:, 2],
-                                                             coefficients)
+        embedding[:, i] = P.polyval3d(rgb_vectors[:, 0], rgb_vectors[:, 1], rgb_vectors[:, 2],
+                                      coefficients[i])
 
-    return embedding
+    return embedding, coefficients
 
 
 def main(embedding_type, output_dir):

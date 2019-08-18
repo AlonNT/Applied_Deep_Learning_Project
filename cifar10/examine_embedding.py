@@ -3,14 +3,19 @@ import argparse
 import numpy as np
 import matplotlib.pyplot as plt
 import torch
+import torch.nn as nn
 
 from utils import get_data
 
 
-def main(embedding_path):
-    embedding = np.load(embedding_path)
-    embedding_tensor = torch.tensor(embedding)
-    embedding_layer = torch.nn.Embedding.from_pretrained(embedding_tensor)
+def main(main_embedding_path, ref_embedding_path=None, visualize=False):
+    # Load the main embedding layer.
+    main_embedding_layer = nn.Embedding.from_pretrained(torch.tensor(np.load(main_embedding_path)))
+
+    # If given, load the reference embedding layer.
+    if ref_embedding_path is not None:
+        ref_embedding_layer = nn.Embedding.from_pretrained(torch.tensor(np.load(ref_embedding_path)))
+
     image_datasets, dataloaders, dataset_sizes, classes = get_data(bs=32, is_int=True)
     num_images = 8
     monomials = torch.tensor(data=[256 ** 0, 256 ** 1, 256 ** 2])
@@ -79,11 +84,13 @@ def main(embedding_path):
 def parse_args():
     parser = argparse.ArgumentParser(description='Create embedding weights to initialize an embedding layer.')
 
-    parser.add_argument('--embedding_path', required=True, type=str)
+    parser.add_argument('--main_embedding_path', required=True, type=str)
+    parser.add_argument('--ref_embedding_path', required=False, type=str)
+    parser.add_argument('--visualize', action='store_true')
 
     return parser.parse_args()
 
 
 if __name__ == '__main__':
     args = parse_args()
-    main(args.embedding_path)
+    main(args.main_embedding_path, args.ref_embedding_path, args.visualize)

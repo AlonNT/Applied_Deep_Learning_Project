@@ -4,7 +4,6 @@ import torch.optim as optim
 from torch.optim import lr_scheduler
 import numpy as np
 import os
-import copy
 import argparse
 from time import strftime
 from tqdm import tqdm
@@ -12,7 +11,7 @@ from itertools import product
 
 from SimpleConvNet import SimpleConvNet, SimpleConvNetWithEmbedding
 from resnet import resnet20, resnet20_with_embedding
-from utils import get_data, train_model, get_accuracy, evaluate_model
+from utils import get_data, train_model, evaluate_model
 from create_embedding import create_rgb, create_random_poly
 from ContinuityLoss import ContinuityLoss
 
@@ -67,7 +66,7 @@ def main(net_type='ResNet20',
     elif init_embedding_as == 'random':
         tqdm.write("Initializing the embedding layer with a random initialization " +
                    "(PyTorch default initialization).")
-        initial_embedding = nn.Embedding(256**3, 3).weight.detach().cpu().numpy()
+        initial_embedding = nn.Embedding(256**3, 3).weight.detach().cpu()
         if save_model:
             saved_embedding_path = './embeddings/random_embedding_{}'.format(curr_time)
             np.save(saved_embedding_path, initial_embedding)
@@ -103,7 +102,9 @@ def main(net_type='ResNet20',
         image_datasets, dataloaders, dataset_sizes, classes = get_data(bs=32, is_int=is_int)
 
         # Load the saved model from the checkpoint and evaluate the model
-        model.load_state_dict(torch.load(checkpoint_path, map_location=device.type))
+        checkpoint = torch.load(checkpoint_path, map_location=device.type)
+        model_state_dict = checkpoint['model_state_dict']
+        model.load_state_dict(model_state_dict)
         evaluate_model(model, net_type, device, dataloaders, classes)
 
         return
@@ -170,15 +171,21 @@ def main(net_type='ResNet20',
 
             # If there is already exists a checkpoint, check if we are better...
             if os.path.isfile(checkpoint_path):
-                checkpoint_model = copy.deepcopy(model)
-                checkpoint_model.load_state_dict(torch.load(checkpoint_path, map_location=device.type))
-                checkpoint_acc = get_accuracy(dataloaders, device, checkpoint_model)
-
+                checkpoint = torch.load(checkpoint_path, map_location=device.type)
+                checkpoint_acc = checkpoint['accuracy']
                 if accuracy < checkpoint_acc:
                     model_good_enough_to_save = False
 
             if model_good_enough_to_save:
-                torch.save(model.state_dict(), checkpoint_path)
+                torch.save({'model_state_dict': model.state_dict(),
+                            'optimizer_state_dict': optimizer.state_dict(),
+                            'accuracy': accuracy,
+                            'lr': curr_lr,
+                            'bs': curr_bs,
+                            'momentum': curr_momentum,
+                            'weight_decay': curr_weight_decay},
+                           checkpoint_path)
+                # torch.save(model.state_dict(), checkpoint_path)
                 tqdm.write("Checkpoint saved\nAccuracy = {:.2f}\nPrevious accuracy = {:.2f}".format(
                     accuracy, checkpoint_acc))
                 if 'embeds.weight' in model.state_dict():

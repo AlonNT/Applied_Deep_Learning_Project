@@ -17,23 +17,23 @@ def get_embeddings(final_embedding_path, initial_embedding_path=None):
     """
     # Load the final embedding layer.
     final_embedding_matrix = np.load(final_embedding_path)
-    final_embedding = nn.Embedding.from_pretrained(torch.tensor(final_embedding_matrix))
 
     # If initial_embedding_path was not given, initialize it as RGB.
     if initial_embedding_path is None:
-        initial_embedding = create_rgb()
+        initial_embedding_matrix = create_rgb()
 
     # If it was a file with polynomial coefficients,
     # load them and create the corresponding embedding
     elif 'polynomial_coefficients' in initial_embedding_path:
         coefficients = np.load(initial_embedding_path)
         initial_embedding_matrix, _ = create_random_poly(coefficients)
-        initial_embedding = nn.Embedding.from_pretrained(torch.tensor(initial_embedding_matrix))
 
     # Load the file as the actual embedding matrix.
     else:
         initial_embedding_matrix = np.load(initial_embedding_path)
-        initial_embedding = nn.Embedding.from_pretrained(torch.tensor(initial_embedding_matrix))
+
+    final_embedding = nn.Embedding.from_pretrained(torch.tensor(final_embedding_matrix))
+    initial_embedding = nn.Embedding.from_pretrained(torch.tensor(initial_embedding_matrix))
 
     return final_embedding, initial_embedding
 
@@ -102,7 +102,8 @@ def visualize_embedding(final_embedding, initial_embedding, name="", num_images=
                 images_so_far += 1
                 ax = plt.subplot(num_images // 3, 3, images_so_far)
                 plt.axis('off')
-                ax.set_title('After Embedding: dist {:.2f}'.format(np.linalg.norm(main_embed_im - ref_embed_im)))
+                ax.set_title('After Embedding: l1-dist={:.2f}'.format(
+                    np.linalg.norm(main_embed_im.flatten() - ref_embed_im.flatten(), ord=1)))
                 plt.imshow(main_embed_im)
 
                 if images_so_far == num_images:
@@ -155,7 +156,10 @@ if __name__ == '__main__':
     args = parse_args()
 
     if args.name is None:
-        args.name = "{}_vs_{}".format(os.path.basename(args.final_embedding_path).replace('.npy', ''),
-                                      os.path.basename(args.initial_embedding_path).replace('.npy', ''))
+        if args.initial_embedding_path is None:
+            args.name = "{}_vs_RGB".format(os.path.basename(args.final_embedding_path).replace('.npy', ''))
+        else:
+            args.name = "{}_vs_{}".format(os.path.basename(args.final_embedding_path).replace('.npy', ''),
+                                          os.path.basename(args.initial_embedding_path).replace('.npy', ''))
 
     main(args.final_embedding_path, args.initial_embedding_path, args.visualize, args.name)

@@ -25,8 +25,10 @@ class ContinuityLoss(nn.Module):
             # A tensor of shape (n_samples, 3) where each row is a triplet representing
             # a specific (R,G,B) color to punish its distance from its neighbors.
             N, C, H, W = input_images.shape
-            images_rgb_values = input_images.permute(0, 2, 3, 1).contiguous().view(N * H * W, C)
-            permutation = torch.randperm(images_rgb_values.shape[0])
+            # images_rgb_values = torch.tensor(data=input_images.permute(0, 2, 3, 1).contiguous().view(N * H * W, C),
+            #                                  device=self.device, dtype=torch.int64)
+            images_rgb_values = input_images.permute(0, 2, 3, 1).contiguous().view(N * H * W, C).long()
+            permutation = torch.randperm(n=images_rgb_values.shape[0], device=self.device, dtype=torch.int64)
             rgb_values = images_rgb_values[permutation[:self.n_samples]]
 
         # Repeat the rgb_values 27 times to obtain a tensor of shape (27, n_samples, 3)

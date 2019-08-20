@@ -70,6 +70,9 @@ def train_model(model, criterion, optimizer, scheduler,
     :param dataset_sizes: the sizes of the datasets
     :param device: which device to train on
     :param embedding_loss: whether or not to train with embedding-loss
+    :param feed_embedding_loss_with: If 'images' - feed the embedding continuity loss with the images pixels,
+                                     instead of random ones.
+                                     If 'random' - choose random pixels to enforce continuity on.
     :param num_epochs: how many epochs to train
     :param verbose: whether or not to show progress bar during training
 

@@ -20,7 +20,8 @@ def main(net_type='ResNet20',
          lr=None, bs=None, momentum=None, weight_decay=None,
          epochs=20, device_num=0,
          use_checkpoint=False, save_model=False, verbose=False,
-         embedding_continuity_loss=-1, init_embedding_as="random"):
+         embedding_continuity_loss=-1, feed_embedding_loss_with='random',
+         init_embedding_as="random"):
     """
     The main function.
     Arguments descriptions are given in the argparse help.
@@ -157,7 +158,7 @@ def main(net_type='ResNet20',
         # Train the network and return the best model (with the learned weights).
         model = train_model(model, criterion, optimizer, exp_lr_scheduler,
                             dataloaders, dataset_sizes, device,
-                            embedding_loss,
+                            embedding_loss, feed_embedding_loss_with,
                             num_epochs=epochs, verbose=verbose)
 
         accuracy = evaluate_model(model, net_type, device, dataloaders, classes)
@@ -220,6 +221,11 @@ def parse_args():
                         help='How many samples to draw randomly to punish the ' +
                              'embedding-layer for being not-continuous. ' +
                              '[Default value is -1, which means no continuity_loss]')
+    parser.add_argument('--feed_embedding_loss_with', type=str, default='random',
+                        help='If \'images\' -  feed the embedding continuity loss with the '
+                             'images\' pixels, instead of random ones. If \'random\' - choose random'
+                             'pixels to enforce continuity on.'
+                             '[Default is \'random\'')
     parser.add_argument('--init_embedding_as', type=str, default='random',
                         help='Initialize the embedding layer with some predefined embedding.')
 
@@ -242,4 +248,5 @@ if __name__ == '__main__':
 
     main(args.net_type, args.lr, args.bs, args.momentum, args.weight_decay, args.epochs,
          args.device_num, args.use_checkpoint, args.save_model, args.verbose,
-         args.embedding_continuity_loss, args.init_embedding_as)
+         args.embedding_continuity_loss, args.feed_embedding_loss_with,
+         args.init_embedding_as)

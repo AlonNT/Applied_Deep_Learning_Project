@@ -13,18 +13,27 @@ class ContinuityLoss(nn.Module):
         self.monomials = torch.tensor(data=[256 ** 0, 256 ** 1, 256 ** 2],
                                       dtype=torch.int64, device=self.device)
 
-    def forward(self, embeds):
-        # Generate n_samples random triplets of (R,G,B) values (in range 0,1,...,255)
-        # A tensor of shape (n_samples, 3) where each row is a triplet representing
-        # a specific (R,G,B) color to punish its distance from its neighbors.
-        rgb_values = torch.randint(low=0, high=256, size=(self.n_samples, 3),
-                                   dtype=torch.int64, device=self.device)
+    def forward(self, embeds, input_images=None):
+        if input_images is None:
+            # Generate n_samples random triplets of (R,G,B) values (in range 0,1,...,255)
+            # A tensor of shape (n_samples, 3) where each row is a triplet representing
+            # a specific (R,G,B) color to punish its distance from its neighbors.
+            rgb_values = torch.randint(low=0, high=256, size=(self.n_samples, 3),
+                                       dtype=torch.int64, device=self.device)
+        else:
+            # Sample n_samples random triplets of (R,G,B) values from the images RGB values.
+            # A tensor of shape (n_samples, 3) where each row is a triplet representing
+            # a specific (R,G,B) color to punish its distance from its neighbors.
+            N, C, H, W = input_images.shape
+            images_rgb_values = input_images.permute(0, 2, 3, 1).contiguous().view(N * H * W, C)
+            permutation = torch.randperm(images_rgb_values.shape[0])
+            rgb_values = images_rgb_values[permutation[:self.n_samples]]
 
         # Repeat the rgb_values 27 times to obtain a tensor of shape (27, n_samples, 3)
         # where each channel will be a neighbor of a specific kind
         # (i.e. (-1,-1,-1) or (1,-1,0) etc...)
         # Currently it's the same values 27 times but the differences will be added later.
-        rgb_values_repeat = rgb_values.flatten().repeat(27).reshape(27, self.n_samples, 3)
+        rgb_values_repeat = rgb_values.flatten().repeat(27).reshape(27, -1, 3)
 
         # There are 27 possible differences, for each diff in {-1,0,1}
         # it can be added to each of the R,G,B values

@@ -57,7 +57,7 @@ def get_data(bs=32, is_int=False):
 
 def train_model(model, criterion, optimizer, scheduler,
                 dataloaders, dataset_sizes, device,
-                embedding_loss=None,
+                embedding_loss=None, feed_embedding_loss_with='random',
                 num_epochs=25, verbose=False):
     """
     A general function to train a model and return the best model found.
@@ -119,9 +119,15 @@ def train_model(model, criterion, optimizer, scheduler,
 
                     # If there was given an embedding_loss, calculate it.
                     if embedding_loss is not None:
-                        embeds_loss = embedding_loss(model.embeds)
-                        loss += embeds_loss
+                        if feed_embedding_loss_with == 'random':
+                            embeds_loss = embedding_loss(model.embeds)
+                        elif feed_embedding_loss_with == 'images':
+                            embeds_loss = embedding_loss(model.embeds, inputs)
+                        else:
+                            raise ValueError("feed_embedding_loss_with = {} " +
+                                             "is not supported!".format(feed_embedding_loss_with))
 
+                        loss += embeds_loss
                         running_embeds_loss += embeds_loss.item() * inputs.size(0)
 
                     # backward + optimize only if in training phase

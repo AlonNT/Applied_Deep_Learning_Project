@@ -21,7 +21,7 @@ def main(net_type='ResNet20',
          epochs=20, device_num=0,
          use_checkpoint=False, save_model=False, verbose=False,
          embedding_continuity_loss=-1, feed_embedding_loss_with='random',
-         init_embedding_as="random"):
+         init_embedding_as='random'):
     """
     The main function.
     Arguments descriptions are given in the argparse help.
@@ -130,11 +130,9 @@ def main(net_type='ResNet20',
 
         # Initialize the model
         model = model_constructor().to(device)
-        if initial_embedding is not None:
-            if 'embeds.weight' not in model.state_dict().keys():
-                raise ValueError("initial_embedding_as {} was given, ".format(init_embedding_as) +
-                                 "but the model does not include an Embedding layer!")
 
+        # Initialize the embedding layer (if exists) with the initial embedding
+        if 'embeds.weight' in model.state_dict().keys():
             model.embeds.load_state_dict({'weight': initial_embedding})
 
         # Initialize the data (data-loaders, classes names, etc...)

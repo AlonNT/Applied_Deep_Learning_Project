@@ -4,7 +4,7 @@ from numpy.polynomial import polynomial as P
 import os
 
 
-def create_rgb():
+def create_rgb(embedding_size=256):
     """
     Create an embedding containing the RGB.
     Each coordinate i in 0,...,256^3-1 will be the (R,G,B) of the same integers in
@@ -13,21 +13,21 @@ def create_rgb():
     :return: the RGB embedding
     """
     # Get the R,G,B per index
-    quotient = np.arange(256 ** 3)
+    quotient = np.arange(embedding_size ** 3)
 
-    quotient, r = np.divmod(quotient, 256)   # R in the RGB representation
-    quotient, g = np.divmod(quotient, 256)   # G in the RGB representation
-    b = np.mod(quotient, 256)   # R in the RGB representation
+    quotient, r = np.divmod(quotient, embedding_size)   # R in the RGB representation
+    quotient, g = np.divmod(quotient, embedding_size)   # G in the RGB representation
+    b = np.mod(quotient, embedding_size)   # R in the RGB representation
 
     rgb_vectors = np.column_stack((r, g, b))
 
     rgb_vectors = rgb_vectors.astype(np.float32)
-    rgb_vectors /= 255
+    rgb_vectors /= (embedding_size - 1)
 
     return rgb_vectors
 
 
-def create_random_poly(coefficients=None, dim=3):
+def create_random_poly(embedding_size=256, coefficients=None, dim=3):
     """
     Create a polynomial embedding of the RGB vectors.
     If the coefficients are given then it is that polynomial, if not - some uniformly random
@@ -43,7 +43,7 @@ def create_random_poly(coefficients=None, dim=3):
     if coefficients is None:
         coefficients = np.random.uniform(low=-1, high=1, size=(3, dim, dim, dim))
 
-    rgb_vectors = create_rgb()
+    rgb_vectors = create_rgb(embedding_size)
     embedding = np.empty_like(rgb_vectors)
 
     for i in range(3):

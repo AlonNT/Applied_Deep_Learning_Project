@@ -36,9 +36,10 @@ class SimpleConvNetWithEmbedding(nn.Module):
     Conv-Relu-Pool-Conv-Relu-Pool-Affn-Relu-Affn-Relu-Affn
     """
 
-    def __init__(self, device):
+    def __init__(self, device, embedding_size=256):
         super(SimpleConvNetWithEmbedding, self).__init__()
-        self.embeds = nn.Embedding(256**3, 3)
+
+        self.embeds = nn.Embedding(embedding_size**3, 3)
         self.conv1 = nn.Conv2d(3, 6, 5)
         self.pool = nn.MaxPool2d(2, 2)
         self.conv2 = nn.Conv2d(6, 16, 5)
@@ -47,10 +48,23 @@ class SimpleConvNetWithEmbedding(nn.Module):
         self.fc3 = nn.Linear(84, 10)
 
         self.device = device
-        self.monomials = torch.tensor(data=[256**0, 256**1, 256**2], device=self.device)
+        self.embedding_size = embedding_size
+
+        # Multiplying the 3D vector (x,y,z) by the monomials vector will give the index in the embedding matrix.
+        self.monomials = torch.tensor(data=[embedding_size**0, embedding_size**1, embedding_size**2],
+                                      device=self.device)
+
+        # This is the factor to divide each R,G,B value in order to quantize it correctly.
+        # For example, if embedding_size is 32, the factor is 256/32 = 8.
+        # So each value in (R,G,B) will be divided by 8 to get values between 0 and 32
+        self.factor = 256 / embedding_size
 
     def forward(self, x):
         N, C, H, W = x.shape
+
+        # Quantize the images colors wo be in range 0,1,...,embedding_size.\
+        x /= self.factor
+
         # Flatten the input tensor x to be in the shape of (batch, 32^2, 3)
         # in order to perform matrix multiplication with the vector
         # [255^0, 255^1, 255^2] and thus extracting the indices in the embedding

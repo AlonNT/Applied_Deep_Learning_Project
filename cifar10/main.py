@@ -20,8 +20,8 @@ def main(net_type='ResNet20',
          lr=None, bs=None, momentum=None, weight_decay=None,
          epochs=20, device_num=0,
          use_checkpoint=False, save_model=False, verbose=False,
-         embedding_continuity_loss=-1, feed_embedding_loss_with='random',
-         init_embedding_as='random'):
+         embedding_size=256, embedding_continuity_loss=-1,
+         feed_embedding_loss_with='random', init_embedding_as='random'):
     """
     The main function.
     Arguments descriptions are given in the argparse help.
@@ -48,13 +48,13 @@ def main(net_type='ResNet20',
 
     # Initialize the embedding as the given option.
     if init_embedding_as == 'RGB':
-        initial_embedding = torch.tensor(create_rgb(), device=device)
+        initial_embedding = torch.tensor(create_rgb(embedding_size), device=device)
         tqdm.write("Initializing the embedding layer with RGB.")
 
     # If the embedding is being initialized with a random polynomial,
     # save the coefficients to examine it later.
     elif init_embedding_as == 'random_poly':
-        initial_embedding, coefficients = create_random_poly()
+        initial_embedding, coefficients = create_random_poly(embedding_size)
         initial_embedding = torch.tensor(initial_embedding, device=device)
         tqdm.write("Initializing the embedding layer with a random 3D polynomial.")
         if save_model:
@@ -67,7 +67,7 @@ def main(net_type='ResNet20',
     elif init_embedding_as == 'random':
         tqdm.write("Initializing the embedding layer with a random initialization " +
                    "(PyTorch default initialization).")
-        initial_embedding = nn.Embedding(256**3, 3).weight.detach().cpu()
+        initial_embedding = nn.Embedding(embedding_size**3, 3).weight.detach().cpu()
         if save_model:
             saved_embedding_path = './embeddings/random_embedding_{}'.format(curr_time)
             np.save(saved_embedding_path, initial_embedding)
@@ -80,7 +80,7 @@ def main(net_type='ResNet20',
     str_to_model = {'ResNet20': (resnet20, False),
                     'ResNet20WithEmbedding': (lambda: resnet20_with_embedding(device), True),
                     'SimpleConvNet': (SimpleConvNet, False),
-                    'SimpleConvNetWithEmbedding': (lambda: SimpleConvNetWithEmbedding(device), True)}
+                    'SimpleConvNetWithEmbedding': (lambda: SimpleConvNetWithEmbedding(device, embedding_size), True)}
 
     if net_type not in str_to_model:
         raise ValueError("net_type given is not a proper type\t{}".format(net_type))
@@ -149,7 +149,7 @@ def main(net_type='ResNet20',
 
         # Initialize the embedding continuity loss, if indicated.
         if embedding_continuity_loss != -1:
-            embedding_loss = ContinuityLoss(device, n_samples=embedding_continuity_loss)
+            embedding_loss = ContinuityLoss(device, n_samples=embedding_continuity_loss, embedding_size=embedding_size)
         else:
             embedding_loss = None
 
@@ -215,15 +215,17 @@ def parse_args():
     parser.add_argument('--epochs', default=5, type=int,
                         help='number of epochs [default 5].')
 
+    parser.add_argument('--embedding_size', type=int, default=256,
+                        help='Size of the embedding matrix. [Default is 256]')
     parser.add_argument('--embedding_continuity_loss', type=int, default=-1,
                         help='How many samples to draw randomly to punish the ' +
                              'embedding-layer for being not-continuous. ' +
                              '[Default value is -1, which means no continuity_loss]')
-    parser.add_argument('--feed_embedding_loss_with', type=str, default='random',
+    parser.add_argument('--feed_embedding_loss_with', type=str, default='images',
                         help='If \'images\' -  feed the embedding continuity loss with the '
                              'images\' pixels, instead of random ones. If \'random\' - choose random'
                              'pixels to enforce continuity on.'
-                             '[Default is \'random\'')
+                             '[Default is \'images\'')
     parser.add_argument('--init_embedding_as', type=str, default='random',
                         help='Initialize the embedding layer with some predefined embedding.')
 
@@ -246,5 +248,5 @@ if __name__ == '__main__':
 
     main(args.net_type, args.lr, args.bs, args.momentum, args.weight_decay, args.epochs,
          args.device_num, args.use_checkpoint, args.save_model, args.verbose,
-         args.embedding_continuity_loss, args.feed_embedding_loss_with,
-         args.init_embedding_as)
+         args.embedding_size, args.embedding_continuity_loss,
+         args.feed_embedding_loss_with, args.init_embedding_as)

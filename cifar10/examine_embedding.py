@@ -9,7 +9,7 @@ from utils import get_data
 from create_embedding import create_rgb, create_random_poly
 
 
-def get_embeddings(final_embedding_path, initial_embedding_path=None):
+def get_embeddings(final_embedding_path, embedding_size, initial_embedding_path=None):
     """
     :param final_embedding_path: The path of the original embedding
     :param initial_embedding_path: The path of the reference embedding
@@ -20,13 +20,13 @@ def get_embeddings(final_embedding_path, initial_embedding_path=None):
 
     # If initial_embedding_path was not given, initialize it as RGB.
     if initial_embedding_path is None:
-        initial_embedding_matrix = create_rgb()
+        initial_embedding_matrix = create_rgb(embedding_size)
 
     # If it was a file with polynomial coefficients,
     # load them and create the corresponding embedding
     elif 'polynomial_coefficients' in initial_embedding_path:
         coefficients = np.load(initial_embedding_path)
-        initial_embedding_matrix, _ = create_random_poly(coefficients)
+        initial_embedding_matrix, _ = create_random_poly(embedding_size, coefficients)
 
     # Load the file as the actual embedding matrix.
     else:
@@ -38,7 +38,7 @@ def get_embeddings(final_embedding_path, initial_embedding_path=None):
     return final_embedding, initial_embedding
 
 
-def visualize_embedding(final_embedding, initial_embedding, name="", num_images=12):
+def visualize_embedding(final_embedding, initial_embedding, embedding_size, name="", num_images=12):
     """
     Visualize the two given embeddings, by showing the embeddings on num_images // 3
     random images taken from CIFAR-10 dataset.
@@ -50,7 +50,7 @@ def visualize_embedding(final_embedding, initial_embedding, name="", num_images=
     :param num_images: Number of images to show in total
     """
     image_datasets, dataloaders, dataset_sizes, classes = get_data(bs=32, is_int=True)
-    monomials = torch.tensor(data=[256 ** 0, 256 ** 1, 256 ** 2])
+    monomials = torch.tensor(data=[embedding_size ** 0, embedding_size ** 1, embedding_size ** 2])
 
     # was_training = model.training
     images_so_far = 0
@@ -60,9 +60,10 @@ def visualize_embedding(final_embedding, initial_embedding, name="", num_images=
         # See explanation about the following calculation in the
         # implementation of the embedding in the models
         for i, (inputs, labels) in enumerate(dataloaders['test']):
-            x = inputs
+            x = inputs.clone().detach()
 
             N, C, H, W = x.shape
+            x /= (256 / embedding_size)
             x = x.permute(0, 2, 3, 1)  # permute from N,C,H,W to N,H,W,C
             x = x.view(N, H * W, 3)
             x = x.long()
@@ -112,12 +113,12 @@ def visualize_embedding(final_embedding, initial_embedding, name="", num_images=
                     return
 
 
-def main(final_embedding_path, initial_embedding_path=None, visualize=False, name=""):
+def main(final_embedding_path, embedding_size, initial_embedding_path=None, visualize=False, name=""):
     """
     The main function.
     Arguments descriptions are given in the argparse help.
     """
-    final_embedding, initial_embedding = get_embeddings(final_embedding_path, initial_embedding_path)
+    final_embedding, initial_embedding = get_embeddings(final_embedding_path, embedding_size, initial_embedding_path)
 
     distances = {p: torch.dist(final_embedding.weight, initial_embedding.weight, p).item()
                  for p in [0, 1, 2, np.inf]}
@@ -129,7 +130,7 @@ def main(final_embedding_path, initial_embedding_path=None, visualize=False, nam
             print("The l_{:3} norm between the two embeddings is {:.2f}".format(p, distance))
 
     if visualize:
-        visualize_embedding(final_embedding, initial_embedding, name)
+        visualize_embedding(final_embedding, initial_embedding, embedding_size, name)
 
     return distances
 
@@ -139,6 +140,8 @@ def parse_args():
 
     parser.add_argument('--final_embedding_path', required=True, type=str,
                         help="The path of the original embedding.")
+    parser.add_argument('--embedding_size', type=int, default=256,
+                        help='Size of the embedding matrix. [Default is 256]')
     parser.add_argument('--initial_embedding_path', required=False, type=str,
                         help="The initial embedding path. "
                              "If initial_embedding_path is not given, initialize it as RGB."
@@ -162,4 +165,4 @@ if __name__ == '__main__':
             args.name = "{}_vs_{}".format(os.path.basename(args.final_embedding_path).replace('.npy', ''),
                                           os.path.basename(args.initial_embedding_path).replace('.npy', ''))
 
-    main(args.final_embedding_path, args.initial_embedding_path, args.visualize, args.name)
+    main(args.final_embedding_path, args.embedding_size, args.initial_embedding_path, args.visualize, args.name)

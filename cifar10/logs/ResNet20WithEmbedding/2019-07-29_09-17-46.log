@@ -1,0 +1,13 @@
+Using device: cuda:0
+Training with the following hyper-patameters:
+learning-rate = 0.01
+batch-size = 16
+momentum = 0.9
+Files already downloaded and verified
+Files already downloaded and verified
+Epoch 1/10
+----------
+train Loss: 14.4778 Acc: 0.1153
+test  Loss: 14.4601 Acc: 0.1393
+Epoch 2/10
+----------

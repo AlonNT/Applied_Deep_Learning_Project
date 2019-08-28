@@ -1,0 +1,7 @@
+Using device: cuda:3
+################################################################
+Training with the following hyper-parameters:
+learning-rate = 0.01
+batch-size = 16
+momentum = 0.9
+weight-decay = 0.0

@@ -1,0 +1,253 @@
+Using device: cuda:0
+Training with the following hyper-patameters:
+learning-rate = 0.01
+batch-size = 16
+momentum = 0.9
+Files already downloaded and verified
+Files already downloaded and verified
+Epoch 1/20
+----------
+train Loss: 14.4841 Acc: 0.0994
+test  Loss: 14.3393 Acc: 0.1000
+Epoch 2/20
+----------
+train Loss: 14.4423 Acc: 0.1013
+test  Loss: 14.5271 Acc: 0.1166
+Epoch 3/20
+----------
+train Loss: 14.4165 Acc: 0.1186
+test  Loss: 14.5142 Acc: 0.1272
+Epoch 4/20
+----------
+train Loss: 14.5366 Acc: 0.1254
+test  Loss: 14.5234 Acc: 0.1260
+Epoch 5/20
+----------
+train Loss: 14.4560 Acc: 0.1309
+test  Loss: 14.2426 Acc: 0.1385
+Epoch 6/20
+----------
+train Loss: 14.3491 Acc: 0.1352
+test  Loss: 14.4093 Acc: 0.1452
+Epoch 7/20
+----------
+train Loss: 14.4055 Acc: 0.1436
+test  Loss: 14.4782 Acc: 0.1412
+Epoch 8/20
+----------
+train Loss: 14.3565 Acc: 0.1442
+test  Loss: 14.4480 Acc: 0.1468
+Epoch 9/20
+----------
+train Loss: 14.3932 Acc: 0.1473
+test  Loss: 14.3951 Acc: 0.1458
+Epoch 10/20
+----------
+train Loss: 14.3185 Acc: 0.1615
+test  Loss: 14.4033 Acc: 0.1532
+Epoch 11/20
+----------
+train Loss: 14.3338 Acc: 0.1673
+test  Loss: 14.4018 Acc: 0.1565
+Epoch 12/20
+----------
+train Loss: 14.3656 Acc: 0.1715
+test  Loss: 14.4696 Acc: 0.1560
+Epoch 13/20
+----------
+train Loss: 14.3776 Acc: 0.1738
+test  Loss: 14.3005 Acc: 0.1557
+Epoch 14/20
+----------
+train Loss: 14.3756 Acc: 0.1788
+test  Loss: 14.4817 Acc: 0.1544
+Epoch 15/20
+----------
+train Loss: 14.4096 Acc: 0.1811
+test  Loss: 14.5300 Acc: 0.1521
+Epoch 16/20
+----------
+train Loss: 14.3794 Acc: 0.1885
+test  Loss: 14.4103 Acc: 0.1537
+Epoch 17/20
+----------
+train Loss: 14.3887 Acc: 0.1930
+test  Loss: 14.2948 Acc: 0.1552
+Epoch 18/20
+----------
+train Loss: 14.2581 Acc: 0.1948
+test  Loss: 14.4611 Acc: 0.1490
+Epoch 19/20
+----------
+train Loss: 14.3329 Acc: 0.2030
+test  Loss: 14.5261 Acc: 0.1459
+Epoch 20/20
+----------
+train Loss: 14.2233 Acc: 0.2314
+test  Loss: 14.5195 Acc: 0.1461
+Training complete in 42m 44s
+Best val Acc: 0.156500
+Accuracy of the network on the 10000 test images: 15.00
+Accuracy of horse : 4.30
+Accuracy of car   : 4.20
+Accuracy of deer  : 62.20
+Accuracy of dog   : 1.10
+Accuracy of frog  : 1.70
+Accuracy of cat   : 0.90
+Accuracy of plane : 21.40
+Accuracy of truck : 20.20
+Accuracy of ship  : 31.20
+Accuracy of bird  : 9.30
+Checkpoint saved
+Accuracy = 15.00
+Previous accuracy = 15.00
+Training with the following hyper-patameters:
+learning-rate = 0.01
+batch-size = 32
+momentum = 0.9
+Files already downloaded and verified
+Files already downloaded and verified
+Epoch 1/20
+----------
+train Loss: 14.4609 Acc: 0.1705
+test  Loss: 14.3719 Acc: 0.1565
+Epoch 2/20
+----------
+train Loss: 14.4236 Acc: 0.1747
+test  Loss: 14.3592 Acc: 0.1590
+Epoch 3/20
+----------
+train Loss: 14.2163 Acc: 0.1788
+test  Loss: 14.6066 Acc: 0.1505
+Epoch 4/20
+----------
+train Loss: 14.4248 Acc: 0.1817
+test  Loss: 14.4057 Acc: 0.1571
+Epoch 5/20
+----------
+train Loss: 14.3091 Acc: 0.1879
+test  Loss: 14.6122 Acc: 0.1577
+Epoch 6/20
+----------
+train Loss: 14.2974 Acc: 0.1906
+test  Loss: 14.2283 Acc: 0.1509
+Epoch 7/20
+----------
+train Loss: 14.2392 Acc: 0.2013
+test  Loss: 14.5797 Acc: 0.1494
+Epoch 8/20
+----------
+train Loss: 14.2822 Acc: 0.2020
+test  Loss: 14.4521 Acc: 0.1516
+Epoch 9/20
+----------
+train Loss: 14.3932 Acc: 0.2080
+test  Loss: 14.3391 Acc: 0.1474
+Epoch 10/20
+----------
+train Loss: 14.3401 Acc: 0.2407
+test  Loss: 14.3125 Acc: 0.1441
+Epoch 11/20
+----------
+train Loss: 14.1435 Acc: 0.2593
+test  Loss: 14.5489 Acc: 0.1483
+Epoch 12/20
+----------
+train Loss: 14.2333 Acc: 0.2710
+test  Loss: 14.7183 Acc: 0.1454
+Epoch 13/20
+----------
+train Loss: 14.1051 Acc: 0.2809
+test  Loss: 14.8804 Acc: 0.1432
+Epoch 14/20
+----------
+train Loss: 14.0398 Acc: 0.2895
+test  Loss: 14.4003 Acc: 0.1404
+Epoch 15/20
+----------
+train Loss: 14.1724 Acc: 0.3025
+test  Loss: 14.5371 Acc: 0.1422
+Epoch 16/20
+----------
+train Loss: 14.0866 Acc: 0.3139
+test  Loss: 14.6672 Acc: 0.1452
+Epoch 17/20
+----------
+train Loss: 14.0527 Acc: 0.3225
+test  Loss: 14.9832 Acc: 0.1418
+Epoch 18/20
+----------
+train Loss: 14.0017 Acc: 0.3367
+test  Loss: 14.6911 Acc: 0.1402
+Epoch 19/20
+----------
+train Loss: 13.9243 Acc: 0.3460
+test  Loss: 14.8795 Acc: 0.1388
+Epoch 20/20
+----------
+train Loss: 13.7179 Acc: 0.4185
+test  Loss: 15.1082 Acc: 0.1334
+Training complete in 21m 11s
+Best val Acc: 0.159000
+Accuracy of the network on the 10000 test images: 15.00
+Accuracy of horse : 1.80
+Accuracy of car   : 13.00
+Accuracy of deer  : 13.10
+Accuracy of dog   : 17.70
+Accuracy of frog  : 26.30
+Accuracy of cat   : 5.10
+Accuracy of plane : 32.00
+Accuracy of truck : 15.80
+Accuracy of ship  : 23.80
+Accuracy of bird  : 10.40
+Checkpoint saved
+Accuracy = 15.00
+Previous accuracy = 15.00
+Training with the following hyper-patameters:
+learning-rate = 0.01
+batch-size = 64
+momentum = 0.9
+Files already downloaded and verified
+Files already downloaded and verified
+Epoch 1/20
+----------
+train Loss: 14.4561 Acc: 0.1889
+test  Loss: 14.2971 Acc: 0.1551
+Epoch 2/20
+----------
+train Loss: 14.2489 Acc: 0.1949
+test  Loss: 14.2938 Acc: 0.1558
+Epoch 3/20
+----------
+train Loss: 14.3579 Acc: 0.2027
+test  Loss: 14.1592 Acc: 0.1512
+Epoch 4/20
+----------
+train Loss: 14.2279 Acc: 0.2097
+test  Loss: 14.3287 Acc: 0.1483
+Epoch 5/20
+----------
+train Loss: 14.3073 Acc: 0.2157
+test  Loss: 14.3527 Acc: 0.1530
+Epoch 6/20
+----------
+train Loss: 14.4758 Acc: 0.2230
+test  Loss: 14.4775 Acc: 0.1461
+Epoch 7/20
+----------
+train Loss: 14.4279 Acc: 0.2348
+test  Loss: 14.4741 Acc: 0.1471
+Epoch 8/20
+----------
+train Loss: 14.1296 Acc: 0.2453
+test  Loss: 14.3416 Acc: 0.1443
+Epoch 9/20
+----------
+train Loss: 14.2250 Acc: 0.2490
+test  Loss: 14.5026 Acc: 0.1438
+Epoch 10/20
+----------
+train Loss: 14.1742 Acc: 0.2916
+test  Loss: 14.4723 Acc: 0.1419
+Epoch 11/20
+----------

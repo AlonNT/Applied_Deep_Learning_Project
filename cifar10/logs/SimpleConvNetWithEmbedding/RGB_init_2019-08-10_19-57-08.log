@@ -1,0 +1,39 @@
+Using device: cuda:0
+################################################################
+Training with the following hyper-parameters:
+learning-rate = 0.001
+batch-size = 16
+momentum = 0.9
+weight-decay = 0.01
+Files already downloaded and verified
+Files already downloaded and verified
+Epoch 1/50
+----------
+train Loss: 2.2729 Acc: 0.1310 Embedding-Loss: 0.0000 Classification-Loss: 2.2729
+test  Loss: 2.0999 Acc: 0.2224 Embedding-Loss: 0.0000 Classification-Loss: 2.0999
+Epoch 2/50
+----------
+train Loss: 1.8655 Acc: 0.3118 Embedding-Loss: 0.0000 Classification-Loss: 1.8655
+test  Loss: 1.6817 Acc: 0.3755 Embedding-Loss: 0.0000 Classification-Loss: 1.6817
+Epoch 3/50
+----------
+train Loss: 1.5799 Acc: 0.4236 Embedding-Loss: 0.0000 Classification-Loss: 1.5799
+test  Loss: 1.4939 Acc: 0.4572 Embedding-Loss: 0.0000 Classification-Loss: 1.4939
+Epoch 4/50
+----------
+train Loss: 1.4629 Acc: 0.4692 Embedding-Loss: 0.0000 Classification-Loss: 1.4629
+test  Loss: 1.4212 Acc: 0.4843 Embedding-Loss: 0.0000 Classification-Loss: 1.4212
+Epoch 5/50
+----------
+train Loss: 1.3906 Acc: 0.4970 Embedding-Loss: 0.0000 Classification-Loss: 1.3906
+test  Loss: 1.3662 Acc: 0.5068 Embedding-Loss: 0.0000 Classification-Loss: 1.3662
+Epoch 6/50
+----------
+train Loss: 1.3321 Acc: 0.5205 Embedding-Loss: 0.0000 Classification-Loss: 1.3321
+test  Loss: 1.3193 Acc: 0.5255 Embedding-Loss: 0.0000 Classification-Loss: 1.3193
+Epoch 7/50
+----------
+train Loss: 1.2773 Acc: 0.5399 Embedding-Loss: 0.0000 Classification-Loss: 1.2773
+test  Loss: 1.3856 Acc: 0.5029 Embedding-Loss: 0.0000 Classification-Loss: 1.3856
+Epoch 8/50
+----------

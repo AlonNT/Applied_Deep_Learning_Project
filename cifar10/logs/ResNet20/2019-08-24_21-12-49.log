@@ -1,0 +1,12 @@
+Started at 2019-08-24_21-12-52
+Using device: cuda:0
+Initializing the embedding layer with a random initialization (PyTorch default initialization).
+#################################################################################
+#################################################################################
+#################################################################################
+Training with the following hyper-parameters:
+learning-rate = 0.0001
+batch-size = 128
+momentum = 0.9
+weight-decay = 0.0
+#################################################################################

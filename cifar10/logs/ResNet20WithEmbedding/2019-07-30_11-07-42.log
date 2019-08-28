@@ -1,0 +1,642 @@
+Using device: cuda:0
+Training with the following hyper-parameters:
+learning-rate = 0.001
+batch-size = 16
+momentum = 0.9
+weight-decay = 0.0
+Files already downloaded and verified
+Files already downloaded and verified
+Epoch 1/10
+----------
+train Loss: 392.0214 Acc: 0.1010 Embedding-Loss: 389.7042 Classification-Loss: 2.3172
+test  Loss: 391.7732 Acc: 0.1136 Embedding-Loss: 389.4540 Classification-Loss: 2.3192
+Epoch 2/10
+----------
+train Loss: 392.1760 Acc: 0.1193 Embedding-Loss: 389.8825 Classification-Loss: 2.2935
+test  Loss: 391.1649 Acc: 0.1192 Embedding-Loss: 388.8703 Classification-Loss: 2.2946
+Epoch 3/10
+----------
+train Loss: 391.8744 Acc: 0.1359 Embedding-Loss: 389.5987 Classification-Loss: 2.2757
+test  Loss: 391.5717 Acc: 0.1288 Embedding-Loss: 389.2837 Classification-Loss: 2.2880
+Epoch 4/10
+----------
+train Loss: 391.7772 Acc: 0.1494 Embedding-Loss: 389.5237 Classification-Loss: 2.2535
+test  Loss: 391.6928 Acc: 0.1390 Embedding-Loss: 389.4300 Classification-Loss: 2.2628
+Epoch 5/10
+----------
+train Loss: 391.8172 Acc: 0.1612 Embedding-Loss: 389.5828 Classification-Loss: 2.2345
+test  Loss: 391.8176 Acc: 0.1452 Embedding-Loss: 389.5542 Classification-Loss: 2.2634
+Epoch 6/10
+----------
+train Loss: 391.4848 Acc: 0.1713 Embedding-Loss: 389.2680 Classification-Loss: 2.2168
+test  Loss: 392.1253 Acc: 0.1453 Embedding-Loss: 389.8599 Classification-Loss: 2.2654
+Epoch 7/10
+----------
+train Loss: 391.6641 Acc: 0.1835 Embedding-Loss: 389.4669 Classification-Loss: 2.1971
+test  Loss: 391.4581 Acc: 0.1493 Embedding-Loss: 389.2003 Classification-Loss: 2.2578
+Epoch 8/10
+----------
+train Loss: 391.8724 Acc: 0.1916 Embedding-Loss: 389.6956 Classification-Loss: 2.1769
+test  Loss: 391.5286 Acc: 0.1545 Embedding-Loss: 389.2583 Classification-Loss: 2.2703
+Epoch 9/10
+----------
+train Loss: 390.8548 Acc: 0.2061 Embedding-Loss: 388.7026 Classification-Loss: 2.1522
+test  Loss: 391.4408 Acc: 0.1537 Embedding-Loss: 389.1668 Classification-Loss: 2.2740
+Epoch 10/10
+----------
+train Loss: 391.0816 Acc: 0.2432 Embedding-Loss: 389.0007 Classification-Loss: 2.0809
+test  Loss: 391.3758 Acc: 0.1539 Embedding-Loss: 389.0554 Classification-Loss: 2.3203
+Training complete in 231m 49s
+Best val Acc: 0.154500
+Accuracy of the network on the 10000 test images: 15.00
+Accuracy of horse : 10.50
+Accuracy of car   : 5.00
+Accuracy of deer  : 55.50
+Accuracy of dog   : 0.80
+Accuracy of frog  : 4.50
+Accuracy of cat   : 8.10
+Accuracy of plane : 30.70
+Accuracy of truck : 11.50
+Accuracy of ship  : 12.00
+Accuracy of bird  : 15.90
+Training with the following hyper-parameters:
+learning-rate = 0.001
+batch-size = 16
+momentum = 0.9
+weight-decay = 0.001
+Files already downloaded and verified
+Files already downloaded and verified
+Epoch 1/10
+----------
+train Loss: 392.1877 Acc: 0.1068 Embedding-Loss: 389.8748 Classification-Loss: 2.3129
+test  Loss: 391.5796 Acc: 0.1161 Embedding-Loss: 389.2742 Classification-Loss: 2.3053
+Epoch 2/10
+----------
+train Loss: 391.9141 Acc: 0.1285 Embedding-Loss: 389.6308 Classification-Loss: 2.2833
+test  Loss: 391.1180 Acc: 0.1243 Embedding-Loss: 388.8335 Classification-Loss: 2.2845
+Epoch 3/10
+----------
+train Loss: 391.8973 Acc: 0.1419 Embedding-Loss: 389.6381 Classification-Loss: 2.2592
+test  Loss: 392.3312 Acc: 0.1358 Embedding-Loss: 390.0577 Classification-Loss: 2.2735
+Epoch 4/10
+----------
+train Loss: 391.5916 Acc: 0.1558 Embedding-Loss: 389.3512 Classification-Loss: 2.2404
+test  Loss: 391.3914 Acc: 0.1409 Embedding-Loss: 389.1084 Classification-Loss: 2.2830
+Epoch 5/10
+----------
+train Loss: 391.5771 Acc: 0.1652 Embedding-Loss: 389.3549 Classification-Loss: 2.2222
+test  Loss: 391.9178 Acc: 0.1463 Embedding-Loss: 389.6504 Classification-Loss: 2.2673
+Epoch 6/10
+----------
+train Loss: 391.0127 Acc: 0.1759 Embedding-Loss: 388.8086 Classification-Loss: 2.2040
+test  Loss: 391.2518 Acc: 0.1518 Embedding-Loss: 389.0019 Classification-Loss: 2.2499
+Epoch 7/10
+----------
+train Loss: 391.8727 Acc: 0.1863 Embedding-Loss: 389.6844 Classification-Loss: 2.1883
+test  Loss: 391.0588 Acc: 0.1514 Embedding-Loss: 388.8022 Classification-Loss: 2.2566
+Epoch 8/10
+----------
+train Loss: 391.0987 Acc: 0.1972 Embedding-Loss: 388.9324 Classification-Loss: 2.1663
+test  Loss: 391.1761 Acc: 0.1461 Embedding-Loss: 388.9059 Classification-Loss: 2.2703
+Epoch 9/10
+----------
+train Loss: 391.3543 Acc: 0.2093 Embedding-Loss: 389.2041 Classification-Loss: 2.1503
+test  Loss: 392.5711 Acc: 0.1433 Embedding-Loss: 390.2734 Classification-Loss: 2.2977
+Epoch 10/10
+----------
+train Loss: 390.8945 Acc: 0.2448 Embedding-Loss: 388.8148 Classification-Loss: 2.0797
+test  Loss: 391.1028 Acc: 0.1470 Embedding-Loss: 388.7880 Classification-Loss: 2.3148
+Training complete in 233m 33s
+Best val Acc: 0.151800
+Accuracy of the network on the 10000 test images: 15.00
+Accuracy of horse : 2.90
+Accuracy of car   : 9.00
+Accuracy of deer  : 16.20
+Accuracy of dog   : 7.10
+Accuracy of frog  : 20.30
+Accuracy of cat   : 2.70
+Accuracy of plane : 31.40
+Accuracy of truck : 23.60
+Accuracy of ship  : 28.90
+Accuracy of bird  : 9.70
+Training with the following hyper-parameters:
+learning-rate = 0.001
+batch-size = 16
+momentum = 0.9
+weight-decay = 0.005
+Files already downloaded and verified
+Files already downloaded and verified
+Epoch 1/10
+----------
+train Loss: 391.8847 Acc: 0.1011 Embedding-Loss: 389.5664 Classification-Loss: 2.3183
+test  Loss: 391.8252 Acc: 0.1007 Embedding-Loss: 389.5074 Classification-Loss: 2.3178
+Epoch 2/10
+----------
+train Loss: 391.4792 Acc: 0.1162 Embedding-Loss: 389.1797 Classification-Loss: 2.2996
+test  Loss: 391.7842 Acc: 0.1220 Embedding-Loss: 389.4799 Classification-Loss: 2.3043
+Epoch 3/10
+----------
+train Loss: 391.9045 Acc: 0.1270 Embedding-Loss: 389.6209 Classification-Loss: 2.2835
+test  Loss: 391.9567 Acc: 0.1324 Embedding-Loss: 389.6619 Classification-Loss: 2.2948
+Epoch 4/10
+----------
+train Loss: 391.9242 Acc: 0.1423 Embedding-Loss: 389.6583 Classification-Loss: 2.2659
+test  Loss: 391.3323 Acc: 0.1331 Embedding-Loss: 389.0469 Classification-Loss: 2.2854
+Epoch 5/10
+----------
+train Loss: 391.6667 Acc: 0.1530 Embedding-Loss: 389.4162 Classification-Loss: 2.2505
+test  Loss: 391.4490 Acc: 0.1318 Embedding-Loss: 389.1661 Classification-Loss: 2.2829
+Epoch 6/10
+----------
+train Loss: 391.4007 Acc: 0.1626 Embedding-Loss: 389.1689 Classification-Loss: 2.2319
+test  Loss: 392.0030 Acc: 0.1379 Embedding-Loss: 389.7268 Classification-Loss: 2.2762
+Epoch 7/10
+----------
+train Loss: 391.4157 Acc: 0.1745 Embedding-Loss: 389.2010 Classification-Loss: 2.2147
+test  Loss: 391.4086 Acc: 0.1407 Embedding-Loss: 389.1365 Classification-Loss: 2.2721
+Epoch 8/10
+----------
+train Loss: 391.7793 Acc: 0.1861 Embedding-Loss: 389.5830 Classification-Loss: 2.1963
+test  Loss: 391.2273 Acc: 0.1471 Embedding-Loss: 388.9532 Classification-Loss: 2.2741
+Epoch 9/10
+----------
+train Loss: 391.4550 Acc: 0.1983 Embedding-Loss: 389.2789 Classification-Loss: 2.1761
+test  Loss: 390.5839 Acc: 0.1479 Embedding-Loss: 388.3051 Classification-Loss: 2.2788
+Epoch 10/10
+----------
+train Loss: 391.4650 Acc: 0.2282 Embedding-Loss: 389.3564 Classification-Loss: 2.1086
+test  Loss: 392.2241 Acc: 0.1412 Embedding-Loss: 389.9029 Classification-Loss: 2.3211
+Training complete in 230m 58s
+Best val Acc: 0.147900
+Accuracy of the network on the 10000 test images: 14.00
+Accuracy of horse : 12.80
+Accuracy of car   : 22.80
+Accuracy of deer  : 21.50
+Accuracy of dog   : 7.10
+Accuracy of frog  : 9.00
+Accuracy of cat   : 12.90
+Accuracy of plane : 25.30
+Accuracy of truck : 14.60
+Accuracy of ship  : 13.30
+Accuracy of bird  : 8.60
+Training with the following hyper-parameters:
+learning-rate = 0.001
+batch-size = 16
+momentum = 0.9
+weight-decay = 0.01
+Files already downloaded and verified
+Files already downloaded and verified
+Epoch 1/10
+----------
+train Loss: 392.2163 Acc: 0.1028 Embedding-Loss: 389.8980 Classification-Loss: 2.3184
+test  Loss: 391.6594 Acc: 0.1013 Embedding-Loss: 389.3479 Classification-Loss: 2.3115
+Epoch 2/10
+----------
+train Loss: 392.1679 Acc: 0.1136 Embedding-Loss: 389.8618 Classification-Loss: 2.3061
+test  Loss: 392.1271 Acc: 0.1111 Embedding-Loss: 389.8132 Classification-Loss: 2.3139
+Epoch 3/10
+----------
+train Loss: 391.6710 Acc: 0.1286 Embedding-Loss: 389.3821 Classification-Loss: 2.2889
+test  Loss: 390.6672 Acc: 0.1220 Embedding-Loss: 388.3778 Classification-Loss: 2.2894
+Epoch 4/10
+----------
+train Loss: 391.8033 Acc: 0.1398 Embedding-Loss: 389.5319 Classification-Loss: 2.2715
+test  Loss: 391.0319 Acc: 0.1296 Embedding-Loss: 388.7505 Classification-Loss: 2.2814
+Epoch 5/10
+----------
+train Loss: 391.4694 Acc: 0.1503 Embedding-Loss: 389.2137 Classification-Loss: 2.2557
+test  Loss: 392.3232 Acc: 0.1351 Embedding-Loss: 390.0495 Classification-Loss: 2.2737
+Epoch 6/10
+----------
+train Loss: 391.1950 Acc: 0.1606 Embedding-Loss: 388.9582 Classification-Loss: 2.2368
+test  Loss: 390.6800 Acc: 0.1392 Embedding-Loss: 388.4037 Classification-Loss: 2.2763
+Epoch 7/10
+----------
+train Loss: 391.5506 Acc: 0.1754 Embedding-Loss: 389.3359 Classification-Loss: 2.2147
+test  Loss: 390.9853 Acc: 0.1452 Embedding-Loss: 388.7149 Classification-Loss: 2.2704
+Epoch 8/10
+----------
+train Loss: 391.5365 Acc: 0.1885 Embedding-Loss: 389.3420 Classification-Loss: 2.1945
+test  Loss: 390.8855 Acc: 0.1448 Embedding-Loss: 388.6106 Classification-Loss: 2.2750
+Epoch 9/10
+----------
+train Loss: 390.9604 Acc: 0.2004 Embedding-Loss: 388.7875 Classification-Loss: 2.1729
+test  Loss: 392.0201 Acc: 0.1410 Embedding-Loss: 389.7256 Classification-Loss: 2.2945
+Epoch 10/10
+----------
+train Loss: 390.9137 Acc: 0.2391 Embedding-Loss: 388.8120 Classification-Loss: 2.1018
+test  Loss: 390.7542 Acc: 0.1437 Embedding-Loss: 388.4403 Classification-Loss: 2.3139
+Training complete in 231m 41s
+Best val Acc: 0.145200
+Accuracy of the network on the 10000 test images: 14.00
+Accuracy of horse : 6.20
+Accuracy of car   : 12.80
+Accuracy of deer  : 9.40
+Accuracy of dog   : 17.80
+Accuracy of frog  : 20.50
+Accuracy of cat   : 0.90
+Accuracy of plane : 27.80
+Accuracy of truck : 3.10
+Accuracy of ship  : 33.80
+Accuracy of bird  : 12.90
+Training with the following hyper-parameters:
+learning-rate = 0.001
+batch-size = 16
+momentum = 0.9
+weight-decay = 0.02
+Files already downloaded and verified
+Files already downloaded and verified
+Epoch 1/10
+----------
+train Loss: 391.9446 Acc: 0.1050 Embedding-Loss: 389.6289 Classification-Loss: 2.3157
+test  Loss: 392.5953 Acc: 0.1059 Embedding-Loss: 390.2792 Classification-Loss: 2.3161
+Epoch 2/10
+----------
+train Loss: 392.1102 Acc: 0.1188 Embedding-Loss: 389.8106 Classification-Loss: 2.2996
+test  Loss: 391.7611 Acc: 0.1255 Embedding-Loss: 389.4723 Classification-Loss: 2.2888
+Epoch 3/10
+----------
+train Loss: 391.9242 Acc: 0.1351 Embedding-Loss: 389.6459 Classification-Loss: 2.2783
+test  Loss: 391.9402 Acc: 0.1331 Embedding-Loss: 389.6625 Classification-Loss: 2.2777
+Epoch 4/10
+----------
+train Loss: 391.6325 Acc: 0.1449 Embedding-Loss: 389.3714 Classification-Loss: 2.2611
+test  Loss: 391.7597 Acc: 0.1315 Embedding-Loss: 389.4833 Classification-Loss: 2.2764
+Epoch 5/10
+----------
+train Loss: 392.0130 Acc: 0.1548 Embedding-Loss: 389.7691 Classification-Loss: 2.2438
+test  Loss: 392.2672 Acc: 0.1312 Embedding-Loss: 389.9853 Classification-Loss: 2.2819
+Epoch 6/10
+----------
+train Loss: 391.4044 Acc: 0.1657 Embedding-Loss: 389.1750 Classification-Loss: 2.2294
+test  Loss: 391.3276 Acc: 0.1315 Embedding-Loss: 389.0479 Classification-Loss: 2.2797
+Epoch 7/10
+----------
+train Loss: 391.2778 Acc: 0.1779 Embedding-Loss: 389.0667 Classification-Loss: 2.2111
+test  Loss: 391.5128 Acc: 0.1428 Embedding-Loss: 389.2247 Classification-Loss: 2.2881
+Epoch 8/10
+----------
+train Loss: 391.4299 Acc: 0.1881 Embedding-Loss: 389.2375 Classification-Loss: 2.1924
+test  Loss: 391.6697 Acc: 0.1330 Embedding-Loss: 389.3849 Classification-Loss: 2.2848
+Epoch 9/10
+----------
+train Loss: 391.0723 Acc: 0.2002 Embedding-Loss: 388.9013 Classification-Loss: 2.1710
+test  Loss: 391.8752 Acc: 0.1391 Embedding-Loss: 389.5885 Classification-Loss: 2.2867
+Epoch 10/10
+----------
+train Loss: 391.1261 Acc: 0.2414 Embedding-Loss: 389.0297 Classification-Loss: 2.0964
+test  Loss: 391.7835 Acc: 0.1429 Embedding-Loss: 389.4496 Classification-Loss: 2.3340
+Training complete in 233m 3s
+Best val Acc: 0.142900
+Accuracy of the network on the 10000 test images: 14.00
+Accuracy of horse : 9.90
+Accuracy of car   : 14.20
+Accuracy of deer  : 11.20
+Accuracy of dog   : 7.60
+Accuracy of frog  : 9.90
+Accuracy of cat   : 13.90
+Accuracy of plane : 30.10
+Accuracy of truck : 18.00
+Accuracy of ship  : 17.20
+Accuracy of bird  : 10.90
+Training with the following hyper-parameters:
+learning-rate = 0.001
+batch-size = 16
+momentum = 0.9
+weight-decay = 0.05
+Files already downloaded and verified
+Files already downloaded and verified
+Epoch 1/10
+----------
+train Loss: 391.7850 Acc: 0.0978 Embedding-Loss: 389.4656 Classification-Loss: 2.3194
+test  Loss: 392.5596 Acc: 0.1069 Embedding-Loss: 390.2449 Classification-Loss: 2.3148
+Epoch 2/10
+----------
+train Loss: 391.7359 Acc: 0.1117 Embedding-Loss: 389.4321 Classification-Loss: 2.3038
+test  Loss: 391.4990 Acc: 0.1186 Embedding-Loss: 389.1680 Classification-Loss: 2.3309
+Epoch 3/10
+----------
+train Loss: 392.1352 Acc: 0.1266 Embedding-Loss: 389.8490 Classification-Loss: 2.2862
+test  Loss: 392.1464 Acc: 0.1366 Embedding-Loss: 389.8545 Classification-Loss: 2.2919
+Epoch 4/10
+----------
+train Loss: 391.4980 Acc: 0.1443 Embedding-Loss: 389.2377 Classification-Loss: 2.2603
+test  Loss: 391.8139 Acc: 0.1334 Embedding-Loss: 389.5307 Classification-Loss: 2.2832
+Epoch 5/10
+----------
+train Loss: 391.3176 Acc: 0.1576 Embedding-Loss: 389.0795 Classification-Loss: 2.2380
+test  Loss: 392.1777 Acc: 0.1438 Embedding-Loss: 389.9243 Classification-Loss: 2.2534
+Epoch 6/10
+----------
+train Loss: 391.4050 Acc: 0.1741 Embedding-Loss: 389.1886 Classification-Loss: 2.2164
+test  Loss: 391.5441 Acc: 0.1510 Embedding-Loss: 389.2987 Classification-Loss: 2.2453
+Epoch 7/10
+----------
+train Loss: 391.4971 Acc: 0.1835 Embedding-Loss: 389.2994 Classification-Loss: 2.1977
+test  Loss: 391.4331 Acc: 0.1551 Embedding-Loss: 389.1772 Classification-Loss: 2.2559
+Epoch 8/10
+----------
+train Loss: 391.2293 Acc: 0.1941 Embedding-Loss: 389.0500 Classification-Loss: 2.1793
+test  Loss: 391.7245 Acc: 0.1563 Embedding-Loss: 389.4798 Classification-Loss: 2.2447
+Epoch 9/10
+----------
+train Loss: 391.3332 Acc: 0.2016 Embedding-Loss: 389.1722 Classification-Loss: 2.1609
+test  Loss: 391.3681 Acc: 0.1521 Embedding-Loss: 389.0978 Classification-Loss: 2.2703
+Epoch 10/10
+----------
+train Loss: 391.3110 Acc: 0.2401 Embedding-Loss: 389.2140 Classification-Loss: 2.0969
+test  Loss: 391.6642 Acc: 0.1556 Embedding-Loss: 389.3767 Classification-Loss: 2.2874
+Training complete in 230m 36s
+Best val Acc: 0.156300
+Accuracy of the network on the 10000 test images: 15.00
+Accuracy of horse : 7.90
+Accuracy of car   : 8.90
+Accuracy of deer  : 32.60
+Accuracy of dog   : 1.30
+Accuracy of frog  : 22.10
+Accuracy of cat   : 14.20
+Accuracy of plane : 32.50
+Accuracy of truck : 18.80
+Accuracy of ship  : 12.20
+Accuracy of bird  : 5.80
+Training with the following hyper-parameters:
+learning-rate = 0.001
+batch-size = 32
+momentum = 0.9
+weight-decay = 0.0
+Files already downloaded and verified
+Files already downloaded and verified
+Epoch 1/10
+----------
+train Loss: 392.6155 Acc: 0.1018 Embedding-Loss: 390.3011 Classification-Loss: 2.3144
+test  Loss: 391.1633 Acc: 0.1040 Embedding-Loss: 388.8526 Classification-Loss: 2.3106
+Epoch 2/10
+----------
+train Loss: 392.4168 Acc: 0.1150 Embedding-Loss: 390.1157 Classification-Loss: 2.3011
+test  Loss: 392.7855 Acc: 0.1056 Embedding-Loss: 390.4716 Classification-Loss: 2.3139
+Epoch 3/10
+----------
+train Loss: 391.8886 Acc: 0.1270 Embedding-Loss: 389.5971 Classification-Loss: 2.2915
+test  Loss: 391.8986 Acc: 0.1105 Embedding-Loss: 389.5850 Classification-Loss: 2.3136
+Epoch 4/10
+----------
+train Loss: 391.9905 Acc: 0.1386 Embedding-Loss: 389.7104 Classification-Loss: 2.2801
+test  Loss: 392.8021 Acc: 0.1111 Embedding-Loss: 390.4930 Classification-Loss: 2.3092
+Epoch 5/10
+----------
+train Loss: 391.7698 Acc: 0.1468 Embedding-Loss: 389.5031 Classification-Loss: 2.2666
+test  Loss: 391.6313 Acc: 0.1199 Embedding-Loss: 389.3253 Classification-Loss: 2.3060
+Epoch 6/10
+----------
+train Loss: 391.6699 Acc: 0.1571 Embedding-Loss: 389.4156 Classification-Loss: 2.2543
+test  Loss: 391.9732 Acc: 0.1227 Embedding-Loss: 389.6641 Classification-Loss: 2.3091
+Epoch 7/10
+----------
+train Loss: 392.0127 Acc: 0.1673 Embedding-Loss: 389.7729 Classification-Loss: 2.2398
+test  Loss: 391.7105 Acc: 0.1304 Embedding-Loss: 389.4028 Classification-Loss: 2.3077
+Epoch 8/10
+----------
+train Loss: 391.7835 Acc: 0.1746 Embedding-Loss: 389.5588 Classification-Loss: 2.2247
+test  Loss: 392.1836 Acc: 0.1194 Embedding-Loss: 389.8637 Classification-Loss: 2.3199
+Epoch 9/10
+----------
+train Loss: 392.0082 Acc: 0.1881 Embedding-Loss: 389.8025 Classification-Loss: 2.2057
+test  Loss: 392.8775 Acc: 0.1200 Embedding-Loss: 390.5522 Classification-Loss: 2.3253
+Epoch 10/10
+----------
+train Loss: 391.4405 Acc: 0.2202 Embedding-Loss: 389.2895 Classification-Loss: 2.1510
+test  Loss: 390.7619 Acc: 0.1209 Embedding-Loss: 388.4065 Classification-Loss: 2.3554
+Training complete in 117m 29s
+Best val Acc: 0.130400
+Accuracy of the network on the 10000 test images: 13.00
+Accuracy of horse : 5.80
+Accuracy of car   : 4.50
+Accuracy of deer  : 5.40
+Accuracy of dog   : 11.80
+Accuracy of frog  : 11.60
+Accuracy of cat   : 16.90
+Accuracy of plane : 33.90
+Accuracy of truck : 2.30
+Accuracy of ship  : 26.50
+Accuracy of bird  : 11.70
+Training with the following hyper-parameters:
+learning-rate = 0.001
+batch-size = 32
+momentum = 0.9
+weight-decay = 0.001
+Files already downloaded and verified
+Files already downloaded and verified
+Epoch 1/10
+----------
+train Loss: 392.4543 Acc: 0.1018 Embedding-Loss: 390.1391 Classification-Loss: 2.3152
+test  Loss: 391.6819 Acc: 0.1008 Embedding-Loss: 389.3701 Classification-Loss: 2.3119
+Epoch 2/10
+----------
+train Loss: 392.0504 Acc: 0.1141 Embedding-Loss: 389.7480 Classification-Loss: 2.3024
+test  Loss: 391.7622 Acc: 0.1042 Embedding-Loss: 389.4511 Classification-Loss: 2.3110
+Epoch 3/10
+----------
+train Loss: 392.2943 Acc: 0.1243 Embedding-Loss: 390.0013 Classification-Loss: 2.2931
+test  Loss: 390.5162 Acc: 0.1031 Embedding-Loss: 388.2068 Classification-Loss: 2.3094
+Epoch 4/10
+----------
+train Loss: 391.2241 Acc: 0.1351 Embedding-Loss: 388.9407 Classification-Loss: 2.2834
+test  Loss: 392.1016 Acc: 0.1079 Embedding-Loss: 389.7910 Classification-Loss: 2.3106
+Epoch 5/10
+----------
+train Loss: 392.3991 Acc: 0.1438 Embedding-Loss: 390.1274 Classification-Loss: 2.2717
+test  Loss: 391.2077 Acc: 0.1118 Embedding-Loss: 388.8983 Classification-Loss: 2.3094
+Epoch 6/10
+----------
+train Loss: 391.3951 Acc: 0.1566 Embedding-Loss: 389.1368 Classification-Loss: 2.2583
+test  Loss: 391.4739 Acc: 0.1093 Embedding-Loss: 389.1612 Classification-Loss: 2.3126
+Epoch 7/10
+----------
+train Loss: 391.6236 Acc: 0.1649 Embedding-Loss: 389.3779 Classification-Loss: 2.2456
+test  Loss: 390.4447 Acc: 0.1166 Embedding-Loss: 388.1258 Classification-Loss: 2.3189
+Epoch 8/10
+----------
+train Loss: 391.9059 Acc: 0.1775 Embedding-Loss: 389.6788 Classification-Loss: 2.2272
+test  Loss: 393.0747 Acc: 0.1168 Embedding-Loss: 390.7439 Classification-Loss: 2.3308
+Epoch 9/10
+----------
+train Loss: 391.4984 Acc: 0.1860 Embedding-Loss: 389.2872 Classification-Loss: 2.2113
+test  Loss: 392.4947 Acc: 0.1206 Embedding-Loss: 390.1650 Classification-Loss: 2.3297
+Epoch 10/10
+----------
+train Loss: 391.2630 Acc: 0.2232 Embedding-Loss: 389.1127 Classification-Loss: 2.1503
+test  Loss: 392.6376 Acc: 0.1162 Embedding-Loss: 390.2802 Classification-Loss: 2.3574
+Training complete in 116m 32s
+Best val Acc: 0.120600
+Accuracy of the network on the 10000 test images: 12.00
+Accuracy of horse : 7.80
+Accuracy of car   : 5.70
+Accuracy of deer  : 12.80
+Accuracy of dog   : 8.40
+Accuracy of frog  : 15.40
+Accuracy of cat   : 11.40
+Accuracy of plane : 24.60
+Accuracy of truck : 17.50
+Accuracy of ship  : 7.90
+Accuracy of bird  : 9.10
+Training with the following hyper-parameters:
+learning-rate = 0.001
+batch-size = 32
+momentum = 0.9
+weight-decay = 0.005
+Files already downloaded and verified
+Files already downloaded and verified
+Epoch 1/10
+----------
+train Loss: 392.7330 Acc: 0.1068 Embedding-Loss: 390.4221 Classification-Loss: 2.3109
+test  Loss: 391.6189 Acc: 0.1136 Embedding-Loss: 389.3128 Classification-Loss: 2.3061
+Epoch 2/10
+----------
+train Loss: 391.5697 Acc: 0.1243 Embedding-Loss: 389.2804 Classification-Loss: 2.2893
+test  Loss: 393.4937 Acc: 0.1158 Embedding-Loss: 391.1990 Classification-Loss: 2.2947
+Epoch 3/10
+----------
+train Loss: 391.9828 Acc: 0.1353 Embedding-Loss: 389.7063 Classification-Loss: 2.2765
+test  Loss: 392.5138 Acc: 0.1207 Embedding-Loss: 390.2238 Classification-Loss: 2.2900
+Epoch 4/10
+----------
+train Loss: 392.1075 Acc: 0.1462 Embedding-Loss: 389.8444 Classification-Loss: 2.2632
+test  Loss: 392.5052 Acc: 0.1312 Embedding-Loss: 390.2282 Classification-Loss: 2.2771
+Epoch 5/10
+----------
+train Loss: 392.2321 Acc: 0.1561 Embedding-Loss: 389.9875 Classification-Loss: 2.2447
+test  Loss: 390.9301 Acc: 0.1359 Embedding-Loss: 388.6513 Classification-Loss: 2.2788
+Epoch 6/10
+----------
+train Loss: 391.6926 Acc: 0.1678 Embedding-Loss: 389.4695 Classification-Loss: 2.2231
+test  Loss: 391.5161 Acc: 0.1476 Embedding-Loss: 389.2594 Classification-Loss: 2.2567
+Epoch 7/10
+----------
+train Loss: 391.6534 Acc: 0.1783 Embedding-Loss: 389.4496 Classification-Loss: 2.2038
+test  Loss: 391.1667 Acc: 0.1532 Embedding-Loss: 388.9138 Classification-Loss: 2.2529
+Epoch 8/10
+----------
+train Loss: 391.6096 Acc: 0.1871 Embedding-Loss: 389.4220 Classification-Loss: 2.1876
+test  Loss: 392.4586 Acc: 0.1461 Embedding-Loss: 390.1973 Classification-Loss: 2.2614
+Epoch 9/10
+----------
+train Loss: 391.0469 Acc: 0.1990 Embedding-Loss: 388.8783 Classification-Loss: 2.1687
+test  Loss: 391.2059 Acc: 0.1547 Embedding-Loss: 388.9460 Classification-Loss: 2.2598
+Epoch 10/10
+----------
+train Loss: 391.3216 Acc: 0.2249 Embedding-Loss: 389.1997 Classification-Loss: 2.1219
+test  Loss: 390.7643 Acc: 0.1519 Embedding-Loss: 388.4870 Classification-Loss: 2.2773
+Training complete in 116m 56s
+Best val Acc: 0.154700
+Accuracy of the network on the 10000 test images: 15.00
+Accuracy of horse : 5.90
+Accuracy of car   : 19.50
+Accuracy of deer  : 11.60
+Accuracy of dog   : 9.10
+Accuracy of frog  : 32.10
+Accuracy of cat   : 9.00
+Accuracy of plane : 28.70
+Accuracy of truck : 10.00
+Accuracy of ship  : 18.50
+Accuracy of bird  : 10.30
+Training with the following hyper-parameters:
+learning-rate = 0.001
+batch-size = 32
+momentum = 0.9
+weight-decay = 0.01
+Files already downloaded and verified
+Files already downloaded and verified
+Epoch 1/10
+----------
+train Loss: 392.5208 Acc: 0.1034 Embedding-Loss: 390.2095 Classification-Loss: 2.3112
+test  Loss: 391.7914 Acc: 0.1068 Embedding-Loss: 389.4871 Classification-Loss: 2.3043
+Epoch 2/10
+----------
+train Loss: 392.3384 Acc: 0.1217 Embedding-Loss: 390.0445 Classification-Loss: 2.2939
+test  Loss: 393.1698 Acc: 0.1140 Embedding-Loss: 390.8638 Classification-Loss: 2.3061
+Epoch 3/10
+----------
+train Loss: 391.6986 Acc: 0.1338 Embedding-Loss: 389.4173 Classification-Loss: 2.2813
+test  Loss: 390.4042 Acc: 0.1253 Embedding-Loss: 388.1145 Classification-Loss: 2.2896
+Epoch 4/10
+----------
+train Loss: 392.3146 Acc: 0.1435 Embedding-Loss: 390.0465 Classification-Loss: 2.2681
+test  Loss: 392.3659 Acc: 0.1289 Embedding-Loss: 390.0837 Classification-Loss: 2.2821
+Epoch 5/10
+----------
+train Loss: 392.3304 Acc: 0.1521 Embedding-Loss: 390.0763 Classification-Loss: 2.2541
+test  Loss: 392.1511 Acc: 0.1362 Embedding-Loss: 389.8799 Classification-Loss: 2.2712
+Epoch 6/10
+----------
+train Loss: 391.8882 Acc: 0.1610 Embedding-Loss: 389.6494 Classification-Loss: 2.2388
+test  Loss: 392.3084 Acc: 0.1399 Embedding-Loss: 390.0459 Classification-Loss: 2.2626
+Epoch 7/10
+----------
+train Loss: 391.9716 Acc: 0.1704 Embedding-Loss: 389.7506 Classification-Loss: 2.2210
+test  Loss: 391.3340 Acc: 0.1378 Embedding-Loss: 389.0665 Classification-Loss: 2.2676
+Epoch 8/10
+----------
+train Loss: 391.2876 Acc: 0.1818 Embedding-Loss: 389.0842 Classification-Loss: 2.2033
+test  Loss: 391.2750 Acc: 0.1441 Embedding-Loss: 389.0083 Classification-Loss: 2.2666
+Epoch 9/10
+----------
+train Loss: 391.1263 Acc: 0.1922 Embedding-Loss: 388.9413 Classification-Loss: 2.1850
+test  Loss: 391.7958 Acc: 0.1468 Embedding-Loss: 389.5260 Classification-Loss: 2.2698
+Epoch 10/10
+----------
+train Loss: 391.4842 Acc: 0.2202 Embedding-Loss: 389.3494 Classification-Loss: 2.1348
+test  Loss: 390.7315 Acc: 0.1458 Embedding-Loss: 388.4380 Classification-Loss: 2.2935
+Training complete in 117m 59s
+Best val Acc: 0.146800
+Accuracy of the network on the 10000 test images: 14.00
+Accuracy of horse : 13.90
+Accuracy of car   : 10.00
+Accuracy of deer  : 20.20
+Accuracy of dog   : 10.70
+Accuracy of frog  : 17.30
+Accuracy of cat   : 2.10
+Accuracy of plane : 43.80
+Accuracy of truck : 16.30
+Accuracy of ship  : 6.70
+Accuracy of bird  : 5.80
+Training with the following hyper-parameters:
+learning-rate = 0.001
+batch-size = 32
+momentum = 0.9
+weight-decay = 0.02
+Files already downloaded and verified
+Files already downloaded and verified
+Epoch 1/10
+----------
+train Loss: 391.8163 Acc: 0.1036 Embedding-Loss: 389.5027 Classification-Loss: 2.3135
+test  Loss: 393.1905 Acc: 0.1121 Embedding-Loss: 390.8812 Classification-Loss: 2.3093
+Epoch 2/10
+----------
+train Loss: 392.2994 Acc: 0.1205 Embedding-Loss: 390.0036 Classification-Loss: 2.2958
+test  Loss: 391.1797 Acc: 0.1145 Embedding-Loss: 388.8750 Classification-Loss: 2.3047
+Epoch 3/10
+----------
+train Loss: 391.6776 Acc: 0.1300 Embedding-Loss: 389.3943 Classification-Loss: 2.2833
+test  Loss: 390.7853 Acc: 0.1192 Embedding-Loss: 388.4829 Classification-Loss: 2.3024
+Epoch 4/10
+----------
+train Loss: 392.3491 Acc: 0.1413 Embedding-Loss: 390.0802 Classification-Loss: 2.2690
+test  Loss: 392.2570 Acc: 0.1262 Embedding-Loss: 389.9674 Classification-Loss: 2.2896
+Epoch 5/10
+----------
+train Loss: 391.7789 Acc: 0.1531 Embedding-Loss: 389.5261 Classification-Loss: 2.2528
+test  Loss: 391.8218 Acc: 0.1352 Embedding-Loss: 389.5423 Classification-Loss: 2.2795
+Epoch 6/10
+----------
+train Loss: 391.6185 Acc: 0.1625 Embedding-Loss: 389.3818 Classification-Loss: 2.2367
+test  Loss: 391.1876 Acc: 0.1357 Embedding-Loss: 388.9166 Classification-Loss: 2.2710
+Epoch 7/10
+----------
+train Loss: 391.6016 Acc: 0.1752 Embedding-Loss: 389.3827 Classification-Loss: 2.2190
+test  Loss: 391.8784 Acc: 0.1396 Embedding-Loss: 389.6061 Classification-Loss: 2.2723
+Epoch 8/10
+----------
+train Loss: 391.8834 Acc: 0.1824 Embedding-Loss: 389.6813 Classification-Loss: 2.2021
+test  Loss: 391.3112 Acc: 0.1484 Embedding-Loss: 389.0344 Classification-Loss: 2.2768
+Epoch 9/10
+----------

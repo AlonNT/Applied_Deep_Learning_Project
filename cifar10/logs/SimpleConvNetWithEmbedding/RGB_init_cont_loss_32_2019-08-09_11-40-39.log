@@ -1,0 +1,18 @@
+Using device: cuda:0
+Training with the following hyper-parameters:
+learning-rate = 0.001
+batch-size = 16
+momentum = 0.9
+weight-decay = 0.01
+Files already downloaded and verified
+Files already downloaded and verified
+Epoch 1/50
+----------
+train Loss: 3.1577 Acc: 0.1551 Embedding-Loss: 0.9245 Classification-Loss: 2.2332
+test  Loss: 2.9274 Acc: 0.2769 Embedding-Loss: 0.9318 Classification-Loss: 1.9957
+Epoch 2/50
+----------
+train Loss: 2.7279 Acc: 0.3503 Embedding-Loss: 0.9400 Classification-Loss: 1.7879
+test  Loss: 2.5481 Acc: 0.4191 Embedding-Loss: 0.9481 Classification-Loss: 1.5999
+Epoch 3/50
+----------

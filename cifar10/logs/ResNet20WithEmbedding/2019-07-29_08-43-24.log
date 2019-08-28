@@ -1,0 +1,12 @@
+Using device: cuda:0
+Training with the following hyper-patameters:
+learning-rate = 0.01
+batch-size = 16
+momentum = 0.9
+Files already downloaded and verified
+Files already downloaded and verified
+Epoch 1/10
+----------
+> /mobileye/algo_OBJD/alonnt/Documents/AppliedDeepLearning/project/cifar10/ContinuousnessLoss.py(66)forward()
+-> s = "stop here"
+(Pdb) 

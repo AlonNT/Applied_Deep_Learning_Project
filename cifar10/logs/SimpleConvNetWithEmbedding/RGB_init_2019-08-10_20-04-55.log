@@ -1,0 +1,2653 @@
+Using device: cuda:0
+################################################################
+Training with the following hyper-parameters:
+learning-rate = 0.001
+batch-size = 16
+momentum = 0.9
+weight-decay = 0.01
+Files already downloaded and verified
+Files already downloaded and verified
+Epoch 1/50
+----------
+train Loss: 2.1903 Acc: 0.1705 Embedding-Loss: 0.0000 Classification-Loss: 2.1903
+test  Loss: 1.9668 Acc: 0.2770 Embedding-Loss: 0.0000 Classification-Loss: 1.9668
+Epoch 2/50
+----------
+train Loss: 1.8338 Acc: 0.3332 Embedding-Loss: 0.0000 Classification-Loss: 1.8338
+test  Loss: 1.6482 Acc: 0.4093 Embedding-Loss: 0.0000 Classification-Loss: 1.6482
+Epoch 3/50
+----------
+train Loss: 1.5758 Acc: 0.4287 Embedding-Loss: 0.0000 Classification-Loss: 1.5758
+test  Loss: 1.4885 Acc: 0.4656 Embedding-Loss: 0.0000 Classification-Loss: 1.4885
+Epoch 4/50
+----------
+train Loss: 1.4440 Acc: 0.4801 Embedding-Loss: 0.0000 Classification-Loss: 1.4440
+test  Loss: 1.4101 Acc: 0.4963 Embedding-Loss: 0.0000 Classification-Loss: 1.4101
+Epoch 5/50
+----------
+train Loss: 1.3565 Acc: 0.5152 Embedding-Loss: 0.0000 Classification-Loss: 1.3565
+test  Loss: 1.3411 Acc: 0.5280 Embedding-Loss: 0.0000 Classification-Loss: 1.3411
+Epoch 6/50
+----------
+train Loss: 1.2962 Acc: 0.5390 Embedding-Loss: 0.0000 Classification-Loss: 1.2962
+test  Loss: 1.2835 Acc: 0.5464 Embedding-Loss: 0.0000 Classification-Loss: 1.2835
+Epoch 7/50
+----------
+train Loss: 1.2400 Acc: 0.5602 Embedding-Loss: 0.0000 Classification-Loss: 1.2400
+test  Loss: 1.2847 Acc: 0.5475 Embedding-Loss: 0.0000 Classification-Loss: 1.2847
+Epoch 8/50
+----------
+train Loss: 1.1913 Acc: 0.5805 Embedding-Loss: 0.0000 Classification-Loss: 1.1913
+test  Loss: 1.2208 Acc: 0.5711 Embedding-Loss: 0.0000 Classification-Loss: 1.2208
+Epoch 9/50
+----------
+train Loss: 1.1456 Acc: 0.5960 Embedding-Loss: 0.0000 Classification-Loss: 1.1456
+test  Loss: 1.2585 Acc: 0.5570 Embedding-Loss: 0.0000 Classification-Loss: 1.2585
+Epoch 10/50
+----------
+train Loss: 1.0609 Acc: 0.6267 Embedding-Loss: 0.0000 Classification-Loss: 1.0609
+test  Loss: 1.1751 Acc: 0.5896 Embedding-Loss: 0.0000 Classification-Loss: 1.1751
+Epoch 11/50
+----------
+train Loss: 1.0340 Acc: 0.6377 Embedding-Loss: 0.0000 Classification-Loss: 1.0340
+test  Loss: 1.1609 Acc: 0.5898 Embedding-Loss: 0.0000 Classification-Loss: 1.1609
+Epoch 12/50
+----------
+train Loss: 1.0076 Acc: 0.6464 Embedding-Loss: 0.0000 Classification-Loss: 1.0076
+test  Loss: 1.1490 Acc: 0.5952 Embedding-Loss: 0.0000 Classification-Loss: 1.1490
+Epoch 13/50
+----------
+train Loss: 0.9868 Acc: 0.6538 Embedding-Loss: 0.0000 Classification-Loss: 0.9868
+test  Loss: 1.1718 Acc: 0.5984 Embedding-Loss: 0.0000 Classification-Loss: 1.1718
+Epoch 14/50
+----------
+train Loss: 0.9649 Acc: 0.6625 Embedding-Loss: 0.0000 Classification-Loss: 0.9649
+test  Loss: 1.1533 Acc: 0.5992 Embedding-Loss: 0.0000 Classification-Loss: 1.1533
+Epoch 15/50
+----------
+train Loss: 0.9424 Acc: 0.6704 Embedding-Loss: 0.0000 Classification-Loss: 0.9424
+test  Loss: 1.1490 Acc: 0.6053 Embedding-Loss: 0.0000 Classification-Loss: 1.1490
+Epoch 16/50
+----------
+train Loss: 0.9206 Acc: 0.6764 Embedding-Loss: 0.0000 Classification-Loss: 0.9206
+test  Loss: 1.1594 Acc: 0.6015 Embedding-Loss: 0.0000 Classification-Loss: 1.1594
+Epoch 17/50
+----------
+train Loss: 0.9003 Acc: 0.6830 Embedding-Loss: 0.0000 Classification-Loss: 0.9003
+test  Loss: 1.1700 Acc: 0.5955 Embedding-Loss: 0.0000 Classification-Loss: 1.1700
+Epoch 18/50
+----------
+train Loss: 0.8787 Acc: 0.6931 Embedding-Loss: 0.0000 Classification-Loss: 0.8787
+test  Loss: 1.1925 Acc: 0.5986 Embedding-Loss: 0.0000 Classification-Loss: 1.1925
+Epoch 19/50
+----------
+train Loss: 0.8597 Acc: 0.6995 Embedding-Loss: 0.0000 Classification-Loss: 0.8597
+test  Loss: 1.2019 Acc: 0.5968 Embedding-Loss: 0.0000 Classification-Loss: 1.2019
+Epoch 20/50
+----------
+train Loss: 0.7907 Acc: 0.7271 Embedding-Loss: 0.0000 Classification-Loss: 0.7907
+test  Loss: 1.1779 Acc: 0.6076 Embedding-Loss: 0.0000 Classification-Loss: 1.1779
+Epoch 21/50
+----------
+train Loss: 0.7753 Acc: 0.7315 Embedding-Loss: 0.0000 Classification-Loss: 0.7753
+test  Loss: 1.1966 Acc: 0.6071 Embedding-Loss: 0.0000 Classification-Loss: 1.1966
+Epoch 22/50
+----------
+train Loss: 0.7619 Acc: 0.7345 Embedding-Loss: 0.0000 Classification-Loss: 0.7619
+test  Loss: 1.1844 Acc: 0.6098 Embedding-Loss: 0.0000 Classification-Loss: 1.1844
+Epoch 23/50
+----------
+train Loss: 0.7484 Acc: 0.7415 Embedding-Loss: 0.0000 Classification-Loss: 0.7484
+test  Loss: 1.2004 Acc: 0.6083 Embedding-Loss: 0.0000 Classification-Loss: 1.2004
+Epoch 24/50
+----------
+train Loss: 0.7335 Acc: 0.7461 Embedding-Loss: 0.0000 Classification-Loss: 0.7335
+test  Loss: 1.2197 Acc: 0.6041 Embedding-Loss: 0.0000 Classification-Loss: 1.2197
+Epoch 25/50
+----------
+train Loss: 0.7240 Acc: 0.7499 Embedding-Loss: 0.0000 Classification-Loss: 0.7240
+test  Loss: 1.2110 Acc: 0.6091 Embedding-Loss: 0.0000 Classification-Loss: 1.2110
+Epoch 26/50
+----------
+train Loss: 0.7098 Acc: 0.7548 Embedding-Loss: 0.0000 Classification-Loss: 0.7098
+test  Loss: 1.2441 Acc: 0.6032 Embedding-Loss: 0.0000 Classification-Loss: 1.2441
+Epoch 27/50
+----------
+train Loss: 0.6977 Acc: 0.7591 Embedding-Loss: 0.0000 Classification-Loss: 0.6977
+test  Loss: 1.2346 Acc: 0.6075 Embedding-Loss: 0.0000 Classification-Loss: 1.2346
+Epoch 28/50
+----------
+train Loss: 0.6859 Acc: 0.7618 Embedding-Loss: 0.0000 Classification-Loss: 0.6859
+test  Loss: 1.2411 Acc: 0.6083 Embedding-Loss: 0.0000 Classification-Loss: 1.2411
+Epoch 29/50
+----------
+train Loss: 0.6717 Acc: 0.7666 Embedding-Loss: 0.0000 Classification-Loss: 0.6717
+test  Loss: 1.2736 Acc: 0.6012 Embedding-Loss: 0.0000 Classification-Loss: 1.2736
+Epoch 30/50
+----------
+train Loss: 0.6250 Acc: 0.7863 Embedding-Loss: 0.0000 Classification-Loss: 0.6250
+test  Loss: 1.2830 Acc: 0.6053 Embedding-Loss: 0.0000 Classification-Loss: 1.2830
+Epoch 31/50
+----------
+train Loss: 0.6144 Acc: 0.7906 Embedding-Loss: 0.0000 Classification-Loss: 0.6144
+test  Loss: 1.2789 Acc: 0.6085 Embedding-Loss: 0.0000 Classification-Loss: 1.2789
+Epoch 32/50
+----------
+train Loss: 0.6067 Acc: 0.7945 Embedding-Loss: 0.0000 Classification-Loss: 0.6067
+test  Loss: 1.2753 Acc: 0.6121 Embedding-Loss: 0.0000 Classification-Loss: 1.2753
+Epoch 33/50
+----------
+train Loss: 0.5993 Acc: 0.7961 Embedding-Loss: 0.0000 Classification-Loss: 0.5993
+test  Loss: 1.3075 Acc: 0.6126 Embedding-Loss: 0.0000 Classification-Loss: 1.3075
+Epoch 34/50
+----------
+train Loss: 0.5906 Acc: 0.7989 Embedding-Loss: 0.0000 Classification-Loss: 0.5906
+test  Loss: 1.3038 Acc: 0.6074 Embedding-Loss: 0.0000 Classification-Loss: 1.3038
+Epoch 35/50
+----------
+train Loss: 0.5825 Acc: 0.8011 Embedding-Loss: 0.0000 Classification-Loss: 0.5825
+test  Loss: 1.3292 Acc: 0.6053 Embedding-Loss: 0.0000 Classification-Loss: 1.3292
+Epoch 36/50
+----------
+train Loss: 0.5754 Acc: 0.8045 Embedding-Loss: 0.0000 Classification-Loss: 0.5754
+test  Loss: 1.3386 Acc: 0.6107 Embedding-Loss: 0.0000 Classification-Loss: 1.3386
+Epoch 37/50
+----------
+train Loss: 0.5680 Acc: 0.8055 Embedding-Loss: 0.0000 Classification-Loss: 0.5680
+test  Loss: 1.3591 Acc: 0.6064 Embedding-Loss: 0.0000 Classification-Loss: 1.3591
+Epoch 38/50
+----------
+train Loss: 0.5603 Acc: 0.8107 Embedding-Loss: 0.0000 Classification-Loss: 0.5603
+test  Loss: 1.3629 Acc: 0.6075 Embedding-Loss: 0.0000 Classification-Loss: 1.3629
+Epoch 39/50
+----------
+train Loss: 0.5531 Acc: 0.8131 Embedding-Loss: 0.0000 Classification-Loss: 0.5531
+test  Loss: 1.3671 Acc: 0.6049 Embedding-Loss: 0.0000 Classification-Loss: 1.3671
+Epoch 40/50
+----------
+train Loss: 0.5236 Acc: 0.8258 Embedding-Loss: 0.0000 Classification-Loss: 0.5236
+test  Loss: 1.3641 Acc: 0.6048 Embedding-Loss: 0.0000 Classification-Loss: 1.3641
+Epoch 41/50
+----------
+train Loss: 0.5177 Acc: 0.8273 Embedding-Loss: 0.0000 Classification-Loss: 0.5177
+test  Loss: 1.3746 Acc: 0.6059 Embedding-Loss: 0.0000 Classification-Loss: 1.3746
+Epoch 42/50
+----------
+train Loss: 0.5136 Acc: 0.8288 Embedding-Loss: 0.0000 Classification-Loss: 0.5136
+test  Loss: 1.3811 Acc: 0.6072 Embedding-Loss: 0.0000 Classification-Loss: 1.3811
+Epoch 43/50
+----------
+train Loss: 0.5081 Acc: 0.8305 Embedding-Loss: 0.0000 Classification-Loss: 0.5081
+test  Loss: 1.3904 Acc: 0.6077 Embedding-Loss: 0.0000 Classification-Loss: 1.3904
+Epoch 44/50
+----------
+train Loss: 0.5044 Acc: 0.8321 Embedding-Loss: 0.0000 Classification-Loss: 0.5044
+test  Loss: 1.4088 Acc: 0.6086 Embedding-Loss: 0.0000 Classification-Loss: 1.4088
+Epoch 45/50
+----------
+train Loss: 0.5005 Acc: 0.8327 Embedding-Loss: 0.0000 Classification-Loss: 0.5005
+test  Loss: 1.4055 Acc: 0.6070 Embedding-Loss: 0.0000 Classification-Loss: 1.4055
+Epoch 46/50
+----------
+train Loss: 0.4955 Acc: 0.8358 Embedding-Loss: 0.0000 Classification-Loss: 0.4955
+test  Loss: 1.4219 Acc: 0.6067 Embedding-Loss: 0.0000 Classification-Loss: 1.4219
+Epoch 47/50
+----------
+train Loss: 0.4914 Acc: 0.8361 Embedding-Loss: 0.0000 Classification-Loss: 0.4914
+test  Loss: 1.4245 Acc: 0.6046 Embedding-Loss: 0.0000 Classification-Loss: 1.4245
+Epoch 48/50
+----------
+train Loss: 0.4873 Acc: 0.8391 Embedding-Loss: 0.0000 Classification-Loss: 0.4873
+test  Loss: 1.4441 Acc: 0.6049 Embedding-Loss: 0.0000 Classification-Loss: 1.4441
+Epoch 49/50
+----------
+train Loss: 0.4833 Acc: 0.8394 Embedding-Loss: 0.0000 Classification-Loss: 0.4833
+test  Loss: 1.4501 Acc: 0.6059 Embedding-Loss: 0.0000 Classification-Loss: 1.4501
+Epoch 50/50
+----------
+train Loss: 0.4669 Acc: 0.8467 Embedding-Loss: 0.0000 Classification-Loss: 0.4669
+test  Loss: 1.4519 Acc: 0.6061 Embedding-Loss: 0.0000 Classification-Loss: 1.4519
+Training complete in 46m 28s
+Best val Acc: 0.612600
+Accuracy of the network on the 10000 test images: 61.00
+Accuracy of horse : 65.10
+Accuracy of car   : 75.50
+Accuracy of deer  : 53.40
+Accuracy of dog   : 50.10
+Accuracy of frog  : 71.70
+Accuracy of cat   : 39.20
+Accuracy of plane : 65.10
+Accuracy of truck : 65.30
+Accuracy of ship  : 75.30
+Accuracy of bird  : 51.90
+################################################################
+Training with the following hyper-parameters:
+learning-rate = 0.001
+batch-size = 16
+momentum = 0.9
+weight-decay = 0.0
+Files already downloaded and verified
+Files already downloaded and verified
+Epoch 1/50
+----------
+train Loss: 2.2223 Acc: 0.1527 Embedding-Loss: 0.0000 Classification-Loss: 2.2223
+test  Loss: 1.9715 Acc: 0.2563 Embedding-Loss: 0.0000 Classification-Loss: 1.9715
+Epoch 2/50
+----------
+train Loss: 1.7805 Acc: 0.3452 Embedding-Loss: 0.0000 Classification-Loss: 1.7805
+test  Loss: 1.6748 Acc: 0.3736 Embedding-Loss: 0.0000 Classification-Loss: 1.6748
+Epoch 3/50
+----------
+train Loss: 1.5663 Acc: 0.4284 Embedding-Loss: 0.0000 Classification-Loss: 1.5663
+test  Loss: 1.4912 Acc: 0.4496 Embedding-Loss: 0.0000 Classification-Loss: 1.4912
+Epoch 4/50
+----------
+train Loss: 1.4482 Acc: 0.4748 Embedding-Loss: 0.0000 Classification-Loss: 1.4482
+test  Loss: 1.4029 Acc: 0.4942 Embedding-Loss: 0.0000 Classification-Loss: 1.4029
+Epoch 5/50
+----------
+train Loss: 1.3623 Acc: 0.5074 Embedding-Loss: 0.0000 Classification-Loss: 1.3623
+test  Loss: 1.3166 Acc: 0.5241 Embedding-Loss: 0.0000 Classification-Loss: 1.3166
+Epoch 6/50
+----------
+train Loss: 1.2963 Acc: 0.5355 Embedding-Loss: 0.0000 Classification-Loss: 1.2963
+test  Loss: 1.2979 Acc: 0.5291 Embedding-Loss: 0.0000 Classification-Loss: 1.2979
+Epoch 7/50
+----------
+train Loss: 1.2424 Acc: 0.5552 Embedding-Loss: 0.0000 Classification-Loss: 1.2424
+test  Loss: 1.2440 Acc: 0.5571 Embedding-Loss: 0.0000 Classification-Loss: 1.2440
+Epoch 8/50
+----------
+train Loss: 1.1894 Acc: 0.5749 Embedding-Loss: 0.0000 Classification-Loss: 1.1894
+test  Loss: 1.2230 Acc: 0.5606 Embedding-Loss: 0.0000 Classification-Loss: 1.2230
+Epoch 9/50
+----------
+train Loss: 1.1438 Acc: 0.5930 Embedding-Loss: 0.0000 Classification-Loss: 1.1438
+test  Loss: 1.2492 Acc: 0.5478 Embedding-Loss: 0.0000 Classification-Loss: 1.2492
+Epoch 10/50
+----------
+train Loss: 1.0505 Acc: 0.6290 Embedding-Loss: 0.0000 Classification-Loss: 1.0505
+test  Loss: 1.1604 Acc: 0.5870 Embedding-Loss: 0.0000 Classification-Loss: 1.1604
+Epoch 11/50
+----------
+train Loss: 1.0233 Acc: 0.6376 Embedding-Loss: 0.0000 Classification-Loss: 1.0233
+test  Loss: 1.1742 Acc: 0.5780 Embedding-Loss: 0.0000 Classification-Loss: 1.1742
+Epoch 12/50
+----------
+train Loss: 0.9983 Acc: 0.6459 Embedding-Loss: 0.0000 Classification-Loss: 0.9983
+test  Loss: 1.1355 Acc: 0.6009 Embedding-Loss: 0.0000 Classification-Loss: 1.1355
+Epoch 13/50
+----------
+train Loss: 0.9740 Acc: 0.6560 Embedding-Loss: 0.0000 Classification-Loss: 0.9740
+test  Loss: 1.1183 Acc: 0.6021 Embedding-Loss: 0.0000 Classification-Loss: 1.1183
+Epoch 14/50
+----------
+train Loss: 0.9501 Acc: 0.6652 Embedding-Loss: 0.0000 Classification-Loss: 0.9501
+test  Loss: 1.1378 Acc: 0.5950 Embedding-Loss: 0.0000 Classification-Loss: 1.1378
+Epoch 15/50
+----------
+train Loss: 0.9282 Acc: 0.6720 Embedding-Loss: 0.0000 Classification-Loss: 0.9282
+test  Loss: 1.1824 Acc: 0.5918 Embedding-Loss: 0.0000 Classification-Loss: 1.1824
+Epoch 16/50
+----------
+train Loss: 0.9045 Acc: 0.6832 Embedding-Loss: 0.0000 Classification-Loss: 0.9045
+test  Loss: 1.1214 Acc: 0.6098 Embedding-Loss: 0.0000 Classification-Loss: 1.1214
+Epoch 17/50
+----------
+train Loss: 0.8853 Acc: 0.6875 Embedding-Loss: 0.0000 Classification-Loss: 0.8853
+test  Loss: 1.1351 Acc: 0.6124 Embedding-Loss: 0.0000 Classification-Loss: 1.1351
+Epoch 18/50
+----------
+train Loss: 0.8655 Acc: 0.6943 Embedding-Loss: 0.0000 Classification-Loss: 0.8655
+test  Loss: 1.1198 Acc: 0.6125 Embedding-Loss: 0.0000 Classification-Loss: 1.1198
+Epoch 19/50
+----------
+train Loss: 0.8407 Acc: 0.7045 Embedding-Loss: 0.0000 Classification-Loss: 0.8407
+test  Loss: 1.1752 Acc: 0.6004 Embedding-Loss: 0.0000 Classification-Loss: 1.1752
+Epoch 20/50
+----------
+train Loss: 0.7740 Acc: 0.7298 Embedding-Loss: 0.0000 Classification-Loss: 0.7740
+test  Loss: 1.1405 Acc: 0.6142 Embedding-Loss: 0.0000 Classification-Loss: 1.1405
+Epoch 21/50
+----------
+train Loss: 0.7565 Acc: 0.7370 Embedding-Loss: 0.0000 Classification-Loss: 0.7565
+test  Loss: 1.1252 Acc: 0.6234 Embedding-Loss: 0.0000 Classification-Loss: 1.1252
+Epoch 22/50
+----------
+train Loss: 0.7421 Acc: 0.7401 Embedding-Loss: 0.0000 Classification-Loss: 0.7421
+test  Loss: 1.1297 Acc: 0.6245 Embedding-Loss: 0.0000 Classification-Loss: 1.1297
+Epoch 23/50
+----------
+train Loss: 0.7292 Acc: 0.7433 Embedding-Loss: 0.0000 Classification-Loss: 0.7292
+test  Loss: 1.1351 Acc: 0.6241 Embedding-Loss: 0.0000 Classification-Loss: 1.1351
+Epoch 24/50
+----------
+train Loss: 0.7173 Acc: 0.7489 Embedding-Loss: 0.0000 Classification-Loss: 0.7173
+test  Loss: 1.1298 Acc: 0.6220 Embedding-Loss: 0.0000 Classification-Loss: 1.1298
+Epoch 25/50
+----------
+train Loss: 0.7045 Acc: 0.7536 Embedding-Loss: 0.0000 Classification-Loss: 0.7045
+test  Loss: 1.1385 Acc: 0.6254 Embedding-Loss: 0.0000 Classification-Loss: 1.1385
+Epoch 26/50
+----------
+train Loss: 0.6906 Acc: 0.7591 Embedding-Loss: 0.0000 Classification-Loss: 0.6906
+test  Loss: 1.1528 Acc: 0.6225 Embedding-Loss: 0.0000 Classification-Loss: 1.1528
+Epoch 27/50
+----------
+train Loss: 0.6794 Acc: 0.7636 Embedding-Loss: 0.0000 Classification-Loss: 0.6794
+test  Loss: 1.1580 Acc: 0.6248 Embedding-Loss: 0.0000 Classification-Loss: 1.1580
+Epoch 28/50
+----------
+train Loss: 0.6651 Acc: 0.7685 Embedding-Loss: 0.0000 Classification-Loss: 0.6651
+test  Loss: 1.1828 Acc: 0.6191 Embedding-Loss: 0.0000 Classification-Loss: 1.1828
+Epoch 29/50
+----------
+train Loss: 0.6531 Acc: 0.7719 Embedding-Loss: 0.0000 Classification-Loss: 0.6531
+test  Loss: 1.2010 Acc: 0.6177 Embedding-Loss: 0.0000 Classification-Loss: 1.2010
+Epoch 30/50
+----------
+train Loss: 0.6065 Acc: 0.7916 Embedding-Loss: 0.0000 Classification-Loss: 0.6065
+test  Loss: 1.1937 Acc: 0.6203 Embedding-Loss: 0.0000 Classification-Loss: 1.1937
+Epoch 31/50
+----------
+train Loss: 0.5956 Acc: 0.7931 Embedding-Loss: 0.0000 Classification-Loss: 0.5956
+test  Loss: 1.1985 Acc: 0.6261 Embedding-Loss: 0.0000 Classification-Loss: 1.1985
+Epoch 32/50
+----------
+train Loss: 0.5881 Acc: 0.7977 Embedding-Loss: 0.0000 Classification-Loss: 0.5881
+test  Loss: 1.2146 Acc: 0.6230 Embedding-Loss: 0.0000 Classification-Loss: 1.2146
+Epoch 33/50
+----------
+train Loss: 0.5792 Acc: 0.8001 Embedding-Loss: 0.0000 Classification-Loss: 0.5792
+test  Loss: 1.2176 Acc: 0.6194 Embedding-Loss: 0.0000 Classification-Loss: 1.2176
+Epoch 34/50
+----------
+train Loss: 0.5729 Acc: 0.8037 Embedding-Loss: 0.0000 Classification-Loss: 0.5729
+test  Loss: 1.2315 Acc: 0.6207 Embedding-Loss: 0.0000 Classification-Loss: 1.2315
+Epoch 35/50
+----------
+train Loss: 0.5654 Acc: 0.8060 Embedding-Loss: 0.0000 Classification-Loss: 0.5654
+test  Loss: 1.2335 Acc: 0.6223 Embedding-Loss: 0.0000 Classification-Loss: 1.2335
+Epoch 36/50
+----------
+train Loss: 0.5568 Acc: 0.8086 Embedding-Loss: 0.0000 Classification-Loss: 0.5568
+test  Loss: 1.2474 Acc: 0.6204 Embedding-Loss: 0.0000 Classification-Loss: 1.2474
+Epoch 37/50
+----------
+train Loss: 0.5503 Acc: 0.8104 Embedding-Loss: 0.0000 Classification-Loss: 0.5503
+test  Loss: 1.2503 Acc: 0.6215 Embedding-Loss: 0.0000 Classification-Loss: 1.2503
+Epoch 38/50
+----------
+train Loss: 0.5428 Acc: 0.8127 Embedding-Loss: 0.0000 Classification-Loss: 0.5428
+test  Loss: 1.2600 Acc: 0.6212 Embedding-Loss: 0.0000 Classification-Loss: 1.2600
+Epoch 39/50
+----------
+train Loss: 0.5355 Acc: 0.8159 Embedding-Loss: 0.0000 Classification-Loss: 0.5355
+test  Loss: 1.2691 Acc: 0.6207 Embedding-Loss: 0.0000 Classification-Loss: 1.2691
+Epoch 40/50
+----------
+train Loss: 0.5062 Acc: 0.8299 Embedding-Loss: 0.0000 Classification-Loss: 0.5062
+test  Loss: 1.2870 Acc: 0.6214 Embedding-Loss: 0.0000 Classification-Loss: 1.2870
+Epoch 41/50
+----------
+train Loss: 0.5010 Acc: 0.8320 Embedding-Loss: 0.0000 Classification-Loss: 0.5010
+test  Loss: 1.2898 Acc: 0.6226 Embedding-Loss: 0.0000 Classification-Loss: 1.2898
+Epoch 42/50
+----------
+train Loss: 0.4967 Acc: 0.8330 Embedding-Loss: 0.0000 Classification-Loss: 0.4967
+test  Loss: 1.2977 Acc: 0.6246 Embedding-Loss: 0.0000 Classification-Loss: 1.2977
+Epoch 43/50
+----------
+train Loss: 0.4921 Acc: 0.8338 Embedding-Loss: 0.0000 Classification-Loss: 0.4921
+test  Loss: 1.2920 Acc: 0.6221 Embedding-Loss: 0.0000 Classification-Loss: 1.2920
+Epoch 44/50
+----------
+train Loss: 0.4880 Acc: 0.8356 Embedding-Loss: 0.0000 Classification-Loss: 0.4880
+test  Loss: 1.3037 Acc: 0.6193 Embedding-Loss: 0.0000 Classification-Loss: 1.3037
+Epoch 45/50
+----------
+train Loss: 0.4841 Acc: 0.8379 Embedding-Loss: 0.0000 Classification-Loss: 0.4841
+test  Loss: 1.3183 Acc: 0.6185 Embedding-Loss: 0.0000 Classification-Loss: 1.3183
+Epoch 46/50
+----------
+train Loss: 0.4797 Acc: 0.8401 Embedding-Loss: 0.0000 Classification-Loss: 0.4797
+test  Loss: 1.3252 Acc: 0.6204 Embedding-Loss: 0.0000 Classification-Loss: 1.3252
+Epoch 47/50
+----------
+train Loss: 0.4754 Acc: 0.8401 Embedding-Loss: 0.0000 Classification-Loss: 0.4754
+test  Loss: 1.3328 Acc: 0.6232 Embedding-Loss: 0.0000 Classification-Loss: 1.3328
+Epoch 48/50
+----------
+train Loss: 0.4710 Acc: 0.8420 Embedding-Loss: 0.0000 Classification-Loss: 0.4710
+test  Loss: 1.3358 Acc: 0.6203 Embedding-Loss: 0.0000 Classification-Loss: 1.3358
+Epoch 49/50
+----------
+train Loss: 0.4662 Acc: 0.8443 Embedding-Loss: 0.0000 Classification-Loss: 0.4662
+test  Loss: 1.3414 Acc: 0.6195 Embedding-Loss: 0.0000 Classification-Loss: 1.3414
+Epoch 50/50
+----------
+train Loss: 0.4513 Acc: 0.8504 Embedding-Loss: 0.0000 Classification-Loss: 0.4513
+test  Loss: 1.3423 Acc: 0.6181 Embedding-Loss: 0.0000 Classification-Loss: 1.3423
+Training complete in 68m 6s
+Best val Acc: 0.626100
+Accuracy of the network on the 10000 test images: 62.00
+Accuracy of horse : 67.70
+Accuracy of car   : 72.70
+Accuracy of deer  : 56.00
+Accuracy of dog   : 53.40
+Accuracy of frog  : 69.50
+Accuracy of cat   : 42.10
+Accuracy of plane : 68.60
+Accuracy of truck : 69.20
+Accuracy of ship  : 75.50
+Accuracy of bird  : 51.40
+################################################################
+Training with the following hyper-parameters:
+learning-rate = 0.001
+batch-size = 32
+momentum = 0.9
+weight-decay = 0.01
+Files already downloaded and verified
+Files already downloaded and verified
+Epoch 1/50
+----------
+train Loss: 2.3023 Acc: 0.1061 Embedding-Loss: 0.0000 Classification-Loss: 2.3023
+test  Loss: 2.3003 Acc: 0.1083 Embedding-Loss: 0.0000 Classification-Loss: 2.3003
+Epoch 2/50
+----------
+train Loss: 2.2352 Acc: 0.1799 Embedding-Loss: 0.0000 Classification-Loss: 2.2352
+test  Loss: 2.0334 Acc: 0.2261 Embedding-Loss: 0.0000 Classification-Loss: 2.0334
+Epoch 3/50
+----------
+train Loss: 1.9453 Acc: 0.2879 Embedding-Loss: 0.0000 Classification-Loss: 1.9453
+test  Loss: 1.8255 Acc: 0.3465 Embedding-Loss: 0.0000 Classification-Loss: 1.8255
+Epoch 4/50
+----------
+train Loss: 1.7563 Acc: 0.3640 Embedding-Loss: 0.0000 Classification-Loss: 1.7563
+test  Loss: 1.6793 Acc: 0.3944 Embedding-Loss: 0.0000 Classification-Loss: 1.6793
+Epoch 5/50
+----------
+train Loss: 1.6232 Acc: 0.4116 Embedding-Loss: 0.0000 Classification-Loss: 1.6232
+test  Loss: 1.5679 Acc: 0.4316 Embedding-Loss: 0.0000 Classification-Loss: 1.5679
+Epoch 6/50
+----------
+train Loss: 1.5292 Acc: 0.4439 Embedding-Loss: 0.0000 Classification-Loss: 1.5292
+test  Loss: 1.4670 Acc: 0.4667 Embedding-Loss: 0.0000 Classification-Loss: 1.4670
+Epoch 7/50
+----------
+train Loss: 1.4484 Acc: 0.4739 Embedding-Loss: 0.0000 Classification-Loss: 1.4484
+test  Loss: 1.4272 Acc: 0.4823 Embedding-Loss: 0.0000 Classification-Loss: 1.4272
+Epoch 8/50
+----------
+train Loss: 1.3913 Acc: 0.4978 Embedding-Loss: 0.0000 Classification-Loss: 1.3913
+test  Loss: 1.3596 Acc: 0.5106 Embedding-Loss: 0.0000 Classification-Loss: 1.3596
+Epoch 9/50
+----------
+train Loss: 1.3367 Acc: 0.5210 Embedding-Loss: 0.0000 Classification-Loss: 1.3367
+test  Loss: 1.3436 Acc: 0.5190 Embedding-Loss: 0.0000 Classification-Loss: 1.3436
+Epoch 10/50
+----------
+train Loss: 1.2704 Acc: 0.5479 Embedding-Loss: 0.0000 Classification-Loss: 1.2704
+test  Loss: 1.3252 Acc: 0.5315 Embedding-Loss: 0.0000 Classification-Loss: 1.3252
+Epoch 11/50
+----------
+train Loss: 1.2453 Acc: 0.5587 Embedding-Loss: 0.0000 Classification-Loss: 1.2453
+test  Loss: 1.3803 Acc: 0.5134 Embedding-Loss: 0.0000 Classification-Loss: 1.3803
+Epoch 12/50
+----------
+train Loss: 1.2226 Acc: 0.5652 Embedding-Loss: 0.0000 Classification-Loss: 1.2226
+test  Loss: 1.2582 Acc: 0.5514 Embedding-Loss: 0.0000 Classification-Loss: 1.2582
+Epoch 13/50
+----------
+train Loss: 1.1955 Acc: 0.5782 Embedding-Loss: 0.0000 Classification-Loss: 1.1955
+test  Loss: 1.2323 Acc: 0.5637 Embedding-Loss: 0.0000 Classification-Loss: 1.2323
+Epoch 14/50
+----------
+train Loss: 1.1782 Acc: 0.5845 Embedding-Loss: 0.0000 Classification-Loss: 1.1782
+test  Loss: 1.2167 Acc: 0.5698 Embedding-Loss: 0.0000 Classification-Loss: 1.2167
+Epoch 15/50
+----------
+train Loss: 1.1550 Acc: 0.5951 Embedding-Loss: 0.0000 Classification-Loss: 1.1550
+test  Loss: 1.2213 Acc: 0.5700 Embedding-Loss: 0.0000 Classification-Loss: 1.2213
+Epoch 16/50
+----------
+train Loss: 1.1383 Acc: 0.5993 Embedding-Loss: 0.0000 Classification-Loss: 1.1383
+test  Loss: 1.2209 Acc: 0.5694 Embedding-Loss: 0.0000 Classification-Loss: 1.2209
+Epoch 17/50
+----------
+train Loss: 1.1195 Acc: 0.6051 Embedding-Loss: 0.0000 Classification-Loss: 1.1195
+test  Loss: 1.1886 Acc: 0.5781 Embedding-Loss: 0.0000 Classification-Loss: 1.1886
+Epoch 18/50
+----------
+train Loss: 1.0978 Acc: 0.6146 Embedding-Loss: 0.0000 Classification-Loss: 1.0978
+test  Loss: 1.1611 Acc: 0.5926 Embedding-Loss: 0.0000 Classification-Loss: 1.1611
+Epoch 19/50
+----------
+train Loss: 1.0829 Acc: 0.6209 Embedding-Loss: 0.0000 Classification-Loss: 1.0829
+test  Loss: 1.1636 Acc: 0.5902 Embedding-Loss: 0.0000 Classification-Loss: 1.1636
+Epoch 20/50
+----------
+train Loss: 1.0445 Acc: 0.6352 Embedding-Loss: 0.0000 Classification-Loss: 1.0445
+test  Loss: 1.1352 Acc: 0.6013 Embedding-Loss: 0.0000 Classification-Loss: 1.1352
+Epoch 21/50
+----------
+train Loss: 1.0307 Acc: 0.6391 Embedding-Loss: 0.0000 Classification-Loss: 1.0307
+test  Loss: 1.1263 Acc: 0.6069 Embedding-Loss: 0.0000 Classification-Loss: 1.1263
+Epoch 22/50
+----------
+train Loss: 1.0231 Acc: 0.6418 Embedding-Loss: 0.0000 Classification-Loss: 1.0231
+test  Loss: 1.1326 Acc: 0.6003 Embedding-Loss: 0.0000 Classification-Loss: 1.1326
+Epoch 23/50
+----------
+train Loss: 1.0148 Acc: 0.6456 Embedding-Loss: 0.0000 Classification-Loss: 1.0148
+test  Loss: 1.1383 Acc: 0.6004 Embedding-Loss: 0.0000 Classification-Loss: 1.1383
+Epoch 24/50
+----------
+train Loss: 1.0054 Acc: 0.6493 Embedding-Loss: 0.0000 Classification-Loss: 1.0054
+test  Loss: 1.1216 Acc: 0.6060 Embedding-Loss: 0.0000 Classification-Loss: 1.1216
+Epoch 25/50
+----------
+train Loss: 0.9959 Acc: 0.6510 Embedding-Loss: 0.0000 Classification-Loss: 0.9959
+test  Loss: 1.1224 Acc: 0.6069 Embedding-Loss: 0.0000 Classification-Loss: 1.1224
+Epoch 26/50
+----------
+train Loss: 0.9872 Acc: 0.6556 Embedding-Loss: 0.0000 Classification-Loss: 0.9872
+test  Loss: 1.1239 Acc: 0.6067 Embedding-Loss: 0.0000 Classification-Loss: 1.1239
+Epoch 27/50
+----------
+train Loss: 0.9774 Acc: 0.6606 Embedding-Loss: 0.0000 Classification-Loss: 0.9774
+test  Loss: 1.1055 Acc: 0.6140 Embedding-Loss: 0.0000 Classification-Loss: 1.1055
+Epoch 28/50
+----------
+train Loss: 0.9696 Acc: 0.6615 Embedding-Loss: 0.0000 Classification-Loss: 0.9696
+test  Loss: 1.0999 Acc: 0.6182 Embedding-Loss: 0.0000 Classification-Loss: 1.0999
+Epoch 29/50
+----------
+train Loss: 0.9661 Acc: 0.6627 Embedding-Loss: 0.0000 Classification-Loss: 0.9661
+test  Loss: 1.0949 Acc: 0.6167 Embedding-Loss: 0.0000 Classification-Loss: 1.0949
+Epoch 30/50
+----------
+train Loss: 0.9372 Acc: 0.6745 Embedding-Loss: 0.0000 Classification-Loss: 0.9372
+test  Loss: 1.0855 Acc: 0.6229 Embedding-Loss: 0.0000 Classification-Loss: 1.0855
+Epoch 31/50
+----------
+train Loss: 0.9321 Acc: 0.6750 Embedding-Loss: 0.0000 Classification-Loss: 0.9321
+test  Loss: 1.0964 Acc: 0.6148 Embedding-Loss: 0.0000 Classification-Loss: 1.0964
+Epoch 32/50
+----------
+train Loss: 0.9277 Acc: 0.6770 Embedding-Loss: 0.0000 Classification-Loss: 0.9277
+test  Loss: 1.0920 Acc: 0.6222 Embedding-Loss: 0.0000 Classification-Loss: 1.0920
+Epoch 33/50
+----------
+train Loss: 0.9230 Acc: 0.6775 Embedding-Loss: 0.0000 Classification-Loss: 0.9230
+test  Loss: 1.0898 Acc: 0.6202 Embedding-Loss: 0.0000 Classification-Loss: 1.0898
+Epoch 34/50
+----------
+train Loss: 0.9190 Acc: 0.6802 Embedding-Loss: 0.0000 Classification-Loss: 0.9190
+test  Loss: 1.0846 Acc: 0.6245 Embedding-Loss: 0.0000 Classification-Loss: 1.0846
+Epoch 35/50
+----------
+train Loss: 0.9142 Acc: 0.6819 Embedding-Loss: 0.0000 Classification-Loss: 0.9142
+test  Loss: 1.0812 Acc: 0.6267 Embedding-Loss: 0.0000 Classification-Loss: 1.0812
+Epoch 36/50
+----------
+train Loss: 0.9103 Acc: 0.6821 Embedding-Loss: 0.0000 Classification-Loss: 0.9103
+test  Loss: 1.0851 Acc: 0.6221 Embedding-Loss: 0.0000 Classification-Loss: 1.0851
+Epoch 37/50
+----------
+train Loss: 0.9061 Acc: 0.6852 Embedding-Loss: 0.0000 Classification-Loss: 0.9061
+test  Loss: 1.0772 Acc: 0.6244 Embedding-Loss: 0.0000 Classification-Loss: 1.0772
+Epoch 38/50
+----------
+train Loss: 0.9011 Acc: 0.6862 Embedding-Loss: 0.0000 Classification-Loss: 0.9011
+test  Loss: 1.0869 Acc: 0.6275 Embedding-Loss: 0.0000 Classification-Loss: 1.0869
+Epoch 39/50
+----------
+train Loss: 0.8964 Acc: 0.6897 Embedding-Loss: 0.0000 Classification-Loss: 0.8964
+test  Loss: 1.0932 Acc: 0.6234 Embedding-Loss: 0.0000 Classification-Loss: 1.0932
+Epoch 40/50
+----------
+train Loss: 0.8817 Acc: 0.6937 Embedding-Loss: 0.0000 Classification-Loss: 0.8817
+test  Loss: 1.0750 Acc: 0.6286 Embedding-Loss: 0.0000 Classification-Loss: 1.0750
+Epoch 41/50
+----------
+train Loss: 0.8793 Acc: 0.6947 Embedding-Loss: 0.0000 Classification-Loss: 0.8793
+test  Loss: 1.0790 Acc: 0.6279 Embedding-Loss: 0.0000 Classification-Loss: 1.0790
+Epoch 42/50
+----------
+train Loss: 0.8766 Acc: 0.6941 Embedding-Loss: 0.0000 Classification-Loss: 0.8766
+test  Loss: 1.0719 Acc: 0.6304 Embedding-Loss: 0.0000 Classification-Loss: 1.0719
+Epoch 43/50
+----------
+train Loss: 0.8747 Acc: 0.6961 Embedding-Loss: 0.0000 Classification-Loss: 0.8747
+test  Loss: 1.0716 Acc: 0.6322 Embedding-Loss: 0.0000 Classification-Loss: 1.0716
+Epoch 44/50
+----------
+train Loss: 0.8717 Acc: 0.6974 Embedding-Loss: 0.0000 Classification-Loss: 0.8717
+test  Loss: 1.0815 Acc: 0.6249 Embedding-Loss: 0.0000 Classification-Loss: 1.0815
+Epoch 45/50
+----------
+train Loss: 0.8700 Acc: 0.6979 Embedding-Loss: 0.0000 Classification-Loss: 0.8700
+test  Loss: 1.0721 Acc: 0.6315 Embedding-Loss: 0.0000 Classification-Loss: 1.0721
+Epoch 46/50
+----------
+train Loss: 0.8679 Acc: 0.6992 Embedding-Loss: 0.0000 Classification-Loss: 0.8679
+test  Loss: 1.0732 Acc: 0.6304 Embedding-Loss: 0.0000 Classification-Loss: 1.0732
+Epoch 47/50
+----------
+train Loss: 0.8660 Acc: 0.6975 Embedding-Loss: 0.0000 Classification-Loss: 0.8660
+test  Loss: 1.0776 Acc: 0.6293 Embedding-Loss: 0.0000 Classification-Loss: 1.0776
+Epoch 48/50
+----------
+train Loss: 0.8633 Acc: 0.6994 Embedding-Loss: 0.0000 Classification-Loss: 0.8633
+test  Loss: 1.0720 Acc: 0.6337 Embedding-Loss: 0.0000 Classification-Loss: 1.0720
+Epoch 49/50
+----------
+train Loss: 0.8607 Acc: 0.7008 Embedding-Loss: 0.0000 Classification-Loss: 0.8607
+test  Loss: 1.0789 Acc: 0.6287 Embedding-Loss: 0.0000 Classification-Loss: 1.0789
+Epoch 50/50
+----------
+train Loss: 0.8522 Acc: 0.7052 Embedding-Loss: 0.0000 Classification-Loss: 0.8522
+test  Loss: 1.0693 Acc: 0.6335 Embedding-Loss: 0.0000 Classification-Loss: 1.0693
+Training complete in 33m 60s
+Best val Acc: 0.633700
+Accuracy of the network on the 10000 test images: 63.00
+Accuracy of horse : 65.90
+Accuracy of car   : 77.40
+Accuracy of deer  : 53.10
+Accuracy of dog   : 53.10
+Accuracy of frog  : 71.10
+Accuracy of cat   : 47.30
+Accuracy of plane : 70.80
+Accuracy of truck : 65.90
+Accuracy of ship  : 76.00
+Accuracy of bird  : 53.10
+################################################################
+Training with the following hyper-parameters:
+learning-rate = 0.001
+batch-size = 32
+momentum = 0.9
+weight-decay = 0.0
+Files already downloaded and verified
+Files already downloaded and verified
+Epoch 1/50
+----------
+train Loss: 2.2839 Acc: 0.1242 Embedding-Loss: 0.0000 Classification-Loss: 2.2839
+test  Loss: 2.1860 Acc: 0.1979 Embedding-Loss: 0.0000 Classification-Loss: 2.1860
+Epoch 2/50
+----------
+train Loss: 2.0474 Acc: 0.2360 Embedding-Loss: 0.0000 Classification-Loss: 2.0474
+test  Loss: 1.9509 Acc: 0.2900 Embedding-Loss: 0.0000 Classification-Loss: 1.9509
+Epoch 3/50
+----------
+train Loss: 1.8724 Acc: 0.3165 Embedding-Loss: 0.0000 Classification-Loss: 1.8724
+test  Loss: 1.7507 Acc: 0.3692 Embedding-Loss: 0.0000 Classification-Loss: 1.7507
+Epoch 4/50
+----------
+train Loss: 1.6761 Acc: 0.3942 Embedding-Loss: 0.0000 Classification-Loss: 1.6761
+test  Loss: 1.5713 Acc: 0.4306 Embedding-Loss: 0.0000 Classification-Loss: 1.5713
+Epoch 5/50
+----------
+train Loss: 1.5584 Acc: 0.4363 Embedding-Loss: 0.0000 Classification-Loss: 1.5584
+test  Loss: 1.5024 Acc: 0.4534 Embedding-Loss: 0.0000 Classification-Loss: 1.5024
+Epoch 6/50
+----------
+train Loss: 1.4830 Acc: 0.4645 Embedding-Loss: 0.0000 Classification-Loss: 1.4830
+test  Loss: 1.5255 Acc: 0.4596 Embedding-Loss: 0.0000 Classification-Loss: 1.5255
+Epoch 7/50
+----------
+train Loss: 1.4286 Acc: 0.4869 Embedding-Loss: 0.0000 Classification-Loss: 1.4286
+test  Loss: 1.4002 Acc: 0.4951 Embedding-Loss: 0.0000 Classification-Loss: 1.4002
+Epoch 8/50
+----------
+train Loss: 1.3790 Acc: 0.5062 Embedding-Loss: 0.0000 Classification-Loss: 1.3790
+test  Loss: 1.3698 Acc: 0.5119 Embedding-Loss: 0.0000 Classification-Loss: 1.3698
+Epoch 9/50
+----------
+train Loss: 1.3356 Acc: 0.5233 Embedding-Loss: 0.0000 Classification-Loss: 1.3356
+test  Loss: 1.3149 Acc: 0.5355 Embedding-Loss: 0.0000 Classification-Loss: 1.3149
+Epoch 10/50
+----------
+train Loss: 1.2707 Acc: 0.5488 Embedding-Loss: 0.0000 Classification-Loss: 1.2707
+test  Loss: 1.2807 Acc: 0.5430 Embedding-Loss: 0.0000 Classification-Loss: 1.2807
+Epoch 11/50
+----------
+train Loss: 1.2476 Acc: 0.5571 Embedding-Loss: 0.0000 Classification-Loss: 1.2476
+test  Loss: 1.2796 Acc: 0.5440 Embedding-Loss: 0.0000 Classification-Loss: 1.2796
+Epoch 12/50
+----------
+train Loss: 1.2271 Acc: 0.5641 Embedding-Loss: 0.0000 Classification-Loss: 1.2271
+test  Loss: 1.2876 Acc: 0.5400 Embedding-Loss: 0.0000 Classification-Loss: 1.2876
+Epoch 13/50
+----------
+train Loss: 1.2074 Acc: 0.5719 Embedding-Loss: 0.0000 Classification-Loss: 1.2074
+test  Loss: 1.2628 Acc: 0.5507 Embedding-Loss: 0.0000 Classification-Loss: 1.2628
+Epoch 14/50
+----------
+train Loss: 1.1914 Acc: 0.5778 Embedding-Loss: 0.0000 Classification-Loss: 1.1914
+test  Loss: 1.2336 Acc: 0.5618 Embedding-Loss: 0.0000 Classification-Loss: 1.2336
+Epoch 15/50
+----------
+train Loss: 1.1726 Acc: 0.5842 Embedding-Loss: 0.0000 Classification-Loss: 1.1726
+test  Loss: 1.2158 Acc: 0.5724 Embedding-Loss: 0.0000 Classification-Loss: 1.2158
+Epoch 16/50
+----------
+train Loss: 1.1579 Acc: 0.5900 Embedding-Loss: 0.0000 Classification-Loss: 1.1579
+test  Loss: 1.2075 Acc: 0.5696 Embedding-Loss: 0.0000 Classification-Loss: 1.2075
+Epoch 17/50
+----------
+train Loss: 1.1403 Acc: 0.5974 Embedding-Loss: 0.0000 Classification-Loss: 1.1403
+test  Loss: 1.2013 Acc: 0.5721 Embedding-Loss: 0.0000 Classification-Loss: 1.2013
+Epoch 18/50
+----------
+train Loss: 1.1236 Acc: 0.6025 Embedding-Loss: 0.0000 Classification-Loss: 1.1236
+test  Loss: 1.2070 Acc: 0.5729 Embedding-Loss: 0.0000 Classification-Loss: 1.2070
+Epoch 19/50
+----------
+train Loss: 1.1081 Acc: 0.6087 Embedding-Loss: 0.0000 Classification-Loss: 1.1081
+test  Loss: 1.1948 Acc: 0.5809 Embedding-Loss: 0.0000 Classification-Loss: 1.1948
+Epoch 20/50
+----------
+train Loss: 1.0692 Acc: 0.6223 Embedding-Loss: 0.0000 Classification-Loss: 1.0692
+test  Loss: 1.1699 Acc: 0.5886 Embedding-Loss: 0.0000 Classification-Loss: 1.1699
+Epoch 21/50
+----------
+train Loss: 1.0591 Acc: 0.6274 Embedding-Loss: 0.0000 Classification-Loss: 1.0591
+test  Loss: 1.1667 Acc: 0.5871 Embedding-Loss: 0.0000 Classification-Loss: 1.1667
+Epoch 22/50
+----------
+train Loss: 1.0499 Acc: 0.6299 Embedding-Loss: 0.0000 Classification-Loss: 1.0499
+test  Loss: 1.1626 Acc: 0.5880 Embedding-Loss: 0.0000 Classification-Loss: 1.1626
+Epoch 23/50
+----------
+train Loss: 1.0404 Acc: 0.6337 Embedding-Loss: 0.0000 Classification-Loss: 1.0404
+test  Loss: 1.1610 Acc: 0.5932 Embedding-Loss: 0.0000 Classification-Loss: 1.1610
+Epoch 24/50
+----------
+train Loss: 1.0313 Acc: 0.6362 Embedding-Loss: 0.0000 Classification-Loss: 1.0313
+test  Loss: 1.1636 Acc: 0.5884 Embedding-Loss: 0.0000 Classification-Loss: 1.1636
+Epoch 25/50
+----------
+train Loss: 1.0246 Acc: 0.6395 Embedding-Loss: 0.0000 Classification-Loss: 1.0246
+test  Loss: 1.1568 Acc: 0.5931 Embedding-Loss: 0.0000 Classification-Loss: 1.1568
+Epoch 26/50
+----------
+train Loss: 1.0164 Acc: 0.6424 Embedding-Loss: 0.0000 Classification-Loss: 1.0164
+test  Loss: 1.1539 Acc: 0.5901 Embedding-Loss: 0.0000 Classification-Loss: 1.1539
+Epoch 27/50
+----------
+train Loss: 1.0069 Acc: 0.6444 Embedding-Loss: 0.0000 Classification-Loss: 1.0069
+test  Loss: 1.1526 Acc: 0.5941 Embedding-Loss: 0.0000 Classification-Loss: 1.1526
+Epoch 28/50
+----------
+train Loss: 1.0010 Acc: 0.6480 Embedding-Loss: 0.0000 Classification-Loss: 1.0010
+test  Loss: 1.1664 Acc: 0.5925 Embedding-Loss: 0.0000 Classification-Loss: 1.1664
+Epoch 29/50
+----------
+train Loss: 0.9939 Acc: 0.6509 Embedding-Loss: 0.0000 Classification-Loss: 0.9939
+test  Loss: 1.1433 Acc: 0.5965 Embedding-Loss: 0.0000 Classification-Loss: 1.1433
+Epoch 30/50
+----------
+train Loss: 0.9679 Acc: 0.6607 Embedding-Loss: 0.0000 Classification-Loss: 0.9679
+test  Loss: 1.1376 Acc: 0.6016 Embedding-Loss: 0.0000 Classification-Loss: 1.1376
+Epoch 31/50
+----------
+train Loss: 0.9629 Acc: 0.6614 Embedding-Loss: 0.0000 Classification-Loss: 0.9629
+test  Loss: 1.1391 Acc: 0.6011 Embedding-Loss: 0.0000 Classification-Loss: 1.1391
+Epoch 32/50
+----------
+train Loss: 0.9583 Acc: 0.6637 Embedding-Loss: 0.0000 Classification-Loss: 0.9583
+test  Loss: 1.1443 Acc: 0.5999 Embedding-Loss: 0.0000 Classification-Loss: 1.1443
+Epoch 33/50
+----------
+train Loss: 0.9540 Acc: 0.6652 Embedding-Loss: 0.0000 Classification-Loss: 0.9540
+test  Loss: 1.1374 Acc: 0.6050 Embedding-Loss: 0.0000 Classification-Loss: 1.1374
+Epoch 34/50
+----------
+train Loss: 0.9493 Acc: 0.6667 Embedding-Loss: 0.0000 Classification-Loss: 0.9493
+test  Loss: 1.1594 Acc: 0.5972 Embedding-Loss: 0.0000 Classification-Loss: 1.1594
+Epoch 35/50
+----------
+train Loss: 0.9463 Acc: 0.6673 Embedding-Loss: 0.0000 Classification-Loss: 0.9463
+test  Loss: 1.1390 Acc: 0.5992 Embedding-Loss: 0.0000 Classification-Loss: 1.1390
+Epoch 36/50
+----------
+train Loss: 0.9414 Acc: 0.6707 Embedding-Loss: 0.0000 Classification-Loss: 0.9414
+test  Loss: 1.1350 Acc: 0.6007 Embedding-Loss: 0.0000 Classification-Loss: 1.1350
+Epoch 37/50
+----------
+train Loss: 0.9375 Acc: 0.6718 Embedding-Loss: 0.0000 Classification-Loss: 0.9375
+test  Loss: 1.1398 Acc: 0.6042 Embedding-Loss: 0.0000 Classification-Loss: 1.1398
+Epoch 38/50
+----------
+train Loss: 0.9324 Acc: 0.6729 Embedding-Loss: 0.0000 Classification-Loss: 0.9324
+test  Loss: 1.1329 Acc: 0.6057 Embedding-Loss: 0.0000 Classification-Loss: 1.1329
+Epoch 39/50
+----------
+train Loss: 0.9289 Acc: 0.6750 Embedding-Loss: 0.0000 Classification-Loss: 0.9289
+test  Loss: 1.1432 Acc: 0.5997 Embedding-Loss: 0.0000 Classification-Loss: 1.1432
+Epoch 40/50
+----------
+train Loss: 0.9138 Acc: 0.6799 Embedding-Loss: 0.0000 Classification-Loss: 0.9138
+test  Loss: 1.1325 Acc: 0.6053 Embedding-Loss: 0.0000 Classification-Loss: 1.1325
+Epoch 41/50
+----------
+train Loss: 0.9112 Acc: 0.6817 Embedding-Loss: 0.0000 Classification-Loss: 0.9112
+test  Loss: 1.1341 Acc: 0.6051 Embedding-Loss: 0.0000 Classification-Loss: 1.1341
+Epoch 42/50
+----------
+train Loss: 0.9088 Acc: 0.6818 Embedding-Loss: 0.0000 Classification-Loss: 0.9088
+test  Loss: 1.1396 Acc: 0.6039 Embedding-Loss: 0.0000 Classification-Loss: 1.1396
+Epoch 43/50
+----------
+train Loss: 0.9069 Acc: 0.6821 Embedding-Loss: 0.0000 Classification-Loss: 0.9069
+test  Loss: 1.1354 Acc: 0.6033 Embedding-Loss: 0.0000 Classification-Loss: 1.1354
+Epoch 44/50
+----------
+train Loss: 0.9047 Acc: 0.6831 Embedding-Loss: 0.0000 Classification-Loss: 0.9047
+test  Loss: 1.1406 Acc: 0.6049 Embedding-Loss: 0.0000 Classification-Loss: 1.1406
+Epoch 45/50
+----------
+train Loss: 0.9027 Acc: 0.6841 Embedding-Loss: 0.0000 Classification-Loss: 0.9027
+test  Loss: 1.1334 Acc: 0.6070 Embedding-Loss: 0.0000 Classification-Loss: 1.1334
+Epoch 46/50
+----------
+train Loss: 0.9001 Acc: 0.6859 Embedding-Loss: 0.0000 Classification-Loss: 0.9001
+test  Loss: 1.1369 Acc: 0.6058 Embedding-Loss: 0.0000 Classification-Loss: 1.1369
+Epoch 47/50
+----------
+train Loss: 0.8980 Acc: 0.6859 Embedding-Loss: 0.0000 Classification-Loss: 0.8980
+test  Loss: 1.1381 Acc: 0.6053 Embedding-Loss: 0.0000 Classification-Loss: 1.1381
+Epoch 48/50
+----------
+train Loss: 0.8962 Acc: 0.6869 Embedding-Loss: 0.0000 Classification-Loss: 0.8962
+test  Loss: 1.1332 Acc: 0.6070 Embedding-Loss: 0.0000 Classification-Loss: 1.1332
+Epoch 49/50
+----------
+train Loss: 0.8938 Acc: 0.6880 Embedding-Loss: 0.0000 Classification-Loss: 0.8938
+test  Loss: 1.1366 Acc: 0.6058 Embedding-Loss: 0.0000 Classification-Loss: 1.1366
+Epoch 50/50
+----------
+train Loss: 0.8851 Acc: 0.6912 Embedding-Loss: 0.0000 Classification-Loss: 0.8851
+test  Loss: 1.1311 Acc: 0.6071 Embedding-Loss: 0.0000 Classification-Loss: 1.1311
+Training complete in 34m 5s
+Best val Acc: 0.607100
+Accuracy of the network on the 10000 test images: 60.00
+Accuracy of horse : 67.40
+Accuracy of car   : 70.70
+Accuracy of deer  : 56.70
+Accuracy of dog   : 47.00
+Accuracy of frog  : 72.20
+Accuracy of cat   : 39.40
+Accuracy of plane : 66.80
+Accuracy of truck : 67.60
+Accuracy of ship  : 72.20
+Accuracy of bird  : 47.10
+################################################################
+Training with the following hyper-parameters:
+learning-rate = 0.001
+batch-size = 64
+momentum = 0.9
+weight-decay = 0.01
+Files already downloaded and verified
+Files already downloaded and verified
+Epoch 1/50
+----------
+train Loss: 2.3036 Acc: 0.1005 Embedding-Loss: 0.0000 Classification-Loss: 2.3036
+test  Loss: 2.3027 Acc: 0.1056 Embedding-Loss: 0.0000 Classification-Loss: 2.3027
+Epoch 2/50
+----------
+train Loss: 2.3024 Acc: 0.1110 Embedding-Loss: 0.0000 Classification-Loss: 2.3024
+test  Loss: 2.3020 Acc: 0.1140 Embedding-Loss: 0.0000 Classification-Loss: 2.3020
+Epoch 3/50
+----------
+train Loss: 2.3013 Acc: 0.1164 Embedding-Loss: 0.0000 Classification-Loss: 2.3013
+test  Loss: 2.2997 Acc: 0.1347 Embedding-Loss: 0.0000 Classification-Loss: 2.2997
+Epoch 4/50
+----------
+train Loss: 2.2924 Acc: 0.1467 Embedding-Loss: 0.0000 Classification-Loss: 2.2924
+test  Loss: 2.2724 Acc: 0.1753 Embedding-Loss: 0.0000 Classification-Loss: 2.2724
+Epoch 5/50
+----------
+train Loss: 2.1422 Acc: 0.1979 Embedding-Loss: 0.0000 Classification-Loss: 2.1422
+test  Loss: 2.0520 Acc: 0.2376 Embedding-Loss: 0.0000 Classification-Loss: 2.0520
+Epoch 6/50
+----------
+train Loss: 2.0022 Acc: 0.2535 Embedding-Loss: 0.0000 Classification-Loss: 2.0022
+test  Loss: 1.9722 Acc: 0.2774 Embedding-Loss: 0.0000 Classification-Loss: 1.9722
+Epoch 7/50
+----------
+train Loss: 1.9383 Acc: 0.2865 Embedding-Loss: 0.0000 Classification-Loss: 1.9383
+test  Loss: 1.9120 Acc: 0.2905 Embedding-Loss: 0.0000 Classification-Loss: 1.9120
+Epoch 8/50
+----------
+train Loss: 1.8794 Acc: 0.3146 Embedding-Loss: 0.0000 Classification-Loss: 1.8794
+test  Loss: 1.8363 Acc: 0.3345 Embedding-Loss: 0.0000 Classification-Loss: 1.8363
+Epoch 9/50
+----------
+train Loss: 1.8057 Acc: 0.3463 Embedding-Loss: 0.0000 Classification-Loss: 1.8057
+test  Loss: 1.7580 Acc: 0.3645 Embedding-Loss: 0.0000 Classification-Loss: 1.7580
+Epoch 10/50
+----------
+train Loss: 1.7348 Acc: 0.3729 Embedding-Loss: 0.0000 Classification-Loss: 1.7348
+test  Loss: 1.7032 Acc: 0.3911 Embedding-Loss: 0.0000 Classification-Loss: 1.7032
+Epoch 11/50
+----------
+train Loss: 1.6897 Acc: 0.3871 Embedding-Loss: 0.0000 Classification-Loss: 1.6897
+test  Loss: 1.6571 Acc: 0.4056 Embedding-Loss: 0.0000 Classification-Loss: 1.6571
+Epoch 12/50
+----------
+train Loss: 1.6458 Acc: 0.4053 Embedding-Loss: 0.0000 Classification-Loss: 1.6458
+test  Loss: 1.6172 Acc: 0.4118 Embedding-Loss: 0.0000 Classification-Loss: 1.6172
+Epoch 13/50
+----------
+train Loss: 1.5945 Acc: 0.4227 Embedding-Loss: 0.0000 Classification-Loss: 1.5945
+test  Loss: 1.5678 Acc: 0.4318 Embedding-Loss: 0.0000 Classification-Loss: 1.5678
+Epoch 14/50
+----------
+train Loss: 1.5607 Acc: 0.4362 Embedding-Loss: 0.0000 Classification-Loss: 1.5607
+test  Loss: 1.5467 Acc: 0.4473 Embedding-Loss: 0.0000 Classification-Loss: 1.5467
+Epoch 15/50
+----------
+train Loss: 1.5339 Acc: 0.4463 Embedding-Loss: 0.0000 Classification-Loss: 1.5339
+test  Loss: 1.5096 Acc: 0.4572 Embedding-Loss: 0.0000 Classification-Loss: 1.5096
+Epoch 16/50
+----------
+train Loss: 1.5146 Acc: 0.4561 Embedding-Loss: 0.0000 Classification-Loss: 1.5146
+test  Loss: 1.5077 Acc: 0.4565 Embedding-Loss: 0.0000 Classification-Loss: 1.5077
+Epoch 17/50
+----------
+train Loss: 1.4915 Acc: 0.4636 Embedding-Loss: 0.0000 Classification-Loss: 1.4915
+test  Loss: 1.4749 Acc: 0.4708 Embedding-Loss: 0.0000 Classification-Loss: 1.4749
+Epoch 18/50
+----------
+train Loss: 1.4763 Acc: 0.4703 Embedding-Loss: 0.0000 Classification-Loss: 1.4763
+test  Loss: 1.4945 Acc: 0.4571 Embedding-Loss: 0.0000 Classification-Loss: 1.4945
+Epoch 19/50
+----------
+train Loss: 1.4598 Acc: 0.4760 Embedding-Loss: 0.0000 Classification-Loss: 1.4598
+test  Loss: 1.4375 Acc: 0.4806 Embedding-Loss: 0.0000 Classification-Loss: 1.4375
+Epoch 20/50
+----------
+train Loss: 1.4298 Acc: 0.4885 Embedding-Loss: 0.0000 Classification-Loss: 1.4298
+test  Loss: 1.4356 Acc: 0.4863 Embedding-Loss: 0.0000 Classification-Loss: 1.4356
+Epoch 21/50
+----------
+train Loss: 1.4220 Acc: 0.4901 Embedding-Loss: 0.0000 Classification-Loss: 1.4220
+test  Loss: 1.4299 Acc: 0.4902 Embedding-Loss: 0.0000 Classification-Loss: 1.4299
+Epoch 22/50
+----------
+train Loss: 1.4137 Acc: 0.4955 Embedding-Loss: 0.0000 Classification-Loss: 1.4137
+test  Loss: 1.4141 Acc: 0.4945 Embedding-Loss: 0.0000 Classification-Loss: 1.4141
+Epoch 23/50
+----------
+train Loss: 1.4091 Acc: 0.4982 Embedding-Loss: 0.0000 Classification-Loss: 1.4091
+test  Loss: 1.4175 Acc: 0.4912 Embedding-Loss: 0.0000 Classification-Loss: 1.4175
+Epoch 24/50
+----------
+train Loss: 1.3974 Acc: 0.5015 Embedding-Loss: 0.0000 Classification-Loss: 1.3974
+test  Loss: 1.4016 Acc: 0.4979 Embedding-Loss: 0.0000 Classification-Loss: 1.4016
+Epoch 25/50
+----------
+train Loss: 1.3927 Acc: 0.5026 Embedding-Loss: 0.0000 Classification-Loss: 1.3927
+test  Loss: 1.4161 Acc: 0.4948 Embedding-Loss: 0.0000 Classification-Loss: 1.4161
+Epoch 26/50
+----------
+train Loss: 1.3849 Acc: 0.5051 Embedding-Loss: 0.0000 Classification-Loss: 1.3849
+test  Loss: 1.3927 Acc: 0.5026 Embedding-Loss: 0.0000 Classification-Loss: 1.3927
+Epoch 27/50
+----------
+train Loss: 1.3765 Acc: 0.5098 Embedding-Loss: 0.0000 Classification-Loss: 1.3765
+test  Loss: 1.3908 Acc: 0.5020 Embedding-Loss: 0.0000 Classification-Loss: 1.3908
+Epoch 28/50
+----------
+train Loss: 1.3693 Acc: 0.5120 Embedding-Loss: 0.0000 Classification-Loss: 1.3693
+test  Loss: 1.3852 Acc: 0.5038 Embedding-Loss: 0.0000 Classification-Loss: 1.3852
+Epoch 29/50
+----------
+train Loss: 1.3628 Acc: 0.5146 Embedding-Loss: 0.0000 Classification-Loss: 1.3628
+test  Loss: 1.3888 Acc: 0.5058 Embedding-Loss: 0.0000 Classification-Loss: 1.3888
+Epoch 30/50
+----------
+train Loss: 1.3471 Acc: 0.5206 Embedding-Loss: 0.0000 Classification-Loss: 1.3471
+test  Loss: 1.3658 Acc: 0.5107 Embedding-Loss: 0.0000 Classification-Loss: 1.3658
+Epoch 31/50
+----------
+train Loss: 1.3417 Acc: 0.5229 Embedding-Loss: 0.0000 Classification-Loss: 1.3417
+test  Loss: 1.3680 Acc: 0.5116 Embedding-Loss: 0.0000 Classification-Loss: 1.3680
+Epoch 32/50
+----------
+train Loss: 1.3394 Acc: 0.5231 Embedding-Loss: 0.0000 Classification-Loss: 1.3394
+test  Loss: 1.3708 Acc: 0.5087 Embedding-Loss: 0.0000 Classification-Loss: 1.3708
+Epoch 33/50
+----------
+train Loss: 1.3351 Acc: 0.5254 Embedding-Loss: 0.0000 Classification-Loss: 1.3351
+test  Loss: 1.3603 Acc: 0.5160 Embedding-Loss: 0.0000 Classification-Loss: 1.3603
+Epoch 34/50
+----------
+train Loss: 1.3329 Acc: 0.5261 Embedding-Loss: 0.0000 Classification-Loss: 1.3329
+test  Loss: 1.3617 Acc: 0.5137 Embedding-Loss: 0.0000 Classification-Loss: 1.3617
+Epoch 35/50
+----------
+train Loss: 1.3281 Acc: 0.5271 Embedding-Loss: 0.0000 Classification-Loss: 1.3281
+test  Loss: 1.3561 Acc: 0.5159 Embedding-Loss: 0.0000 Classification-Loss: 1.3561
+Epoch 36/50
+----------
+train Loss: 1.3245 Acc: 0.5295 Embedding-Loss: 0.0000 Classification-Loss: 1.3245
+test  Loss: 1.3619 Acc: 0.5135 Embedding-Loss: 0.0000 Classification-Loss: 1.3619
+Epoch 37/50
+----------
+train Loss: 1.3214 Acc: 0.5303 Embedding-Loss: 0.0000 Classification-Loss: 1.3214
+test  Loss: 1.3542 Acc: 0.5153 Embedding-Loss: 0.0000 Classification-Loss: 1.3542
+Epoch 38/50
+----------
+train Loss: 1.3178 Acc: 0.5319 Embedding-Loss: 0.0000 Classification-Loss: 1.3178
+test  Loss: 1.3466 Acc: 0.5187 Embedding-Loss: 0.0000 Classification-Loss: 1.3466
+Epoch 39/50
+----------
+train Loss: 1.3160 Acc: 0.5330 Embedding-Loss: 0.0000 Classification-Loss: 1.3160
+test  Loss: 1.3535 Acc: 0.5209 Embedding-Loss: 0.0000 Classification-Loss: 1.3535
+Epoch 40/50
+----------
+train Loss: 1.3048 Acc: 0.5363 Embedding-Loss: 0.0000 Classification-Loss: 1.3048
+test  Loss: 1.3468 Acc: 0.5201 Embedding-Loss: 0.0000 Classification-Loss: 1.3468
+Epoch 41/50
+----------
+train Loss: 1.3019 Acc: 0.5386 Embedding-Loss: 0.0000 Classification-Loss: 1.3019
+test  Loss: 1.3387 Acc: 0.5230 Embedding-Loss: 0.0000 Classification-Loss: 1.3387
+Epoch 42/50
+----------
+train Loss: 1.3001 Acc: 0.5379 Embedding-Loss: 0.0000 Classification-Loss: 1.3001
+test  Loss: 1.3373 Acc: 0.5236 Embedding-Loss: 0.0000 Classification-Loss: 1.3373
+Epoch 43/50
+----------
+train Loss: 1.2986 Acc: 0.5385 Embedding-Loss: 0.0000 Classification-Loss: 1.2986
+test  Loss: 1.3391 Acc: 0.5209 Embedding-Loss: 0.0000 Classification-Loss: 1.3391
+Epoch 44/50
+----------
+train Loss: 1.2966 Acc: 0.5396 Embedding-Loss: 0.0000 Classification-Loss: 1.2966
+test  Loss: 1.3328 Acc: 0.5254 Embedding-Loss: 0.0000 Classification-Loss: 1.3328
+Epoch 45/50
+----------
+train Loss: 1.2946 Acc: 0.5407 Embedding-Loss: 0.0000 Classification-Loss: 1.2946
+test  Loss: 1.3342 Acc: 0.5254 Embedding-Loss: 0.0000 Classification-Loss: 1.3342
+Epoch 46/50
+----------
+train Loss: 1.2925 Acc: 0.5404 Embedding-Loss: 0.0000 Classification-Loss: 1.2925
+test  Loss: 1.3358 Acc: 0.5238 Embedding-Loss: 0.0000 Classification-Loss: 1.3358
+Epoch 47/50
+----------
+train Loss: 1.2920 Acc: 0.5413 Embedding-Loss: 0.0000 Classification-Loss: 1.2920
+test  Loss: 1.3295 Acc: 0.5269 Embedding-Loss: 0.0000 Classification-Loss: 1.3295
+Epoch 48/50
+----------
+train Loss: 1.2889 Acc: 0.5423 Embedding-Loss: 0.0000 Classification-Loss: 1.2889
+test  Loss: 1.3305 Acc: 0.5271 Embedding-Loss: 0.0000 Classification-Loss: 1.3305
+Epoch 49/50
+----------
+train Loss: 1.2881 Acc: 0.5434 Embedding-Loss: 0.0000 Classification-Loss: 1.2881
+test  Loss: 1.3339 Acc: 0.5227 Embedding-Loss: 0.0000 Classification-Loss: 1.3339
+Epoch 50/50
+----------
+train Loss: 1.2825 Acc: 0.5444 Embedding-Loss: 0.0000 Classification-Loss: 1.2825
+test  Loss: 1.3268 Acc: 0.5264 Embedding-Loss: 0.0000 Classification-Loss: 1.3268
+Training complete in 18m 31s
+Best val Acc: 0.527100
+Accuracy of the network on the 10000 test images: 52.00
+Accuracy of horse : 60.10
+Accuracy of car   : 64.10
+Accuracy of deer  : 40.40
+Accuracy of dog   : 45.20
+Accuracy of frog  : 60.40
+Accuracy of cat   : 31.70
+Accuracy of plane : 62.80
+Accuracy of truck : 57.60
+Accuracy of ship  : 65.50
+Accuracy of bird  : 39.30
+################################################################
+Training with the following hyper-parameters:
+learning-rate = 0.001
+batch-size = 64
+momentum = 0.9
+weight-decay = 0.0
+Files already downloaded and verified
+Files already downloaded and verified
+Epoch 1/50
+----------
+train Loss: 2.3019 Acc: 0.1011 Embedding-Loss: 0.0000 Classification-Loss: 2.3019
+test  Loss: 2.2984 Acc: 0.1002 Embedding-Loss: 0.0000 Classification-Loss: 2.2984
+Epoch 2/50
+----------
+train Loss: 2.2795 Acc: 0.1263 Embedding-Loss: 0.0000 Classification-Loss: 2.2795
+test  Loss: 2.2169 Acc: 0.1698 Embedding-Loss: 0.0000 Classification-Loss: 2.2169
+Epoch 3/50
+----------
+train Loss: 2.0809 Acc: 0.2242 Embedding-Loss: 0.0000 Classification-Loss: 2.0809
+test  Loss: 2.0447 Acc: 0.2450 Embedding-Loss: 0.0000 Classification-Loss: 2.0447
+Epoch 4/50
+----------
+train Loss: 1.9740 Acc: 0.2680 Embedding-Loss: 0.0000 Classification-Loss: 1.9740
+test  Loss: 1.9161 Acc: 0.3001 Embedding-Loss: 0.0000 Classification-Loss: 1.9161
+Epoch 5/50
+----------
+train Loss: 1.8721 Acc: 0.3161 Embedding-Loss: 0.0000 Classification-Loss: 1.8721
+test  Loss: 1.7948 Acc: 0.3481 Embedding-Loss: 0.0000 Classification-Loss: 1.7948
+Epoch 6/50
+----------
+train Loss: 1.7301 Acc: 0.3705 Embedding-Loss: 0.0000 Classification-Loss: 1.7301
+test  Loss: 1.6846 Acc: 0.3906 Embedding-Loss: 0.0000 Classification-Loss: 1.6846
+Epoch 7/50
+----------
+train Loss: 1.6126 Acc: 0.4190 Embedding-Loss: 0.0000 Classification-Loss: 1.6126
+test  Loss: 1.5882 Acc: 0.4256 Embedding-Loss: 0.0000 Classification-Loss: 1.5882
+Epoch 8/50
+----------
+train Loss: 1.5425 Acc: 0.4435 Embedding-Loss: 0.0000 Classification-Loss: 1.5425
+test  Loss: 1.4972 Acc: 0.4529 Embedding-Loss: 0.0000 Classification-Loss: 1.4972
+Epoch 9/50
+----------
+train Loss: 1.4944 Acc: 0.4627 Embedding-Loss: 0.0000 Classification-Loss: 1.4944
+test  Loss: 1.4705 Acc: 0.4663 Embedding-Loss: 0.0000 Classification-Loss: 1.4705
+Epoch 10/50
+----------
+train Loss: 1.4413 Acc: 0.4836 Embedding-Loss: 0.0000 Classification-Loss: 1.4413
+test  Loss: 1.4289 Acc: 0.4831 Embedding-Loss: 0.0000 Classification-Loss: 1.4289
+Epoch 11/50
+----------
+train Loss: 1.4228 Acc: 0.4886 Embedding-Loss: 0.0000 Classification-Loss: 1.4228
+test  Loss: 1.4340 Acc: 0.4850 Embedding-Loss: 0.0000 Classification-Loss: 1.4340
+Epoch 12/50
+----------
+train Loss: 1.3989 Acc: 0.4998 Embedding-Loss: 0.0000 Classification-Loss: 1.3989
+test  Loss: 1.4143 Acc: 0.4902 Embedding-Loss: 0.0000 Classification-Loss: 1.4143
+Epoch 13/50
+----------
+train Loss: 1.3803 Acc: 0.5070 Embedding-Loss: 0.0000 Classification-Loss: 1.3803
+test  Loss: 1.3924 Acc: 0.4964 Embedding-Loss: 0.0000 Classification-Loss: 1.3924
+Epoch 14/50
+----------
+train Loss: 1.3628 Acc: 0.5156 Embedding-Loss: 0.0000 Classification-Loss: 1.3628
+test  Loss: 1.3851 Acc: 0.5033 Embedding-Loss: 0.0000 Classification-Loss: 1.3851
+Epoch 15/50
+----------
+train Loss: 1.3449 Acc: 0.5192 Embedding-Loss: 0.0000 Classification-Loss: 1.3449
+test  Loss: 1.3608 Acc: 0.5112 Embedding-Loss: 0.0000 Classification-Loss: 1.3608
+Epoch 16/50
+----------
+train Loss: 1.3297 Acc: 0.5251 Embedding-Loss: 0.0000 Classification-Loss: 1.3297
+test  Loss: 1.3350 Acc: 0.5200 Embedding-Loss: 0.0000 Classification-Loss: 1.3350
+Epoch 17/50
+----------
+train Loss: 1.3128 Acc: 0.5314 Embedding-Loss: 0.0000 Classification-Loss: 1.3128
+test  Loss: 1.3329 Acc: 0.5204 Embedding-Loss: 0.0000 Classification-Loss: 1.3329
+Epoch 18/50
+----------
+train Loss: 1.3007 Acc: 0.5371 Embedding-Loss: 0.0000 Classification-Loss: 1.3007
+test  Loss: 1.3697 Acc: 0.5150 Embedding-Loss: 0.0000 Classification-Loss: 1.3697
+Epoch 19/50
+----------
+train Loss: 1.2881 Acc: 0.5410 Embedding-Loss: 0.0000 Classification-Loss: 1.2881
+test  Loss: 1.3029 Acc: 0.5321 Embedding-Loss: 0.0000 Classification-Loss: 1.3029
+Epoch 20/50
+----------
+train Loss: 1.2612 Acc: 0.5508 Embedding-Loss: 0.0000 Classification-Loss: 1.2612
+test  Loss: 1.2862 Acc: 0.5389 Embedding-Loss: 0.0000 Classification-Loss: 1.2862
+Epoch 21/50
+----------
+train Loss: 1.2548 Acc: 0.5548 Embedding-Loss: 0.0000 Classification-Loss: 1.2548
+test  Loss: 1.2851 Acc: 0.5394 Embedding-Loss: 0.0000 Classification-Loss: 1.2851
+Epoch 22/50
+----------
+train Loss: 1.2461 Acc: 0.5580 Embedding-Loss: 0.0000 Classification-Loss: 1.2461
+test  Loss: 1.2760 Acc: 0.5381 Embedding-Loss: 0.0000 Classification-Loss: 1.2760
+Epoch 23/50
+----------
+train Loss: 1.2399 Acc: 0.5608 Embedding-Loss: 0.0000 Classification-Loss: 1.2399
+test  Loss: 1.2809 Acc: 0.5420 Embedding-Loss: 0.0000 Classification-Loss: 1.2809
+Epoch 24/50
+----------
+train Loss: 1.2344 Acc: 0.5609 Embedding-Loss: 0.0000 Classification-Loss: 1.2344
+test  Loss: 1.2799 Acc: 0.5402 Embedding-Loss: 0.0000 Classification-Loss: 1.2799
+Epoch 25/50
+----------
+train Loss: 1.2274 Acc: 0.5642 Embedding-Loss: 0.0000 Classification-Loss: 1.2274
+test  Loss: 1.2578 Acc: 0.5500 Embedding-Loss: 0.0000 Classification-Loss: 1.2578
+Epoch 26/50
+----------
+train Loss: 1.2205 Acc: 0.5663 Embedding-Loss: 0.0000 Classification-Loss: 1.2205
+test  Loss: 1.2565 Acc: 0.5461 Embedding-Loss: 0.0000 Classification-Loss: 1.2565
+Epoch 27/50
+----------
+train Loss: 1.2150 Acc: 0.5697 Embedding-Loss: 0.0000 Classification-Loss: 1.2150
+test  Loss: 1.2596 Acc: 0.5499 Embedding-Loss: 0.0000 Classification-Loss: 1.2596
+Epoch 28/50
+----------
+train Loss: 1.2086 Acc: 0.5720 Embedding-Loss: 0.0000 Classification-Loss: 1.2086
+test  Loss: 1.2690 Acc: 0.5497 Embedding-Loss: 0.0000 Classification-Loss: 1.2690
+Epoch 29/50
+----------
+train Loss: 1.2027 Acc: 0.5751 Embedding-Loss: 0.0000 Classification-Loss: 1.2027
+test  Loss: 1.2405 Acc: 0.5563 Embedding-Loss: 0.0000 Classification-Loss: 1.2405
+Epoch 30/50
+----------
+train Loss: 1.1873 Acc: 0.5806 Embedding-Loss: 0.0000 Classification-Loss: 1.1873
+test  Loss: 1.2351 Acc: 0.5605 Embedding-Loss: 0.0000 Classification-Loss: 1.2351
+Epoch 31/50
+----------
+train Loss: 1.1837 Acc: 0.5811 Embedding-Loss: 0.0000 Classification-Loss: 1.1837
+test  Loss: 1.2362 Acc: 0.5606 Embedding-Loss: 0.0000 Classification-Loss: 1.2362
+Epoch 32/50
+----------
+train Loss: 1.1808 Acc: 0.5832 Embedding-Loss: 0.0000 Classification-Loss: 1.1808
+test  Loss: 1.2340 Acc: 0.5605 Embedding-Loss: 0.0000 Classification-Loss: 1.2340
+Epoch 33/50
+----------
+train Loss: 1.1777 Acc: 0.5837 Embedding-Loss: 0.0000 Classification-Loss: 1.1777
+test  Loss: 1.2308 Acc: 0.5616 Embedding-Loss: 0.0000 Classification-Loss: 1.2308
+Epoch 34/50
+----------
+train Loss: 1.1746 Acc: 0.5849 Embedding-Loss: 0.0000 Classification-Loss: 1.1746
+test  Loss: 1.2243 Acc: 0.5633 Embedding-Loss: 0.0000 Classification-Loss: 1.2243
+Epoch 35/50
+----------
+train Loss: 1.1704 Acc: 0.5871 Embedding-Loss: 0.0000 Classification-Loss: 1.1704
+test  Loss: 1.2231 Acc: 0.5632 Embedding-Loss: 0.0000 Classification-Loss: 1.2231
+Epoch 36/50
+----------
+train Loss: 1.1678 Acc: 0.5862 Embedding-Loss: 0.0000 Classification-Loss: 1.1678
+test  Loss: 1.2204 Acc: 0.5638 Embedding-Loss: 0.0000 Classification-Loss: 1.2204
+Epoch 37/50
+----------
+train Loss: 1.1644 Acc: 0.5886 Embedding-Loss: 0.0000 Classification-Loss: 1.1644
+test  Loss: 1.2167 Acc: 0.5670 Embedding-Loss: 0.0000 Classification-Loss: 1.2167
+Epoch 38/50
+----------
+train Loss: 1.1634 Acc: 0.5897 Embedding-Loss: 0.0000 Classification-Loss: 1.1634
+test  Loss: 1.2184 Acc: 0.5656 Embedding-Loss: 0.0000 Classification-Loss: 1.2184
+Epoch 39/50
+----------
+train Loss: 1.1587 Acc: 0.5919 Embedding-Loss: 0.0000 Classification-Loss: 1.1587
+test  Loss: 1.2170 Acc: 0.5670 Embedding-Loss: 0.0000 Classification-Loss: 1.2170
+Epoch 40/50
+----------
+train Loss: 1.1510 Acc: 0.5940 Embedding-Loss: 0.0000 Classification-Loss: 1.1510
+test  Loss: 1.2128 Acc: 0.5678 Embedding-Loss: 0.0000 Classification-Loss: 1.2128
+Epoch 41/50
+----------
+train Loss: 1.1483 Acc: 0.5956 Embedding-Loss: 0.0000 Classification-Loss: 1.1483
+test  Loss: 1.2112 Acc: 0.5719 Embedding-Loss: 0.0000 Classification-Loss: 1.2112
+Epoch 42/50
+----------
+train Loss: 1.1471 Acc: 0.5960 Embedding-Loss: 0.0000 Classification-Loss: 1.1471
+test  Loss: 1.2089 Acc: 0.5711 Embedding-Loss: 0.0000 Classification-Loss: 1.2089
+Epoch 43/50
+----------
+train Loss: 1.1453 Acc: 0.5954 Embedding-Loss: 0.0000 Classification-Loss: 1.1453
+test  Loss: 1.2146 Acc: 0.5664 Embedding-Loss: 0.0000 Classification-Loss: 1.2146
+Epoch 44/50
+----------
+train Loss: 1.1442 Acc: 0.5970 Embedding-Loss: 0.0000 Classification-Loss: 1.1442
+test  Loss: 1.2090 Acc: 0.5724 Embedding-Loss: 0.0000 Classification-Loss: 1.2090
+Epoch 45/50
+----------
+train Loss: 1.1425 Acc: 0.5977 Embedding-Loss: 0.0000 Classification-Loss: 1.1425
+test  Loss: 1.2067 Acc: 0.5724 Embedding-Loss: 0.0000 Classification-Loss: 1.2067
+Epoch 46/50
+----------
+train Loss: 1.1403 Acc: 0.5977 Embedding-Loss: 0.0000 Classification-Loss: 1.1403
+test  Loss: 1.2055 Acc: 0.5716 Embedding-Loss: 0.0000 Classification-Loss: 1.2055
+Epoch 47/50
+----------
+train Loss: 1.1392 Acc: 0.5989 Embedding-Loss: 0.0000 Classification-Loss: 1.1392
+test  Loss: 1.2083 Acc: 0.5676 Embedding-Loss: 0.0000 Classification-Loss: 1.2083
+Epoch 48/50
+----------
+train Loss: 1.1373 Acc: 0.5989 Embedding-Loss: 0.0000 Classification-Loss: 1.1373
+test  Loss: 1.2052 Acc: 0.5704 Embedding-Loss: 0.0000 Classification-Loss: 1.2052
+Epoch 49/50
+----------
+train Loss: 1.1365 Acc: 0.5985 Embedding-Loss: 0.0000 Classification-Loss: 1.1365
+test  Loss: 1.2034 Acc: 0.5730 Embedding-Loss: 0.0000 Classification-Loss: 1.2034
+Epoch 50/50
+----------
+train Loss: 1.1314 Acc: 0.6011 Embedding-Loss: 0.0000 Classification-Loss: 1.1314
+test  Loss: 1.2021 Acc: 0.5737 Embedding-Loss: 0.0000 Classification-Loss: 1.2021
+Training complete in 18m 34s
+Best val Acc: 0.573700
+Accuracy of the network on the 10000 test images: 57.00
+Accuracy of horse : 67.50
+Accuracy of car   : 68.00
+Accuracy of deer  : 45.80
+Accuracy of dog   : 49.80
+Accuracy of frog  : 74.40
+Accuracy of cat   : 31.90
+Accuracy of plane : 64.30
+Accuracy of truck : 59.20
+Accuracy of ship  : 73.30
+Accuracy of bird  : 39.50
+################################################################
+Training with the following hyper-parameters:
+learning-rate = 0.002
+batch-size = 16
+momentum = 0.9
+weight-decay = 0.01
+Files already downloaded and verified
+Files already downloaded and verified
+Epoch 1/50
+----------
+train Loss: 2.1060 Acc: 0.2086 Embedding-Loss: 0.0000 Classification-Loss: 2.1060
+test  Loss: 1.8839 Acc: 0.3190 Embedding-Loss: 0.0000 Classification-Loss: 1.8839
+Epoch 2/50
+----------
+train Loss: 1.6612 Acc: 0.3982 Embedding-Loss: 0.0000 Classification-Loss: 1.6612
+test  Loss: 1.5428 Acc: 0.4419 Embedding-Loss: 0.0000 Classification-Loss: 1.5428
+Epoch 3/50
+----------
+train Loss: 1.4777 Acc: 0.4674 Embedding-Loss: 0.0000 Classification-Loss: 1.4777
+test  Loss: 1.4408 Acc: 0.4862 Embedding-Loss: 0.0000 Classification-Loss: 1.4408
+Epoch 4/50
+----------
+train Loss: 1.3771 Acc: 0.5072 Embedding-Loss: 0.0000 Classification-Loss: 1.3771
+test  Loss: 1.3476 Acc: 0.5171 Embedding-Loss: 0.0000 Classification-Loss: 1.3476
+Epoch 5/50
+----------
+train Loss: 1.3038 Acc: 0.5349 Embedding-Loss: 0.0000 Classification-Loss: 1.3038
+test  Loss: 1.3714 Acc: 0.5107 Embedding-Loss: 0.0000 Classification-Loss: 1.3714
+Epoch 6/50
+----------
+train Loss: 1.2305 Acc: 0.5603 Embedding-Loss: 0.0000 Classification-Loss: 1.2305
+test  Loss: 1.2650 Acc: 0.5481 Embedding-Loss: 0.0000 Classification-Loss: 1.2650
+Epoch 7/50
+----------
+train Loss: 1.1687 Acc: 0.5856 Embedding-Loss: 0.0000 Classification-Loss: 1.1687
+test  Loss: 1.2451 Acc: 0.5564 Embedding-Loss: 0.0000 Classification-Loss: 1.2451
+Epoch 8/50
+----------
+train Loss: 1.1124 Acc: 0.6052 Embedding-Loss: 0.0000 Classification-Loss: 1.1124
+test  Loss: 1.2236 Acc: 0.5685 Embedding-Loss: 0.0000 Classification-Loss: 1.2236
+Epoch 9/50
+----------
+train Loss: 1.0639 Acc: 0.6224 Embedding-Loss: 0.0000 Classification-Loss: 1.0639
+test  Loss: 1.2048 Acc: 0.5764 Embedding-Loss: 0.0000 Classification-Loss: 1.2048
+Epoch 10/50
+----------
+train Loss: 0.9296 Acc: 0.6732 Embedding-Loss: 0.0000 Classification-Loss: 0.9296
+test  Loss: 1.1740 Acc: 0.5988 Embedding-Loss: 0.0000 Classification-Loss: 1.1740
+Epoch 11/50
+----------
+train Loss: 0.8902 Acc: 0.6853 Embedding-Loss: 0.0000 Classification-Loss: 0.8902
+test  Loss: 1.2230 Acc: 0.5879 Embedding-Loss: 0.0000 Classification-Loss: 1.2230
+Epoch 12/50
+----------
+train Loss: 0.8506 Acc: 0.7001 Embedding-Loss: 0.0000 Classification-Loss: 0.8506
+test  Loss: 1.2007 Acc: 0.5965 Embedding-Loss: 0.0000 Classification-Loss: 1.2007
+Epoch 13/50
+----------
+train Loss: 0.8187 Acc: 0.7118 Embedding-Loss: 0.0000 Classification-Loss: 0.8187
+test  Loss: 1.1879 Acc: 0.5990 Embedding-Loss: 0.0000 Classification-Loss: 1.1879
+Epoch 14/50
+----------
+train Loss: 0.7801 Acc: 0.7241 Embedding-Loss: 0.0000 Classification-Loss: 0.7801
+test  Loss: 1.2264 Acc: 0.5954 Embedding-Loss: 0.0000 Classification-Loss: 1.2264
+Epoch 15/50
+----------
+train Loss: 0.7478 Acc: 0.7354 Embedding-Loss: 0.0000 Classification-Loss: 0.7478
+test  Loss: 1.2234 Acc: 0.5996 Embedding-Loss: 0.0000 Classification-Loss: 1.2234
+Epoch 16/50
+----------
+train Loss: 0.7097 Acc: 0.7513 Embedding-Loss: 0.0000 Classification-Loss: 0.7097
+test  Loss: 1.2500 Acc: 0.5993 Embedding-Loss: 0.0000 Classification-Loss: 1.2500
+Epoch 17/50
+----------
+train Loss: 0.6712 Acc: 0.7646 Embedding-Loss: 0.0000 Classification-Loss: 0.6712
+test  Loss: 1.2897 Acc: 0.6006 Embedding-Loss: 0.0000 Classification-Loss: 1.2897
+Epoch 18/50
+----------
+train Loss: 0.6276 Acc: 0.7780 Embedding-Loss: 0.0000 Classification-Loss: 0.6276
+test  Loss: 1.3365 Acc: 0.5912 Embedding-Loss: 0.0000 Classification-Loss: 1.3365
+Epoch 19/50
+----------
+train Loss: 0.5891 Acc: 0.7923 Embedding-Loss: 0.0000 Classification-Loss: 0.5891
+test  Loss: 1.3885 Acc: 0.5912 Embedding-Loss: 0.0000 Classification-Loss: 1.3885
+Epoch 20/50
+----------
+train Loss: 0.4666 Acc: 0.8403 Embedding-Loss: 0.0000 Classification-Loss: 0.4666
+test  Loss: 1.4586 Acc: 0.5994 Embedding-Loss: 0.0000 Classification-Loss: 1.4586
+Epoch 21/50
+----------
+train Loss: 0.4306 Acc: 0.8528 Embedding-Loss: 0.0000 Classification-Loss: 0.4306
+test  Loss: 1.5105 Acc: 0.5982 Embedding-Loss: 0.0000 Classification-Loss: 1.5105
+Epoch 22/50
+----------
+train Loss: 0.4002 Acc: 0.8647 Embedding-Loss: 0.0000 Classification-Loss: 0.4002
+test  Loss: 1.5772 Acc: 0.5926 Embedding-Loss: 0.0000 Classification-Loss: 1.5772
+Epoch 23/50
+----------
+train Loss: 0.3726 Acc: 0.8742 Embedding-Loss: 0.0000 Classification-Loss: 0.3726
+test  Loss: 1.6611 Acc: 0.5913 Embedding-Loss: 0.0000 Classification-Loss: 1.6611
+Epoch 24/50
+----------
+train Loss: 0.3443 Acc: 0.8848 Embedding-Loss: 0.0000 Classification-Loss: 0.3443
+test  Loss: 1.7271 Acc: 0.5924 Embedding-Loss: 0.0000 Classification-Loss: 1.7271
+Epoch 25/50
+----------
+train Loss: 0.3171 Acc: 0.8924 Embedding-Loss: 0.0000 Classification-Loss: 0.3171
+test  Loss: 1.7717 Acc: 0.5895 Embedding-Loss: 0.0000 Classification-Loss: 1.7717
+Epoch 26/50
+----------
+train Loss: 0.2878 Acc: 0.9046 Embedding-Loss: 0.0000 Classification-Loss: 0.2878
+test  Loss: 1.8850 Acc: 0.5845 Embedding-Loss: 0.0000 Classification-Loss: 1.8850
+Epoch 27/50
+----------
+train Loss: 0.2597 Acc: 0.9159 Embedding-Loss: 0.0000 Classification-Loss: 0.2597
+test  Loss: 1.9852 Acc: 0.5904 Embedding-Loss: 0.0000 Classification-Loss: 1.9852
+Epoch 28/50
+----------
+train Loss: 0.2315 Acc: 0.9246 Embedding-Loss: 0.0000 Classification-Loss: 0.2315
+test  Loss: 2.0789 Acc: 0.5859 Embedding-Loss: 0.0000 Classification-Loss: 2.0789
+Epoch 29/50
+----------
+train Loss: 0.2060 Acc: 0.9342 Embedding-Loss: 0.0000 Classification-Loss: 0.2060
+test  Loss: 2.1482 Acc: 0.5783 Embedding-Loss: 0.0000 Classification-Loss: 2.1482
+Epoch 30/50
+----------
+train Loss: 0.1476 Acc: 0.9599 Embedding-Loss: 0.0000 Classification-Loss: 0.1476
+test  Loss: 2.2760 Acc: 0.5860 Embedding-Loss: 0.0000 Classification-Loss: 2.2760
+Epoch 31/50
+----------
+train Loss: 0.1296 Acc: 0.9664 Embedding-Loss: 0.0000 Classification-Loss: 0.1296
+test  Loss: 2.3654 Acc: 0.5879 Embedding-Loss: 0.0000 Classification-Loss: 2.3654
+Epoch 32/50
+----------
+train Loss: 0.1166 Acc: 0.9712 Embedding-Loss: 0.0000 Classification-Loss: 0.1166
+test  Loss: 2.4237 Acc: 0.5876 Embedding-Loss: 0.0000 Classification-Loss: 2.4237
+Epoch 33/50
+----------
+train Loss: 0.1051 Acc: 0.9752 Embedding-Loss: 0.0000 Classification-Loss: 0.1051
+test  Loss: 2.5142 Acc: 0.5885 Embedding-Loss: 0.0000 Classification-Loss: 2.5142
+Epoch 34/50
+----------
+train Loss: 0.0952 Acc: 0.9789 Embedding-Loss: 0.0000 Classification-Loss: 0.0952
+test  Loss: 2.5799 Acc: 0.5897 Embedding-Loss: 0.0000 Classification-Loss: 2.5799
+Epoch 35/50
+----------
+train Loss: 0.0853 Acc: 0.9821 Embedding-Loss: 0.0000 Classification-Loss: 0.0853
+test  Loss: 2.6868 Acc: 0.5893 Embedding-Loss: 0.0000 Classification-Loss: 2.6868
+Epoch 36/50
+----------
+train Loss: 0.0763 Acc: 0.9852 Embedding-Loss: 0.0000 Classification-Loss: 0.0763
+test  Loss: 2.7473 Acc: 0.5873 Embedding-Loss: 0.0000 Classification-Loss: 2.7473
+Epoch 37/50
+----------
+train Loss: 0.0682 Acc: 0.9877 Embedding-Loss: 0.0000 Classification-Loss: 0.0682
+test  Loss: 2.8257 Acc: 0.5858 Embedding-Loss: 0.0000 Classification-Loss: 2.8257
+Epoch 38/50
+----------
+train Loss: 0.0609 Acc: 0.9897 Embedding-Loss: 0.0000 Classification-Loss: 0.0609
+test  Loss: 2.9271 Acc: 0.5855 Embedding-Loss: 0.0000 Classification-Loss: 2.9271
+Epoch 39/50
+----------
+train Loss: 0.0545 Acc: 0.9911 Embedding-Loss: 0.0000 Classification-Loss: 0.0545
+test  Loss: 2.9849 Acc: 0.5857 Embedding-Loss: 0.0000 Classification-Loss: 2.9849
+Epoch 40/50
+----------
+train Loss: 0.0444 Acc: 0.9941 Embedding-Loss: 0.0000 Classification-Loss: 0.0444
+test  Loss: 3.0472 Acc: 0.5882 Embedding-Loss: 0.0000 Classification-Loss: 3.0472
+Epoch 41/50
+----------
+train Loss: 0.0413 Acc: 0.9950 Embedding-Loss: 0.0000 Classification-Loss: 0.0413
+test  Loss: 3.0762 Acc: 0.5880 Embedding-Loss: 0.0000 Classification-Loss: 3.0762
+Epoch 42/50
+----------
+train Loss: 0.0390 Acc: 0.9954 Embedding-Loss: 0.0000 Classification-Loss: 0.0390
+test  Loss: 3.1397 Acc: 0.5872 Embedding-Loss: 0.0000 Classification-Loss: 3.1397
+Epoch 43/50
+----------
+train Loss: 0.0367 Acc: 0.9956 Embedding-Loss: 0.0000 Classification-Loss: 0.0367
+test  Loss: 3.1594 Acc: 0.5875 Embedding-Loss: 0.0000 Classification-Loss: 3.1594
+Epoch 44/50
+----------
+train Loss: 0.0347 Acc: 0.9962 Embedding-Loss: 0.0000 Classification-Loss: 0.0347
+test  Loss: 3.2003 Acc: 0.5860 Embedding-Loss: 0.0000 Classification-Loss: 3.2003
+Epoch 45/50
+----------
+train Loss: 0.0328 Acc: 0.9967 Embedding-Loss: 0.0000 Classification-Loss: 0.0328
+test  Loss: 3.2222 Acc: 0.5863 Embedding-Loss: 0.0000 Classification-Loss: 3.2222
+Epoch 46/50
+----------
+train Loss: 0.0310 Acc: 0.9971 Embedding-Loss: 0.0000 Classification-Loss: 0.0310
+test  Loss: 3.2845 Acc: 0.5861 Embedding-Loss: 0.0000 Classification-Loss: 3.2845
+Epoch 47/50
+----------
+train Loss: 0.0293 Acc: 0.9974 Embedding-Loss: 0.0000 Classification-Loss: 0.0293
+test  Loss: 3.3120 Acc: 0.5867 Embedding-Loss: 0.0000 Classification-Loss: 3.3120
+Epoch 48/50
+----------
+train Loss: 0.0276 Acc: 0.9977 Embedding-Loss: 0.0000 Classification-Loss: 0.0276
+test  Loss: 3.3576 Acc: 0.5852 Embedding-Loss: 0.0000 Classification-Loss: 3.3576
+Epoch 49/50
+----------
+train Loss: 0.0263 Acc: 0.9979 Embedding-Loss: 0.0000 Classification-Loss: 0.0263
+test  Loss: 3.3765 Acc: 0.5872 Embedding-Loss: 0.0000 Classification-Loss: 3.3765
+Epoch 50/50
+----------
+train Loss: 0.0240 Acc: 0.9982 Embedding-Loss: 0.0000 Classification-Loss: 0.0240
+test  Loss: 3.3982 Acc: 0.5852 Embedding-Loss: 0.0000 Classification-Loss: 3.3982
+Training complete in 69m 22s
+Best val Acc: 0.600600
+Accuracy of the network on the 10000 test images: 60.00
+Accuracy of horse : 64.50
+Accuracy of car   : 74.30
+Accuracy of deer  : 50.50
+Accuracy of dog   : 46.90
+Accuracy of frog  : 74.10
+Accuracy of cat   : 39.70
+Accuracy of plane : 63.40
+Accuracy of truck : 61.40
+Accuracy of ship  : 73.00
+Accuracy of bird  : 52.80
+################################################################
+Training with the following hyper-parameters:
+learning-rate = 0.002
+batch-size = 16
+momentum = 0.9
+weight-decay = 0.0
+Files already downloaded and verified
+Files already downloaded and verified
+Epoch 1/50
+----------
+train Loss: 2.0855 Acc: 0.2201 Embedding-Loss: 0.0000 Classification-Loss: 2.0855
+test  Loss: 1.8176 Acc: 0.3532 Embedding-Loss: 0.0000 Classification-Loss: 1.8176
+Epoch 2/50
+----------
+train Loss: 1.6364 Acc: 0.4060 Embedding-Loss: 0.0000 Classification-Loss: 1.6364
+test  Loss: 1.5165 Acc: 0.4421 Embedding-Loss: 0.0000 Classification-Loss: 1.5165
+Epoch 3/50
+----------
+train Loss: 1.4460 Acc: 0.4769 Embedding-Loss: 0.0000 Classification-Loss: 1.4460
+test  Loss: 1.4253 Acc: 0.4862 Embedding-Loss: 0.0000 Classification-Loss: 1.4253
+Epoch 4/50
+----------
+train Loss: 1.3434 Acc: 0.5171 Embedding-Loss: 0.0000 Classification-Loss: 1.3434
+test  Loss: 1.3399 Acc: 0.5156 Embedding-Loss: 0.0000 Classification-Loss: 1.3399
+Epoch 5/50
+----------
+train Loss: 1.2697 Acc: 0.5490 Embedding-Loss: 0.0000 Classification-Loss: 1.2697
+test  Loss: 1.3000 Acc: 0.5358 Embedding-Loss: 0.0000 Classification-Loss: 1.3000
+Epoch 6/50
+----------
+train Loss: 1.2119 Acc: 0.5673 Embedding-Loss: 0.0000 Classification-Loss: 1.2119
+test  Loss: 1.3196 Acc: 0.5430 Embedding-Loss: 0.0000 Classification-Loss: 1.3196
+Epoch 7/50
+----------
+train Loss: 1.1500 Acc: 0.5939 Embedding-Loss: 0.0000 Classification-Loss: 1.1500
+test  Loss: 1.2406 Acc: 0.5685 Embedding-Loss: 0.0000 Classification-Loss: 1.2406
+Epoch 8/50
+----------
+train Loss: 1.0894 Acc: 0.6150 Embedding-Loss: 0.0000 Classification-Loss: 1.0894
+test  Loss: 1.2446 Acc: 0.5574 Embedding-Loss: 0.0000 Classification-Loss: 1.2446
+Epoch 9/50
+----------
+train Loss: 1.0307 Acc: 0.6371 Embedding-Loss: 0.0000 Classification-Loss: 1.0307
+test  Loss: 1.2445 Acc: 0.5718 Embedding-Loss: 0.0000 Classification-Loss: 1.2445
+Epoch 10/50
+----------
+train Loss: 0.9009 Acc: 0.6844 Embedding-Loss: 0.0000 Classification-Loss: 0.9009
+test  Loss: 1.1754 Acc: 0.6011 Embedding-Loss: 0.0000 Classification-Loss: 1.1754
+Epoch 11/50
+----------
+train Loss: 0.8562 Acc: 0.6984 Embedding-Loss: 0.0000 Classification-Loss: 0.8562
+test  Loss: 1.1494 Acc: 0.6123 Embedding-Loss: 0.0000 Classification-Loss: 1.1494
+Epoch 12/50
+----------
+train Loss: 0.8220 Acc: 0.7103 Embedding-Loss: 0.0000 Classification-Loss: 0.8220
+test  Loss: 1.1680 Acc: 0.6146 Embedding-Loss: 0.0000 Classification-Loss: 1.1680
+Epoch 13/50
+----------
+train Loss: 0.7836 Acc: 0.7238 Embedding-Loss: 0.0000 Classification-Loss: 0.7836
+test  Loss: 1.1715 Acc: 0.6086 Embedding-Loss: 0.0000 Classification-Loss: 1.1715
+Epoch 14/50
+----------
+train Loss: 0.7505 Acc: 0.7361 Embedding-Loss: 0.0000 Classification-Loss: 0.7505
+test  Loss: 1.2007 Acc: 0.6081 Embedding-Loss: 0.0000 Classification-Loss: 1.2007
+Epoch 15/50
+----------
+train Loss: 0.7158 Acc: 0.7487 Embedding-Loss: 0.0000 Classification-Loss: 0.7158
+test  Loss: 1.2047 Acc: 0.6084 Embedding-Loss: 0.0000 Classification-Loss: 1.2047
+Epoch 16/50
+----------
+train Loss: 0.6803 Acc: 0.7591 Embedding-Loss: 0.0000 Classification-Loss: 0.6803
+test  Loss: 1.2295 Acc: 0.6031 Embedding-Loss: 0.0000 Classification-Loss: 1.2295
+Epoch 17/50
+----------
+train Loss: 0.6475 Acc: 0.7713 Embedding-Loss: 0.0000 Classification-Loss: 0.6475
+test  Loss: 1.2625 Acc: 0.6065 Embedding-Loss: 0.0000 Classification-Loss: 1.2625
+Epoch 18/50
+----------
+train Loss: 0.6113 Acc: 0.7841 Embedding-Loss: 0.0000 Classification-Loss: 0.6113
+test  Loss: 1.3244 Acc: 0.6059 Embedding-Loss: 0.0000 Classification-Loss: 1.3244
+Epoch 19/50
+----------
+train Loss: 0.5775 Acc: 0.7965 Embedding-Loss: 0.0000 Classification-Loss: 0.5775
+test  Loss: 1.3546 Acc: 0.6052 Embedding-Loss: 0.0000 Classification-Loss: 1.3546
+Epoch 20/50
+----------
+train Loss: 0.4597 Acc: 0.8430 Embedding-Loss: 0.0000 Classification-Loss: 0.4597
+test  Loss: 1.3852 Acc: 0.6122 Embedding-Loss: 0.0000 Classification-Loss: 1.3852
+Epoch 21/50
+----------
+train Loss: 0.4245 Acc: 0.8555 Embedding-Loss: 0.0000 Classification-Loss: 0.4245
+test  Loss: 1.4602 Acc: 0.6086 Embedding-Loss: 0.0000 Classification-Loss: 1.4602
+Epoch 22/50
+----------
+train Loss: 0.3982 Acc: 0.8636 Embedding-Loss: 0.0000 Classification-Loss: 0.3982
+test  Loss: 1.5288 Acc: 0.6067 Embedding-Loss: 0.0000 Classification-Loss: 1.5288
+Epoch 23/50
+----------
+train Loss: 0.3733 Acc: 0.8732 Embedding-Loss: 0.0000 Classification-Loss: 0.3733
+test  Loss: 1.6027 Acc: 0.6066 Embedding-Loss: 0.0000 Classification-Loss: 1.6027
+Epoch 24/50
+----------
+train Loss: 0.3482 Acc: 0.8817 Embedding-Loss: 0.0000 Classification-Loss: 0.3482
+test  Loss: 1.6914 Acc: 0.6034 Embedding-Loss: 0.0000 Classification-Loss: 1.6914
+Epoch 25/50
+----------
+train Loss: 0.3263 Acc: 0.8891 Embedding-Loss: 0.0000 Classification-Loss: 0.3263
+test  Loss: 1.7483 Acc: 0.5976 Embedding-Loss: 0.0000 Classification-Loss: 1.7483
+Epoch 26/50
+----------
+train Loss: 0.3028 Acc: 0.8978 Embedding-Loss: 0.0000 Classification-Loss: 0.3028
+test  Loss: 1.8247 Acc: 0.5980 Embedding-Loss: 0.0000 Classification-Loss: 1.8247
+Epoch 27/50
+----------
+train Loss: 0.2764 Acc: 0.9066 Embedding-Loss: 0.0000 Classification-Loss: 0.2764
+test  Loss: 1.8784 Acc: 0.5952 Embedding-Loss: 0.0000 Classification-Loss: 1.8784
+Epoch 28/50
+----------
+train Loss: 0.2539 Acc: 0.9156 Embedding-Loss: 0.0000 Classification-Loss: 0.2539
+test  Loss: 1.9854 Acc: 0.5989 Embedding-Loss: 0.0000 Classification-Loss: 1.9854
+Epoch 29/50
+----------
+train Loss: 0.2339 Acc: 0.9224 Embedding-Loss: 0.0000 Classification-Loss: 0.2339
+test  Loss: 2.0263 Acc: 0.5964 Embedding-Loss: 0.0000 Classification-Loss: 2.0263
+Epoch 30/50
+----------
+train Loss: 0.1709 Acc: 0.9518 Embedding-Loss: 0.0000 Classification-Loss: 0.1709
+test  Loss: 2.1390 Acc: 0.5998 Embedding-Loss: 0.0000 Classification-Loss: 2.1390
+Epoch 31/50
+----------
+train Loss: 0.1507 Acc: 0.9589 Embedding-Loss: 0.0000 Classification-Loss: 0.1507
+test  Loss: 2.2139 Acc: 0.6019 Embedding-Loss: 0.0000 Classification-Loss: 2.2139
+Epoch 32/50
+----------
+train Loss: 0.1379 Acc: 0.9629 Embedding-Loss: 0.0000 Classification-Loss: 0.1379
+test  Loss: 2.3018 Acc: 0.6006 Embedding-Loss: 0.0000 Classification-Loss: 2.3018
+Epoch 33/50
+----------
+train Loss: 0.1264 Acc: 0.9675 Embedding-Loss: 0.0000 Classification-Loss: 0.1264
+test  Loss: 2.3518 Acc: 0.5984 Embedding-Loss: 0.0000 Classification-Loss: 2.3518
+Epoch 34/50
+----------
+train Loss: 0.1159 Acc: 0.9707 Embedding-Loss: 0.0000 Classification-Loss: 0.1159
+test  Loss: 2.4591 Acc: 0.5943 Embedding-Loss: 0.0000 Classification-Loss: 2.4591
+Epoch 35/50
+----------
+train Loss: 0.1058 Acc: 0.9743 Embedding-Loss: 0.0000 Classification-Loss: 0.1058
+test  Loss: 2.5373 Acc: 0.5961 Embedding-Loss: 0.0000 Classification-Loss: 2.5373
+Epoch 36/50
+----------
+train Loss: 0.0968 Acc: 0.9774 Embedding-Loss: 0.0000 Classification-Loss: 0.0968
+test  Loss: 2.5894 Acc: 0.5950 Embedding-Loss: 0.0000 Classification-Loss: 2.5894
+Epoch 37/50
+----------
+train Loss: 0.0880 Acc: 0.9807 Embedding-Loss: 0.0000 Classification-Loss: 0.0880
+test  Loss: 2.6540 Acc: 0.5969 Embedding-Loss: 0.0000 Classification-Loss: 2.6540
+Epoch 38/50
+----------
+train Loss: 0.0798 Acc: 0.9835 Embedding-Loss: 0.0000 Classification-Loss: 0.0798
+test  Loss: 2.7625 Acc: 0.5943 Embedding-Loss: 0.0000 Classification-Loss: 2.7625
+Epoch 39/50
+----------
+train Loss: 0.0718 Acc: 0.9856 Embedding-Loss: 0.0000 Classification-Loss: 0.0718
+test  Loss: 2.8123 Acc: 0.5947 Embedding-Loss: 0.0000 Classification-Loss: 2.8123
+Epoch 40/50
+----------
+train Loss: 0.0583 Acc: 0.9903 Embedding-Loss: 0.0000 Classification-Loss: 0.0583
+test  Loss: 2.8512 Acc: 0.5948 Embedding-Loss: 0.0000 Classification-Loss: 2.8512
+Epoch 41/50
+----------
+train Loss: 0.0544 Acc: 0.9915 Embedding-Loss: 0.0000 Classification-Loss: 0.0544
+test  Loss: 2.9155 Acc: 0.5955 Embedding-Loss: 0.0000 Classification-Loss: 2.9155
+Epoch 42/50
+----------
+train Loss: 0.0514 Acc: 0.9921 Embedding-Loss: 0.0000 Classification-Loss: 0.0514
+test  Loss: 2.9446 Acc: 0.5938 Embedding-Loss: 0.0000 Classification-Loss: 2.9446
+Epoch 43/50
+----------
+train Loss: 0.0486 Acc: 0.9930 Embedding-Loss: 0.0000 Classification-Loss: 0.0486
+test  Loss: 2.9851 Acc: 0.5939 Embedding-Loss: 0.0000 Classification-Loss: 2.9851
+Epoch 44/50
+----------
+train Loss: 0.0460 Acc: 0.9935 Embedding-Loss: 0.0000 Classification-Loss: 0.0460
+test  Loss: 3.0280 Acc: 0.5953 Embedding-Loss: 0.0000 Classification-Loss: 3.0280
+Epoch 45/50
+----------
+train Loss: 0.0436 Acc: 0.9941 Embedding-Loss: 0.0000 Classification-Loss: 0.0436
+test  Loss: 3.0669 Acc: 0.5927 Embedding-Loss: 0.0000 Classification-Loss: 3.0669
+Epoch 46/50
+----------
+train Loss: 0.0413 Acc: 0.9948 Embedding-Loss: 0.0000 Classification-Loss: 0.0413
+test  Loss: 3.1068 Acc: 0.5952 Embedding-Loss: 0.0000 Classification-Loss: 3.1068
+Epoch 47/50
+----------
+train Loss: 0.0390 Acc: 0.9954 Embedding-Loss: 0.0000 Classification-Loss: 0.0390
+test  Loss: 3.1588 Acc: 0.5945 Embedding-Loss: 0.0000 Classification-Loss: 3.1588
+Epoch 48/50
+----------
+train Loss: 0.0370 Acc: 0.9956 Embedding-Loss: 0.0000 Classification-Loss: 0.0370
+test  Loss: 3.1739 Acc: 0.5940 Embedding-Loss: 0.0000 Classification-Loss: 3.1739
+Epoch 49/50
+----------
+train Loss: 0.0351 Acc: 0.9960 Embedding-Loss: 0.0000 Classification-Loss: 0.0351
+test  Loss: 3.2153 Acc: 0.5947 Embedding-Loss: 0.0000 Classification-Loss: 3.2153
+Epoch 50/50
+----------
+train Loss: 0.0319 Acc: 0.9969 Embedding-Loss: 0.0000 Classification-Loss: 0.0319
+test  Loss: 3.2355 Acc: 0.5935 Embedding-Loss: 0.0000 Classification-Loss: 3.2355
+Training complete in 68m 49s
+Best val Acc: 0.614600
+Accuracy of the network on the 10000 test images: 61.00
+Accuracy of horse : 69.30
+Accuracy of car   : 70.70
+Accuracy of deer  : 52.50
+Accuracy of dog   : 53.00
+Accuracy of frog  : 63.00
+Accuracy of cat   : 42.70
+Accuracy of plane : 74.70
+Accuracy of truck : 69.20
+Accuracy of ship  : 68.30
+Accuracy of bird  : 51.20
+################################################################
+Training with the following hyper-parameters:
+learning-rate = 0.002
+batch-size = 32
+momentum = 0.9
+weight-decay = 0.01
+Files already downloaded and verified
+Files already downloaded and verified
+Epoch 1/50
+----------
+train Loss: 2.1632 Acc: 0.1810 Embedding-Loss: 0.0000 Classification-Loss: 2.1632
+test  Loss: 1.9184 Acc: 0.2938 Embedding-Loss: 0.0000 Classification-Loss: 1.9184
+Epoch 2/50
+----------
+train Loss: 1.7573 Acc: 0.3633 Embedding-Loss: 0.0000 Classification-Loss: 1.7573
+test  Loss: 1.5969 Acc: 0.4179 Embedding-Loss: 0.0000 Classification-Loss: 1.5969
+Epoch 3/50
+----------
+train Loss: 1.5267 Acc: 0.4463 Embedding-Loss: 0.0000 Classification-Loss: 1.5267
+test  Loss: 1.5106 Acc: 0.4563 Embedding-Loss: 0.0000 Classification-Loss: 1.5106
+Epoch 4/50
+----------
+train Loss: 1.4217 Acc: 0.4877 Embedding-Loss: 0.0000 Classification-Loss: 1.4217
+test  Loss: 1.3615 Acc: 0.5127 Embedding-Loss: 0.0000 Classification-Loss: 1.3615
+Epoch 5/50
+----------
+train Loss: 1.3359 Acc: 0.5195 Embedding-Loss: 0.0000 Classification-Loss: 1.3359
+test  Loss: 1.3165 Acc: 0.5242 Embedding-Loss: 0.0000 Classification-Loss: 1.3165
+Epoch 6/50
+----------
+train Loss: 1.2699 Acc: 0.5461 Embedding-Loss: 0.0000 Classification-Loss: 1.2699
+test  Loss: 1.2838 Acc: 0.5439 Embedding-Loss: 0.0000 Classification-Loss: 1.2838
+Epoch 7/50
+----------
+train Loss: 1.2130 Acc: 0.5670 Embedding-Loss: 0.0000 Classification-Loss: 1.2130
+test  Loss: 1.3213 Acc: 0.5284 Embedding-Loss: 0.0000 Classification-Loss: 1.3213
+Epoch 8/50
+----------
+train Loss: 1.1610 Acc: 0.5881 Embedding-Loss: 0.0000 Classification-Loss: 1.1610
+test  Loss: 1.2728 Acc: 0.5518 Embedding-Loss: 0.0000 Classification-Loss: 1.2728
+Epoch 9/50
+----------
+train Loss: 1.1134 Acc: 0.6046 Embedding-Loss: 0.0000 Classification-Loss: 1.1134
+test  Loss: 1.1875 Acc: 0.5745 Embedding-Loss: 0.0000 Classification-Loss: 1.1875
+Epoch 10/50
+----------
+train Loss: 1.0211 Acc: 0.6386 Embedding-Loss: 0.0000 Classification-Loss: 1.0211
+test  Loss: 1.1522 Acc: 0.5965 Embedding-Loss: 0.0000 Classification-Loss: 1.1522
+Epoch 11/50
+----------
+train Loss: 0.9919 Acc: 0.6499 Embedding-Loss: 0.0000 Classification-Loss: 0.9919
+test  Loss: 1.1094 Acc: 0.6129 Embedding-Loss: 0.0000 Classification-Loss: 1.1094
+Epoch 12/50
+----------
+train Loss: 0.9685 Acc: 0.6584 Embedding-Loss: 0.0000 Classification-Loss: 0.9685
+test  Loss: 1.1074 Acc: 0.6183 Embedding-Loss: 0.0000 Classification-Loss: 1.1074
+Epoch 13/50
+----------
+train Loss: 0.9434 Acc: 0.6702 Embedding-Loss: 0.0000 Classification-Loss: 0.9434
+test  Loss: 1.1151 Acc: 0.6160 Embedding-Loss: 0.0000 Classification-Loss: 1.1151
+Epoch 14/50
+----------
+train Loss: 0.9204 Acc: 0.6761 Embedding-Loss: 0.0000 Classification-Loss: 0.9204
+test  Loss: 1.1175 Acc: 0.6155 Embedding-Loss: 0.0000 Classification-Loss: 1.1175
+Epoch 15/50
+----------
+train Loss: 0.8999 Acc: 0.6848 Embedding-Loss: 0.0000 Classification-Loss: 0.8999
+test  Loss: 1.1203 Acc: 0.6090 Embedding-Loss: 0.0000 Classification-Loss: 1.1203
+Epoch 16/50
+----------
+train Loss: 0.8764 Acc: 0.6923 Embedding-Loss: 0.0000 Classification-Loss: 0.8764
+test  Loss: 1.1058 Acc: 0.6219 Embedding-Loss: 0.0000 Classification-Loss: 1.1058
+Epoch 17/50
+----------
+train Loss: 0.8572 Acc: 0.6997 Embedding-Loss: 0.0000 Classification-Loss: 0.8572
+test  Loss: 1.0868 Acc: 0.6211 Embedding-Loss: 0.0000 Classification-Loss: 1.0868
+Epoch 18/50
+----------
+train Loss: 0.8317 Acc: 0.7099 Embedding-Loss: 0.0000 Classification-Loss: 0.8317
+test  Loss: 1.1082 Acc: 0.6222 Embedding-Loss: 0.0000 Classification-Loss: 1.1082
+Epoch 19/50
+----------
+train Loss: 0.8150 Acc: 0.7142 Embedding-Loss: 0.0000 Classification-Loss: 0.8150
+test  Loss: 1.1219 Acc: 0.6280 Embedding-Loss: 0.0000 Classification-Loss: 1.1219
+Epoch 20/50
+----------
+train Loss: 0.7467 Acc: 0.7398 Embedding-Loss: 0.0000 Classification-Loss: 0.7467
+test  Loss: 1.1014 Acc: 0.6307 Embedding-Loss: 0.0000 Classification-Loss: 1.1014
+Epoch 21/50
+----------
+train Loss: 0.7296 Acc: 0.7460 Embedding-Loss: 0.0000 Classification-Loss: 0.7296
+test  Loss: 1.1274 Acc: 0.6282 Embedding-Loss: 0.0000 Classification-Loss: 1.1274
+Epoch 22/50
+----------
+train Loss: 0.7148 Acc: 0.7517 Embedding-Loss: 0.0000 Classification-Loss: 0.7148
+test  Loss: 1.1313 Acc: 0.6264 Embedding-Loss: 0.0000 Classification-Loss: 1.1313
+Epoch 23/50
+----------
+train Loss: 0.7027 Acc: 0.7550 Embedding-Loss: 0.0000 Classification-Loss: 0.7027
+test  Loss: 1.1447 Acc: 0.6296 Embedding-Loss: 0.0000 Classification-Loss: 1.1447
+Epoch 24/50
+----------
+train Loss: 0.6902 Acc: 0.7591 Embedding-Loss: 0.0000 Classification-Loss: 0.6902
+test  Loss: 1.1418 Acc: 0.6288 Embedding-Loss: 0.0000 Classification-Loss: 1.1418
+Epoch 25/50
+----------
+train Loss: 0.6758 Acc: 0.7651 Embedding-Loss: 0.0000 Classification-Loss: 0.6758
+test  Loss: 1.1526 Acc: 0.6295 Embedding-Loss: 0.0000 Classification-Loss: 1.1526
+Epoch 26/50
+----------
+train Loss: 0.6642 Acc: 0.7702 Embedding-Loss: 0.0000 Classification-Loss: 0.6642
+test  Loss: 1.1710 Acc: 0.6263 Embedding-Loss: 0.0000 Classification-Loss: 1.1710
+Epoch 27/50
+----------
+train Loss: 0.6511 Acc: 0.7734 Embedding-Loss: 0.0000 Classification-Loss: 0.6511
+test  Loss: 1.1781 Acc: 0.6241 Embedding-Loss: 0.0000 Classification-Loss: 1.1781
+Epoch 28/50
+----------
+train Loss: 0.6372 Acc: 0.7778 Embedding-Loss: 0.0000 Classification-Loss: 0.6372
+test  Loss: 1.1882 Acc: 0.6234 Embedding-Loss: 0.0000 Classification-Loss: 1.1882
+Epoch 29/50
+----------
+train Loss: 0.6258 Acc: 0.7817 Embedding-Loss: 0.0000 Classification-Loss: 0.6258
+test  Loss: 1.1819 Acc: 0.6268 Embedding-Loss: 0.0000 Classification-Loss: 1.1819
+Epoch 30/50
+----------
+train Loss: 0.5792 Acc: 0.8021 Embedding-Loss: 0.0000 Classification-Loss: 0.5792
+test  Loss: 1.1904 Acc: 0.6265 Embedding-Loss: 0.0000 Classification-Loss: 1.1904
+Epoch 31/50
+----------
+train Loss: 0.5694 Acc: 0.8058 Embedding-Loss: 0.0000 Classification-Loss: 0.5694
+test  Loss: 1.2046 Acc: 0.6287 Embedding-Loss: 0.0000 Classification-Loss: 1.2046
+Epoch 32/50
+----------
+train Loss: 0.5610 Acc: 0.8083 Embedding-Loss: 0.0000 Classification-Loss: 0.5610
+test  Loss: 1.2101 Acc: 0.6274 Embedding-Loss: 0.0000 Classification-Loss: 1.2101
+Epoch 33/50
+----------
+train Loss: 0.5529 Acc: 0.8104 Embedding-Loss: 0.0000 Classification-Loss: 0.5529
+test  Loss: 1.2280 Acc: 0.6269 Embedding-Loss: 0.0000 Classification-Loss: 1.2280
+Epoch 34/50
+----------
+train Loss: 0.5464 Acc: 0.8136 Embedding-Loss: 0.0000 Classification-Loss: 0.5464
+test  Loss: 1.2348 Acc: 0.6276 Embedding-Loss: 0.0000 Classification-Loss: 1.2348
+Epoch 35/50
+----------
+train Loss: 0.5384 Acc: 0.8145 Embedding-Loss: 0.0000 Classification-Loss: 0.5384
+test  Loss: 1.2395 Acc: 0.6284 Embedding-Loss: 0.0000 Classification-Loss: 1.2395
+Epoch 36/50
+----------
+train Loss: 0.5298 Acc: 0.8193 Embedding-Loss: 0.0000 Classification-Loss: 0.5298
+test  Loss: 1.2606 Acc: 0.6266 Embedding-Loss: 0.0000 Classification-Loss: 1.2606
+Epoch 37/50
+----------
+train Loss: 0.5238 Acc: 0.8199 Embedding-Loss: 0.0000 Classification-Loss: 0.5238
+test  Loss: 1.2593 Acc: 0.6274 Embedding-Loss: 0.0000 Classification-Loss: 1.2593
+Epoch 38/50
+----------
+train Loss: 0.5149 Acc: 0.8244 Embedding-Loss: 0.0000 Classification-Loss: 0.5149
+test  Loss: 1.2877 Acc: 0.6262 Embedding-Loss: 0.0000 Classification-Loss: 1.2877
+Epoch 39/50
+----------
+train Loss: 0.5079 Acc: 0.8266 Embedding-Loss: 0.0000 Classification-Loss: 0.5079
+test  Loss: 1.2947 Acc: 0.6214 Embedding-Loss: 0.0000 Classification-Loss: 1.2947
+Epoch 40/50
+----------
+train Loss: 0.4806 Acc: 0.8392 Embedding-Loss: 0.0000 Classification-Loss: 0.4806
+test  Loss: 1.2915 Acc: 0.6285 Embedding-Loss: 0.0000 Classification-Loss: 1.2915
+Epoch 41/50
+----------
+train Loss: 0.4753 Acc: 0.8412 Embedding-Loss: 0.0000 Classification-Loss: 0.4753
+test  Loss: 1.2949 Acc: 0.6270 Embedding-Loss: 0.0000 Classification-Loss: 1.2949
+Epoch 42/50
+----------
+train Loss: 0.4705 Acc: 0.8431 Embedding-Loss: 0.0000 Classification-Loss: 0.4705
+test  Loss: 1.3040 Acc: 0.6272 Embedding-Loss: 0.0000 Classification-Loss: 1.3040
+Epoch 43/50
+----------
+train Loss: 0.4663 Acc: 0.8436 Embedding-Loss: 0.0000 Classification-Loss: 0.4663
+test  Loss: 1.3124 Acc: 0.6264 Embedding-Loss: 0.0000 Classification-Loss: 1.3124
+Epoch 44/50
+----------
+train Loss: 0.4623 Acc: 0.8458 Embedding-Loss: 0.0000 Classification-Loss: 0.4623
+test  Loss: 1.3131 Acc: 0.6239 Embedding-Loss: 0.0000 Classification-Loss: 1.3131
+Epoch 45/50
+----------
+train Loss: 0.4579 Acc: 0.8482 Embedding-Loss: 0.0000 Classification-Loss: 0.4579
+test  Loss: 1.3337 Acc: 0.6255 Embedding-Loss: 0.0000 Classification-Loss: 1.3337
+Epoch 46/50
+----------
+train Loss: 0.4528 Acc: 0.8494 Embedding-Loss: 0.0000 Classification-Loss: 0.4528
+test  Loss: 1.3347 Acc: 0.6251 Embedding-Loss: 0.0000 Classification-Loss: 1.3347
+Epoch 47/50
+----------
+train Loss: 0.4496 Acc: 0.8504 Embedding-Loss: 0.0000 Classification-Loss: 0.4496
+test  Loss: 1.3357 Acc: 0.6254 Embedding-Loss: 0.0000 Classification-Loss: 1.3357
+Epoch 48/50
+----------
+train Loss: 0.4448 Acc: 0.8515 Embedding-Loss: 0.0000 Classification-Loss: 0.4448
+test  Loss: 1.3463 Acc: 0.6265 Embedding-Loss: 0.0000 Classification-Loss: 1.3463
+Epoch 49/50
+----------
+train Loss: 0.4409 Acc: 0.8545 Embedding-Loss: 0.0000 Classification-Loss: 0.4409
+test  Loss: 1.3621 Acc: 0.6206 Embedding-Loss: 0.0000 Classification-Loss: 1.3621
+Epoch 50/50
+----------
+train Loss: 0.4262 Acc: 0.8614 Embedding-Loss: 0.0000 Classification-Loss: 0.4262
+test  Loss: 1.3608 Acc: 0.6253 Embedding-Loss: 0.0000 Classification-Loss: 1.3608
+Training complete in 35m 31s
+Best val Acc: 0.630700
+Accuracy of the network on the 10000 test images: 63.00
+Accuracy of horse : 67.50
+Accuracy of car   : 76.40
+Accuracy of deer  : 55.20
+Accuracy of dog   : 53.20
+Accuracy of frog  : 74.50
+Accuracy of cat   : 42.70
+Accuracy of plane : 69.00
+Accuracy of truck : 68.00
+Accuracy of ship  : 71.50
+Accuracy of bird  : 52.70
+################################################################
+Training with the following hyper-parameters:
+learning-rate = 0.002
+batch-size = 32
+momentum = 0.9
+weight-decay = 0.0
+Files already downloaded and verified
+Files already downloaded and verified
+Epoch 1/50
+----------
+train Loss: 2.1938 Acc: 0.1745 Embedding-Loss: 0.0000 Classification-Loss: 2.1938
+test  Loss: 1.9626 Acc: 0.2559 Embedding-Loss: 0.0000 Classification-Loss: 1.9626
+Epoch 2/50
+----------
+train Loss: 1.8146 Acc: 0.3362 Embedding-Loss: 0.0000 Classification-Loss: 1.8146
+test  Loss: 1.6208 Acc: 0.4088 Embedding-Loss: 0.0000 Classification-Loss: 1.6208
+Epoch 3/50
+----------
+train Loss: 1.5671 Acc: 0.4277 Embedding-Loss: 0.0000 Classification-Loss: 1.5671
+test  Loss: 1.4885 Acc: 0.4601 Embedding-Loss: 0.0000 Classification-Loss: 1.4885
+Epoch 4/50
+----------
+train Loss: 1.4432 Acc: 0.4758 Embedding-Loss: 0.0000 Classification-Loss: 1.4432
+test  Loss: 1.3696 Acc: 0.5051 Embedding-Loss: 0.0000 Classification-Loss: 1.3696
+Epoch 5/50
+----------
+train Loss: 1.3470 Acc: 0.5172 Embedding-Loss: 0.0000 Classification-Loss: 1.3470
+test  Loss: 1.3119 Acc: 0.5303 Embedding-Loss: 0.0000 Classification-Loss: 1.3119
+Epoch 6/50
+----------
+train Loss: 1.2845 Acc: 0.5415 Embedding-Loss: 0.0000 Classification-Loss: 1.2845
+test  Loss: 1.2855 Acc: 0.5410 Embedding-Loss: 0.0000 Classification-Loss: 1.2855
+Epoch 7/50
+----------
+train Loss: 1.2311 Acc: 0.5628 Embedding-Loss: 0.0000 Classification-Loss: 1.2311
+test  Loss: 1.2935 Acc: 0.5436 Embedding-Loss: 0.0000 Classification-Loss: 1.2935
+Epoch 8/50
+----------
+train Loss: 1.1781 Acc: 0.5809 Embedding-Loss: 0.0000 Classification-Loss: 1.1781
+test  Loss: 1.2146 Acc: 0.5673 Embedding-Loss: 0.0000 Classification-Loss: 1.2146
+Epoch 9/50
+----------
+train Loss: 1.1311 Acc: 0.5982 Embedding-Loss: 0.0000 Classification-Loss: 1.1311
+test  Loss: 1.1807 Acc: 0.5829 Embedding-Loss: 0.0000 Classification-Loss: 1.1807
+Epoch 10/50
+----------
+train Loss: 1.0396 Acc: 0.6335 Embedding-Loss: 0.0000 Classification-Loss: 1.0396
+test  Loss: 1.1270 Acc: 0.6001 Embedding-Loss: 0.0000 Classification-Loss: 1.1270
+Epoch 11/50
+----------
+train Loss: 1.0103 Acc: 0.6425 Embedding-Loss: 0.0000 Classification-Loss: 1.0103
+test  Loss: 1.1237 Acc: 0.6112 Embedding-Loss: 0.0000 Classification-Loss: 1.1237
+Epoch 12/50
+----------
+train Loss: 0.9867 Acc: 0.6539 Embedding-Loss: 0.0000 Classification-Loss: 0.9867
+test  Loss: 1.1172 Acc: 0.6079 Embedding-Loss: 0.0000 Classification-Loss: 1.1172
+Epoch 13/50
+----------
+train Loss: 0.9632 Acc: 0.6607 Embedding-Loss: 0.0000 Classification-Loss: 0.9632
+test  Loss: 1.1319 Acc: 0.6009 Embedding-Loss: 0.0000 Classification-Loss: 1.1319
+Epoch 14/50
+----------
+train Loss: 0.9377 Acc: 0.6714 Embedding-Loss: 0.0000 Classification-Loss: 0.9377
+test  Loss: 1.1108 Acc: 0.6170 Embedding-Loss: 0.0000 Classification-Loss: 1.1108
+Epoch 15/50
+----------
+train Loss: 0.9150 Acc: 0.6782 Embedding-Loss: 0.0000 Classification-Loss: 0.9150
+test  Loss: 1.1075 Acc: 0.6162 Embedding-Loss: 0.0000 Classification-Loss: 1.1075
+Epoch 16/50
+----------
+train Loss: 0.8894 Acc: 0.6876 Embedding-Loss: 0.0000 Classification-Loss: 0.8894
+test  Loss: 1.1093 Acc: 0.6115 Embedding-Loss: 0.0000 Classification-Loss: 1.1093
+Epoch 17/50
+----------
+train Loss: 0.8699 Acc: 0.6958 Embedding-Loss: 0.0000 Classification-Loss: 0.8699
+test  Loss: 1.1184 Acc: 0.6165 Embedding-Loss: 0.0000 Classification-Loss: 1.1184
+Epoch 18/50
+----------
+train Loss: 0.8491 Acc: 0.7035 Embedding-Loss: 0.0000 Classification-Loss: 0.8491
+test  Loss: 1.1194 Acc: 0.6183 Embedding-Loss: 0.0000 Classification-Loss: 1.1194
+Epoch 19/50
+----------
+train Loss: 0.8287 Acc: 0.7080 Embedding-Loss: 0.0000 Classification-Loss: 0.8287
+test  Loss: 1.1198 Acc: 0.6209 Embedding-Loss: 0.0000 Classification-Loss: 1.1198
+Epoch 20/50
+----------
+train Loss: 0.7561 Acc: 0.7382 Embedding-Loss: 0.0000 Classification-Loss: 0.7561
+test  Loss: 1.1132 Acc: 0.6256 Embedding-Loss: 0.0000 Classification-Loss: 1.1132
+Epoch 21/50
+----------
+train Loss: 0.7409 Acc: 0.7419 Embedding-Loss: 0.0000 Classification-Loss: 0.7409
+test  Loss: 1.1104 Acc: 0.6283 Embedding-Loss: 0.0000 Classification-Loss: 1.1104
+Epoch 22/50
+----------
+train Loss: 0.7265 Acc: 0.7488 Embedding-Loss: 0.0000 Classification-Loss: 0.7265
+test  Loss: 1.1291 Acc: 0.6278 Embedding-Loss: 0.0000 Classification-Loss: 1.1291
+Epoch 23/50
+----------
+train Loss: 0.7145 Acc: 0.7528 Embedding-Loss: 0.0000 Classification-Loss: 0.7145
+test  Loss: 1.1274 Acc: 0.6240 Embedding-Loss: 0.0000 Classification-Loss: 1.1274
+Epoch 24/50
+----------
+train Loss: 0.7013 Acc: 0.7572 Embedding-Loss: 0.0000 Classification-Loss: 0.7013
+test  Loss: 1.1418 Acc: 0.6247 Embedding-Loss: 0.0000 Classification-Loss: 1.1418
+Epoch 25/50
+----------
+train Loss: 0.6894 Acc: 0.7600 Embedding-Loss: 0.0000 Classification-Loss: 0.6894
+test  Loss: 1.1632 Acc: 0.6193 Embedding-Loss: 0.0000 Classification-Loss: 1.1632
+Epoch 26/50
+----------
+train Loss: 0.6746 Acc: 0.7663 Embedding-Loss: 0.0000 Classification-Loss: 0.6746
+test  Loss: 1.1804 Acc: 0.6218 Embedding-Loss: 0.0000 Classification-Loss: 1.1804
+Epoch 27/50
+----------
+train Loss: 0.6608 Acc: 0.7718 Embedding-Loss: 0.0000 Classification-Loss: 0.6608
+test  Loss: 1.1813 Acc: 0.6178 Embedding-Loss: 0.0000 Classification-Loss: 1.1813
+Epoch 28/50
+----------
+train Loss: 0.6492 Acc: 0.7749 Embedding-Loss: 0.0000 Classification-Loss: 0.6492
+test  Loss: 1.1920 Acc: 0.6234 Embedding-Loss: 0.0000 Classification-Loss: 1.1920
+Epoch 29/50
+----------
+train Loss: 0.6359 Acc: 0.7786 Embedding-Loss: 0.0000 Classification-Loss: 0.6359
+test  Loss: 1.1953 Acc: 0.6262 Embedding-Loss: 0.0000 Classification-Loss: 1.1953
+Epoch 30/50
+----------
+train Loss: 0.5882 Acc: 0.7985 Embedding-Loss: 0.0000 Classification-Loss: 0.5882
+test  Loss: 1.2080 Acc: 0.6250 Embedding-Loss: 0.0000 Classification-Loss: 1.2080
+Epoch 31/50
+----------
+train Loss: 0.5784 Acc: 0.8028 Embedding-Loss: 0.0000 Classification-Loss: 0.5784
+test  Loss: 1.2131 Acc: 0.6222 Embedding-Loss: 0.0000 Classification-Loss: 1.2131
+Epoch 32/50
+----------
+train Loss: 0.5691 Acc: 0.8051 Embedding-Loss: 0.0000 Classification-Loss: 0.5691
+test  Loss: 1.2154 Acc: 0.6252 Embedding-Loss: 0.0000 Classification-Loss: 1.2154
+Epoch 33/50
+----------
+train Loss: 0.5610 Acc: 0.8093 Embedding-Loss: 0.0000 Classification-Loss: 0.5610
+test  Loss: 1.2218 Acc: 0.6188 Embedding-Loss: 0.0000 Classification-Loss: 1.2218
+Epoch 34/50
+----------
+train Loss: 0.5536 Acc: 0.8109 Embedding-Loss: 0.0000 Classification-Loss: 0.5536
+test  Loss: 1.2475 Acc: 0.6239 Embedding-Loss: 0.0000 Classification-Loss: 1.2475
+Epoch 35/50
+----------
+train Loss: 0.5468 Acc: 0.8133 Embedding-Loss: 0.0000 Classification-Loss: 0.5468
+test  Loss: 1.2588 Acc: 0.6229 Embedding-Loss: 0.0000 Classification-Loss: 1.2588
+Epoch 36/50
+----------
+train Loss: 0.5384 Acc: 0.8168 Embedding-Loss: 0.0000 Classification-Loss: 0.5384
+test  Loss: 1.2573 Acc: 0.6196 Embedding-Loss: 0.0000 Classification-Loss: 1.2573
+Epoch 37/50
+----------
+train Loss: 0.5293 Acc: 0.8206 Embedding-Loss: 0.0000 Classification-Loss: 0.5293
+test  Loss: 1.2773 Acc: 0.6197 Embedding-Loss: 0.0000 Classification-Loss: 1.2773
+Epoch 38/50
+----------
+train Loss: 0.5227 Acc: 0.8220 Embedding-Loss: 0.0000 Classification-Loss: 0.5227
+test  Loss: 1.2789 Acc: 0.6185 Embedding-Loss: 0.0000 Classification-Loss: 1.2789
+Epoch 39/50
+----------
+train Loss: 0.5138 Acc: 0.8257 Embedding-Loss: 0.0000 Classification-Loss: 0.5138
+test  Loss: 1.2977 Acc: 0.6171 Embedding-Loss: 0.0000 Classification-Loss: 1.2977
+Epoch 40/50
+----------
+train Loss: 0.4863 Acc: 0.8398 Embedding-Loss: 0.0000 Classification-Loss: 0.4863
+test  Loss: 1.2928 Acc: 0.6232 Embedding-Loss: 0.0000 Classification-Loss: 1.2928
+Epoch 41/50
+----------
+train Loss: 0.4807 Acc: 0.8409 Embedding-Loss: 0.0000 Classification-Loss: 0.4807
+test  Loss: 1.3015 Acc: 0.6186 Embedding-Loss: 0.0000 Classification-Loss: 1.3015
+Epoch 42/50
+----------
+train Loss: 0.4760 Acc: 0.8414 Embedding-Loss: 0.0000 Classification-Loss: 0.4760
+test  Loss: 1.3107 Acc: 0.6233 Embedding-Loss: 0.0000 Classification-Loss: 1.3107
+Epoch 43/50
+----------
+train Loss: 0.4722 Acc: 0.8443 Embedding-Loss: 0.0000 Classification-Loss: 0.4722
+test  Loss: 1.3235 Acc: 0.6202 Embedding-Loss: 0.0000 Classification-Loss: 1.3235
+Epoch 44/50
+----------
+train Loss: 0.4684 Acc: 0.8450 Embedding-Loss: 0.0000 Classification-Loss: 0.4684
+test  Loss: 1.3322 Acc: 0.6177 Embedding-Loss: 0.0000 Classification-Loss: 1.3322
+Epoch 45/50
+----------
+train Loss: 0.4634 Acc: 0.8468 Embedding-Loss: 0.0000 Classification-Loss: 0.4634
+test  Loss: 1.3358 Acc: 0.6186 Embedding-Loss: 0.0000 Classification-Loss: 1.3358
+Epoch 46/50
+----------
+train Loss: 0.4591 Acc: 0.8482 Embedding-Loss: 0.0000 Classification-Loss: 0.4591
+test  Loss: 1.3413 Acc: 0.6191 Embedding-Loss: 0.0000 Classification-Loss: 1.3413
+Epoch 47/50
+----------
+train Loss: 0.4542 Acc: 0.8496 Embedding-Loss: 0.0000 Classification-Loss: 0.4542
+test  Loss: 1.3547 Acc: 0.6201 Embedding-Loss: 0.0000 Classification-Loss: 1.3547
+Epoch 48/50
+----------
+train Loss: 0.4508 Acc: 0.8514 Embedding-Loss: 0.0000 Classification-Loss: 0.4508
+test  Loss: 1.3687 Acc: 0.6188 Embedding-Loss: 0.0000 Classification-Loss: 1.3687
+Epoch 49/50
+----------
+train Loss: 0.4460 Acc: 0.8532 Embedding-Loss: 0.0000 Classification-Loss: 0.4460
+test  Loss: 1.3674 Acc: 0.6176 Embedding-Loss: 0.0000 Classification-Loss: 1.3674
+Epoch 50/50
+----------
+train Loss: 0.4307 Acc: 0.8607 Embedding-Loss: 0.0000 Classification-Loss: 0.4307
+test  Loss: 1.3749 Acc: 0.6200 Embedding-Loss: 0.0000 Classification-Loss: 1.3749
+Training complete in 34m 50s
+Best val Acc: 0.628300
+Accuracy of the network on the 10000 test images: 62.00
+Accuracy of horse : 64.70
+Accuracy of car   : 71.30
+Accuracy of deer  : 63.30
+Accuracy of dog   : 46.60
+Accuracy of frog  : 75.30
+Accuracy of cat   : 44.10
+Accuracy of plane : 64.30
+Accuracy of truck : 69.80
+Accuracy of ship  : 80.60
+Accuracy of bird  : 48.30
+################################################################
+Training with the following hyper-parameters:
+learning-rate = 0.002
+batch-size = 64
+momentum = 0.9
+weight-decay = 0.01
+Files already downloaded and verified
+Files already downloaded and verified
+Epoch 1/50
+----------
+train Loss: 2.3024 Acc: 0.1145 Embedding-Loss: 0.0000 Classification-Loss: 2.3024
+test  Loss: 2.3004 Acc: 0.1224 Embedding-Loss: 0.0000 Classification-Loss: 2.3004
+Epoch 2/50
+----------
+train Loss: 2.2698 Acc: 0.1358 Embedding-Loss: 0.0000 Classification-Loss: 2.2698
+test  Loss: 2.1332 Acc: 0.2190 Embedding-Loss: 0.0000 Classification-Loss: 2.1332
+Epoch 3/50
+----------
+train Loss: 2.0264 Acc: 0.2477 Embedding-Loss: 0.0000 Classification-Loss: 2.0264
+test  Loss: 1.9528 Acc: 0.2808 Embedding-Loss: 0.0000 Classification-Loss: 1.9528
+Epoch 4/50
+----------
+train Loss: 1.9005 Acc: 0.3049 Embedding-Loss: 0.0000 Classification-Loss: 1.9005
+test  Loss: 1.8426 Acc: 0.3317 Embedding-Loss: 0.0000 Classification-Loss: 1.8426
+Epoch 5/50
+----------
+train Loss: 1.7188 Acc: 0.3751 Embedding-Loss: 0.0000 Classification-Loss: 1.7188
+test  Loss: 1.6410 Acc: 0.3985 Embedding-Loss: 0.0000 Classification-Loss: 1.6410
+Epoch 6/50
+----------
+train Loss: 1.5895 Acc: 0.4250 Embedding-Loss: 0.0000 Classification-Loss: 1.5895
+test  Loss: 1.5204 Acc: 0.4474 Embedding-Loss: 0.0000 Classification-Loss: 1.5204
+Epoch 7/50
+----------
+train Loss: 1.5163 Acc: 0.4532 Embedding-Loss: 0.0000 Classification-Loss: 1.5163
+test  Loss: 1.4534 Acc: 0.4746 Embedding-Loss: 0.0000 Classification-Loss: 1.4534
+Epoch 8/50
+----------
+train Loss: 1.4532 Acc: 0.4767 Embedding-Loss: 0.0000 Classification-Loss: 1.4532
+test  Loss: 1.4053 Acc: 0.4937 Embedding-Loss: 0.0000 Classification-Loss: 1.4053
+Epoch 9/50
+----------
+train Loss: 1.4087 Acc: 0.4948 Embedding-Loss: 0.0000 Classification-Loss: 1.4087
+test  Loss: 1.3874 Acc: 0.5033 Embedding-Loss: 0.0000 Classification-Loss: 1.3874
+Epoch 10/50
+----------
+train Loss: 1.3419 Acc: 0.5201 Embedding-Loss: 0.0000 Classification-Loss: 1.3419
+test  Loss: 1.3696 Acc: 0.5047 Embedding-Loss: 0.0000 Classification-Loss: 1.3696
+Epoch 11/50
+----------
+train Loss: 1.3169 Acc: 0.5274 Embedding-Loss: 0.0000 Classification-Loss: 1.3169
+test  Loss: 1.3356 Acc: 0.5204 Embedding-Loss: 0.0000 Classification-Loss: 1.3356
+Epoch 12/50
+----------
+train Loss: 1.2976 Acc: 0.5368 Embedding-Loss: 0.0000 Classification-Loss: 1.2976
+test  Loss: 1.3066 Acc: 0.5301 Embedding-Loss: 0.0000 Classification-Loss: 1.3066
+Epoch 13/50
+----------
+train Loss: 1.2759 Acc: 0.5450 Embedding-Loss: 0.0000 Classification-Loss: 1.2759
+test  Loss: 1.2941 Acc: 0.5358 Embedding-Loss: 0.0000 Classification-Loss: 1.2941
+Epoch 14/50
+----------
+train Loss: 1.2562 Acc: 0.5533 Embedding-Loss: 0.0000 Classification-Loss: 1.2562
+test  Loss: 1.2742 Acc: 0.5457 Embedding-Loss: 0.0000 Classification-Loss: 1.2742
+Epoch 15/50
+----------
+train Loss: 1.2368 Acc: 0.5590 Embedding-Loss: 0.0000 Classification-Loss: 1.2368
+test  Loss: 1.2639 Acc: 0.5511 Embedding-Loss: 0.0000 Classification-Loss: 1.2639
+Epoch 16/50
+----------
+train Loss: 1.2148 Acc: 0.5673 Embedding-Loss: 0.0000 Classification-Loss: 1.2148
+test  Loss: 1.2799 Acc: 0.5413 Embedding-Loss: 0.0000 Classification-Loss: 1.2799
+Epoch 17/50
+----------
+train Loss: 1.1972 Acc: 0.5763 Embedding-Loss: 0.0000 Classification-Loss: 1.1972
+test  Loss: 1.2813 Acc: 0.5414 Embedding-Loss: 0.0000 Classification-Loss: 1.2813
+Epoch 18/50
+----------
+train Loss: 1.1822 Acc: 0.5816 Embedding-Loss: 0.0000 Classification-Loss: 1.1822
+test  Loss: 1.2455 Acc: 0.5578 Embedding-Loss: 0.0000 Classification-Loss: 1.2455
+Epoch 19/50
+----------
+train Loss: 1.1615 Acc: 0.5885 Embedding-Loss: 0.0000 Classification-Loss: 1.1615
+test  Loss: 1.2232 Acc: 0.5665 Embedding-Loss: 0.0000 Classification-Loss: 1.2232
+Epoch 20/50
+----------
+train Loss: 1.1204 Acc: 0.6052 Embedding-Loss: 0.0000 Classification-Loss: 1.1204
+test  Loss: 1.1993 Acc: 0.5794 Embedding-Loss: 0.0000 Classification-Loss: 1.1993
+Epoch 21/50
+----------
+train Loss: 1.1107 Acc: 0.6081 Embedding-Loss: 0.0000 Classification-Loss: 1.1107
+test  Loss: 1.2003 Acc: 0.5766 Embedding-Loss: 0.0000 Classification-Loss: 1.2003
+Epoch 22/50
+----------
+train Loss: 1.0998 Acc: 0.6131 Embedding-Loss: 0.0000 Classification-Loss: 1.0998
+test  Loss: 1.1970 Acc: 0.5791 Embedding-Loss: 0.0000 Classification-Loss: 1.1970
+Epoch 23/50
+----------
+train Loss: 1.0901 Acc: 0.6168 Embedding-Loss: 0.0000 Classification-Loss: 1.0901
+test  Loss: 1.1936 Acc: 0.5814 Embedding-Loss: 0.0000 Classification-Loss: 1.1936
+Epoch 24/50
+----------
+train Loss: 1.0819 Acc: 0.6202 Embedding-Loss: 0.0000 Classification-Loss: 1.0819
+test  Loss: 1.2100 Acc: 0.5754 Embedding-Loss: 0.0000 Classification-Loss: 1.2100
+Epoch 25/50
+----------
+train Loss: 1.0730 Acc: 0.6232 Embedding-Loss: 0.0000 Classification-Loss: 1.0730
+test  Loss: 1.1926 Acc: 0.5795 Embedding-Loss: 0.0000 Classification-Loss: 1.1926
+Epoch 26/50
+----------
+train Loss: 1.0633 Acc: 0.6262 Embedding-Loss: 0.0000 Classification-Loss: 1.0633
+test  Loss: 1.1823 Acc: 0.5833 Embedding-Loss: 0.0000 Classification-Loss: 1.1823
+Epoch 27/50
+----------
+train Loss: 1.0548 Acc: 0.6296 Embedding-Loss: 0.0000 Classification-Loss: 1.0548
+test  Loss: 1.1907 Acc: 0.5832 Embedding-Loss: 0.0000 Classification-Loss: 1.1907
+Epoch 28/50
+----------
+train Loss: 1.0464 Acc: 0.6328 Embedding-Loss: 0.0000 Classification-Loss: 1.0464
+test  Loss: 1.2065 Acc: 0.5784 Embedding-Loss: 0.0000 Classification-Loss: 1.2065
+Epoch 29/50
+----------
+train Loss: 1.0380 Acc: 0.6350 Embedding-Loss: 0.0000 Classification-Loss: 1.0380
+test  Loss: 1.1849 Acc: 0.5826 Embedding-Loss: 0.0000 Classification-Loss: 1.1849
+Epoch 30/50
+----------
+train Loss: 1.0119 Acc: 0.6475 Embedding-Loss: 0.0000 Classification-Loss: 1.0119
+test  Loss: 1.1855 Acc: 0.5874 Embedding-Loss: 0.0000 Classification-Loss: 1.1855
+Epoch 31/50
+----------
+train Loss: 1.0052 Acc: 0.6488 Embedding-Loss: 0.0000 Classification-Loss: 1.0052
+test  Loss: 1.1594 Acc: 0.5960 Embedding-Loss: 0.0000 Classification-Loss: 1.1594
+Epoch 32/50
+----------
+train Loss: 1.0003 Acc: 0.6509 Embedding-Loss: 0.0000 Classification-Loss: 1.0003
+test  Loss: 1.1588 Acc: 0.5919 Embedding-Loss: 0.0000 Classification-Loss: 1.1588
+Epoch 33/50
+----------
+train Loss: 0.9953 Acc: 0.6505 Embedding-Loss: 0.0000 Classification-Loss: 0.9953
+test  Loss: 1.1612 Acc: 0.5947 Embedding-Loss: 0.0000 Classification-Loss: 1.1612
+Epoch 34/50
+----------
+train Loss: 0.9905 Acc: 0.6554 Embedding-Loss: 0.0000 Classification-Loss: 0.9905
+test  Loss: 1.1662 Acc: 0.5940 Embedding-Loss: 0.0000 Classification-Loss: 1.1662
+Epoch 35/50
+----------
+train Loss: 0.9852 Acc: 0.6558 Embedding-Loss: 0.0000 Classification-Loss: 0.9852
+test  Loss: 1.1532 Acc: 0.6023 Embedding-Loss: 0.0000 Classification-Loss: 1.1532
+Epoch 36/50
+----------
+train Loss: 0.9806 Acc: 0.6585 Embedding-Loss: 0.0000 Classification-Loss: 0.9806
+test  Loss: 1.1664 Acc: 0.5918 Embedding-Loss: 0.0000 Classification-Loss: 1.1664
+Epoch 37/50
+----------
+train Loss: 0.9758 Acc: 0.6598 Embedding-Loss: 0.0000 Classification-Loss: 0.9758
+test  Loss: 1.1621 Acc: 0.5957 Embedding-Loss: 0.0000 Classification-Loss: 1.1621
+Epoch 38/50
+----------
+train Loss: 0.9711 Acc: 0.6610 Embedding-Loss: 0.0000 Classification-Loss: 0.9711
+test  Loss: 1.1579 Acc: 0.5958 Embedding-Loss: 0.0000 Classification-Loss: 1.1579
+Epoch 39/50
+----------
+train Loss: 0.9680 Acc: 0.6617 Embedding-Loss: 0.0000 Classification-Loss: 0.9680
+test  Loss: 1.1544 Acc: 0.5993 Embedding-Loss: 0.0000 Classification-Loss: 1.1544
+Epoch 40/50
+----------
+train Loss: 0.9507 Acc: 0.6696 Embedding-Loss: 0.0000 Classification-Loss: 0.9507
+test  Loss: 1.1488 Acc: 0.6031 Embedding-Loss: 0.0000 Classification-Loss: 1.1488
+Epoch 41/50
+----------
+train Loss: 0.9486 Acc: 0.6698 Embedding-Loss: 0.0000 Classification-Loss: 0.9486
+test  Loss: 1.1529 Acc: 0.6009 Embedding-Loss: 0.0000 Classification-Loss: 1.1529
+Epoch 42/50
+----------
+train Loss: 0.9451 Acc: 0.6711 Embedding-Loss: 0.0000 Classification-Loss: 0.9451
+test  Loss: 1.1484 Acc: 0.6046 Embedding-Loss: 0.0000 Classification-Loss: 1.1484
+Epoch 43/50
+----------
+train Loss: 0.9435 Acc: 0.6709 Embedding-Loss: 0.0000 Classification-Loss: 0.9435
+test  Loss: 1.1473 Acc: 0.6027 Embedding-Loss: 0.0000 Classification-Loss: 1.1473
+Epoch 44/50
+----------
+train Loss: 0.9397 Acc: 0.6728 Embedding-Loss: 0.0000 Classification-Loss: 0.9397
+test  Loss: 1.1477 Acc: 0.6050 Embedding-Loss: 0.0000 Classification-Loss: 1.1477
+Epoch 45/50
+----------
+train Loss: 0.9383 Acc: 0.6718 Embedding-Loss: 0.0000 Classification-Loss: 0.9383
+test  Loss: 1.1527 Acc: 0.6009 Embedding-Loss: 0.0000 Classification-Loss: 1.1527
+Epoch 46/50
+----------
+train Loss: 0.9359 Acc: 0.6741 Embedding-Loss: 0.0000 Classification-Loss: 0.9359
+test  Loss: 1.1546 Acc: 0.5995 Embedding-Loss: 0.0000 Classification-Loss: 1.1546
+Epoch 47/50
+----------
+train Loss: 0.9331 Acc: 0.6743 Embedding-Loss: 0.0000 Classification-Loss: 0.9331
+test  Loss: 1.1507 Acc: 0.6009 Embedding-Loss: 0.0000 Classification-Loss: 1.1507
+Epoch 48/50
+----------
+train Loss: 0.9313 Acc: 0.6752 Embedding-Loss: 0.0000 Classification-Loss: 0.9313
+test  Loss: 1.1606 Acc: 0.5963 Embedding-Loss: 0.0000 Classification-Loss: 1.1606
+Epoch 49/50
+----------
+train Loss: 0.9279 Acc: 0.6774 Embedding-Loss: 0.0000 Classification-Loss: 0.9279
+test  Loss: 1.1483 Acc: 0.6015 Embedding-Loss: 0.0000 Classification-Loss: 1.1483
+Epoch 50/50
+----------
+train Loss: 0.9192 Acc: 0.6801 Embedding-Loss: 0.0000 Classification-Loss: 0.9192
+test  Loss: 1.1472 Acc: 0.6047 Embedding-Loss: 0.0000 Classification-Loss: 1.1472
+Training complete in 18m 22s
+Best val Acc: 0.605000
+Accuracy of the network on the 10000 test images: 60.00
+Accuracy of horse : 67.40
+Accuracy of car   : 76.50
+Accuracy of deer  : 51.40
+Accuracy of dog   : 54.70
+Accuracy of frog  : 70.50
+Accuracy of cat   : 40.50
+Accuracy of plane : 65.70
+Accuracy of truck : 63.00
+Accuracy of ship  : 71.70
+Accuracy of bird  : 43.60
+################################################################
+Training with the following hyper-parameters:
+learning-rate = 0.002
+batch-size = 64
+momentum = 0.9
+weight-decay = 0.0
+Files already downloaded and verified
+Files already downloaded and verified
+Epoch 1/50
+----------
+train Loss: 2.2652 Acc: 0.1509 Embedding-Loss: 0.0000 Classification-Loss: 2.2652
+test  Loss: 2.0762 Acc: 0.2306 Embedding-Loss: 0.0000 Classification-Loss: 2.0762
+Epoch 2/50
+----------
+train Loss: 1.9915 Acc: 0.2691 Embedding-Loss: 0.0000 Classification-Loss: 1.9915
+test  Loss: 1.9950 Acc: 0.2680 Embedding-Loss: 0.0000 Classification-Loss: 1.9950
+Epoch 3/50
+----------
+train Loss: 1.8027 Acc: 0.3469 Embedding-Loss: 0.0000 Classification-Loss: 1.8027
+test  Loss: 1.6857 Acc: 0.3963 Embedding-Loss: 0.0000 Classification-Loss: 1.6857
+Epoch 4/50
+----------
+train Loss: 1.6425 Acc: 0.4111 Embedding-Loss: 0.0000 Classification-Loss: 1.6425
+test  Loss: 1.5939 Acc: 0.4352 Embedding-Loss: 0.0000 Classification-Loss: 1.5939
+Epoch 5/50
+----------
+train Loss: 1.5597 Acc: 0.4436 Embedding-Loss: 0.0000 Classification-Loss: 1.5597
+test  Loss: 1.5555 Acc: 0.4496 Embedding-Loss: 0.0000 Classification-Loss: 1.5555
+Epoch 6/50
+----------
+train Loss: 1.4962 Acc: 0.4636 Embedding-Loss: 0.0000 Classification-Loss: 1.4962
+test  Loss: 1.4820 Acc: 0.4755 Embedding-Loss: 0.0000 Classification-Loss: 1.4820
+Epoch 7/50
+----------
+train Loss: 1.4502 Acc: 0.4821 Embedding-Loss: 0.0000 Classification-Loss: 1.4502
+test  Loss: 1.4210 Acc: 0.4957 Embedding-Loss: 0.0000 Classification-Loss: 1.4210
+Epoch 8/50
+----------
+train Loss: 1.4012 Acc: 0.4989 Embedding-Loss: 0.0000 Classification-Loss: 1.4012
+test  Loss: 1.3972 Acc: 0.5044 Embedding-Loss: 0.0000 Classification-Loss: 1.3972
+Epoch 9/50
+----------
+train Loss: 1.3570 Acc: 0.5157 Embedding-Loss: 0.0000 Classification-Loss: 1.3570
+test  Loss: 1.3763 Acc: 0.5086 Embedding-Loss: 0.0000 Classification-Loss: 1.3763
+Epoch 10/50
+----------
+train Loss: 1.2918 Acc: 0.5405 Embedding-Loss: 0.0000 Classification-Loss: 1.2918
+test  Loss: 1.3158 Acc: 0.5365 Embedding-Loss: 0.0000 Classification-Loss: 1.3158
+Epoch 11/50
+----------
+train Loss: 1.2655 Acc: 0.5481 Embedding-Loss: 0.0000 Classification-Loss: 1.2655
+test  Loss: 1.3134 Acc: 0.5368 Embedding-Loss: 0.0000 Classification-Loss: 1.3134
+Epoch 12/50
+----------
+train Loss: 1.2466 Acc: 0.5579 Embedding-Loss: 0.0000 Classification-Loss: 1.2466
+test  Loss: 1.2934 Acc: 0.5399 Embedding-Loss: 0.0000 Classification-Loss: 1.2934
+Epoch 13/50
+----------
+train Loss: 1.2231 Acc: 0.5653 Embedding-Loss: 0.0000 Classification-Loss: 1.2231
+test  Loss: 1.3389 Acc: 0.5287 Embedding-Loss: 0.0000 Classification-Loss: 1.3389
+Epoch 14/50
+----------
+train Loss: 1.2066 Acc: 0.5729 Embedding-Loss: 0.0000 Classification-Loss: 1.2066
+test  Loss: 1.2619 Acc: 0.5517 Embedding-Loss: 0.0000 Classification-Loss: 1.2619
+Epoch 15/50
+----------
+train Loss: 1.1848 Acc: 0.5784 Embedding-Loss: 0.0000 Classification-Loss: 1.1848
+test  Loss: 1.2444 Acc: 0.5593 Embedding-Loss: 0.0000 Classification-Loss: 1.2444
+Epoch 16/50
+----------
+train Loss: 1.1672 Acc: 0.5832 Embedding-Loss: 0.0000 Classification-Loss: 1.1672
+test  Loss: 1.2535 Acc: 0.5587 Embedding-Loss: 0.0000 Classification-Loss: 1.2535
+Epoch 17/50
+----------
+train Loss: 1.1497 Acc: 0.5929 Embedding-Loss: 0.0000 Classification-Loss: 1.1497
+test  Loss: 1.2368 Acc: 0.5623 Embedding-Loss: 0.0000 Classification-Loss: 1.2368
+Epoch 18/50
+----------
+train Loss: 1.1328 Acc: 0.6002 Embedding-Loss: 0.0000 Classification-Loss: 1.1328
+test  Loss: 1.2171 Acc: 0.5682 Embedding-Loss: 0.0000 Classification-Loss: 1.2171
+Epoch 19/50
+----------
+train Loss: 1.1167 Acc: 0.6029 Embedding-Loss: 0.0000 Classification-Loss: 1.1167
+test  Loss: 1.2121 Acc: 0.5741 Embedding-Loss: 0.0000 Classification-Loss: 1.2121
+Epoch 20/50
+----------
+train Loss: 1.0711 Acc: 0.6229 Embedding-Loss: 0.0000 Classification-Loss: 1.0711
+test  Loss: 1.2025 Acc: 0.5784 Embedding-Loss: 0.0000 Classification-Loss: 1.2025
+Epoch 21/50
+----------
+train Loss: 1.0609 Acc: 0.6252 Embedding-Loss: 0.0000 Classification-Loss: 1.0609
+test  Loss: 1.2033 Acc: 0.5776 Embedding-Loss: 0.0000 Classification-Loss: 1.2033
+Epoch 22/50
+----------
+train Loss: 1.0517 Acc: 0.6293 Embedding-Loss: 0.0000 Classification-Loss: 1.0517
+test  Loss: 1.2154 Acc: 0.5733 Embedding-Loss: 0.0000 Classification-Loss: 1.2154
+Epoch 23/50
+----------
+train Loss: 1.0428 Acc: 0.6321 Embedding-Loss: 0.0000 Classification-Loss: 1.0428
+test  Loss: 1.1941 Acc: 0.5780 Embedding-Loss: 0.0000 Classification-Loss: 1.1941
+Epoch 24/50
+----------
+train Loss: 1.0345 Acc: 0.6356 Embedding-Loss: 0.0000 Classification-Loss: 1.0345
+test  Loss: 1.1999 Acc: 0.5772 Embedding-Loss: 0.0000 Classification-Loss: 1.1999
+Epoch 25/50
+----------
+train Loss: 1.0255 Acc: 0.6388 Embedding-Loss: 0.0000 Classification-Loss: 1.0255
+test  Loss: 1.2004 Acc: 0.5782 Embedding-Loss: 0.0000 Classification-Loss: 1.2004
+Epoch 26/50
+----------
+train Loss: 1.0168 Acc: 0.6415 Embedding-Loss: 0.0000 Classification-Loss: 1.0168
+test  Loss: 1.1902 Acc: 0.5832 Embedding-Loss: 0.0000 Classification-Loss: 1.1902
+Epoch 27/50
+----------
+train Loss: 1.0098 Acc: 0.6434 Embedding-Loss: 0.0000 Classification-Loss: 1.0098
+test  Loss: 1.2043 Acc: 0.5760 Embedding-Loss: 0.0000 Classification-Loss: 1.2043
+Epoch 28/50
+----------
+train Loss: 1.0038 Acc: 0.6467 Embedding-Loss: 0.0000 Classification-Loss: 1.0038
+test  Loss: 1.1863 Acc: 0.5806 Embedding-Loss: 0.0000 Classification-Loss: 1.1863
+Epoch 29/50
+----------
+train Loss: 0.9938 Acc: 0.6508 Embedding-Loss: 0.0000 Classification-Loss: 0.9938
+test  Loss: 1.1975 Acc: 0.5800 Embedding-Loss: 0.0000 Classification-Loss: 1.1975
+Epoch 30/50
+----------
+train Loss: 0.9643 Acc: 0.6624 Embedding-Loss: 0.0000 Classification-Loss: 0.9643
+test  Loss: 1.1813 Acc: 0.5868 Embedding-Loss: 0.0000 Classification-Loss: 1.1813
+Epoch 31/50
+----------
+train Loss: 0.9586 Acc: 0.6648 Embedding-Loss: 0.0000 Classification-Loss: 0.9586
+test  Loss: 1.1868 Acc: 0.5837 Embedding-Loss: 0.0000 Classification-Loss: 1.1868
+Epoch 32/50
+----------
+train Loss: 0.9543 Acc: 0.6661 Embedding-Loss: 0.0000 Classification-Loss: 0.9543
+test  Loss: 1.1783 Acc: 0.5896 Embedding-Loss: 0.0000 Classification-Loss: 1.1783
+Epoch 33/50
+----------
+train Loss: 0.9490 Acc: 0.6686 Embedding-Loss: 0.0000 Classification-Loss: 0.9490
+test  Loss: 1.1782 Acc: 0.5882 Embedding-Loss: 0.0000 Classification-Loss: 1.1782
+Epoch 34/50
+----------
+train Loss: 0.9442 Acc: 0.6691 Embedding-Loss: 0.0000 Classification-Loss: 0.9442
+test  Loss: 1.1796 Acc: 0.5870 Embedding-Loss: 0.0000 Classification-Loss: 1.1796
+Epoch 35/50
+----------
+train Loss: 0.9397 Acc: 0.6714 Embedding-Loss: 0.0000 Classification-Loss: 0.9397
+test  Loss: 1.1774 Acc: 0.5883 Embedding-Loss: 0.0000 Classification-Loss: 1.1774
+Epoch 36/50
+----------
+train Loss: 0.9354 Acc: 0.6725 Embedding-Loss: 0.0000 Classification-Loss: 0.9354
+test  Loss: 1.1737 Acc: 0.5893 Embedding-Loss: 0.0000 Classification-Loss: 1.1737
+Epoch 37/50
+----------
+train Loss: 0.9304 Acc: 0.6748 Embedding-Loss: 0.0000 Classification-Loss: 0.9304
+test  Loss: 1.1948 Acc: 0.5795 Embedding-Loss: 0.0000 Classification-Loss: 1.1948
+Epoch 38/50
+----------
+train Loss: 0.9280 Acc: 0.6759 Embedding-Loss: 0.0000 Classification-Loss: 0.9280
+test  Loss: 1.1786 Acc: 0.5887 Embedding-Loss: 0.0000 Classification-Loss: 1.1786
+Epoch 39/50
+----------
+train Loss: 0.9222 Acc: 0.6768 Embedding-Loss: 0.0000 Classification-Loss: 0.9222
+test  Loss: 1.1829 Acc: 0.5848 Embedding-Loss: 0.0000 Classification-Loss: 1.1829
+Epoch 40/50
+----------
+train Loss: 0.9049 Acc: 0.6848 Embedding-Loss: 0.0000 Classification-Loss: 0.9049
+test  Loss: 1.1760 Acc: 0.5913 Embedding-Loss: 0.0000 Classification-Loss: 1.1760
+Epoch 41/50
+----------
+train Loss: 0.9008 Acc: 0.6859 Embedding-Loss: 0.0000 Classification-Loss: 0.9008
+test  Loss: 1.1787 Acc: 0.5884 Embedding-Loss: 0.0000 Classification-Loss: 1.1787
+Epoch 42/50
+----------
+train Loss: 0.8988 Acc: 0.6871 Embedding-Loss: 0.0000 Classification-Loss: 0.8988
+test  Loss: 1.1808 Acc: 0.5935 Embedding-Loss: 0.0000 Classification-Loss: 1.1808
+Epoch 43/50
+----------
+train Loss: 0.8968 Acc: 0.6884 Embedding-Loss: 0.0000 Classification-Loss: 0.8968
+test  Loss: 1.1784 Acc: 0.5929 Embedding-Loss: 0.0000 Classification-Loss: 1.1784
+Epoch 44/50
+----------
+train Loss: 0.8940 Acc: 0.6888 Embedding-Loss: 0.0000 Classification-Loss: 0.8940
+test  Loss: 1.1789 Acc: 0.5935 Embedding-Loss: 0.0000 Classification-Loss: 1.1789
+Epoch 45/50
+----------
+train Loss: 0.8905 Acc: 0.6892 Embedding-Loss: 0.0000 Classification-Loss: 0.8905
+test  Loss: 1.1812 Acc: 0.5907 Embedding-Loss: 0.0000 Classification-Loss: 1.1812
+Epoch 46/50
+----------
+train Loss: 0.8892 Acc: 0.6908 Embedding-Loss: 0.0000 Classification-Loss: 0.8892
+test  Loss: 1.1831 Acc: 0.5920 Embedding-Loss: 0.0000 Classification-Loss: 1.1831
+Epoch 47/50
+----------
+train Loss: 0.8867 Acc: 0.6905 Embedding-Loss: 0.0000 Classification-Loss: 0.8867
+test  Loss: 1.1780 Acc: 0.5916 Embedding-Loss: 0.0000 Classification-Loss: 1.1780
+Epoch 48/50
+----------
+train Loss: 0.8845 Acc: 0.6911 Embedding-Loss: 0.0000 Classification-Loss: 0.8845
+test  Loss: 1.1792 Acc: 0.5915 Embedding-Loss: 0.0000 Classification-Loss: 1.1792
+Epoch 49/50
+----------
+train Loss: 0.8818 Acc: 0.6930 Embedding-Loss: 0.0000 Classification-Loss: 0.8818
+test  Loss: 1.1785 Acc: 0.5928 Embedding-Loss: 0.0000 Classification-Loss: 1.1785
+Epoch 50/50
+----------
+train Loss: 0.8719 Acc: 0.6978 Embedding-Loss: 0.0000 Classification-Loss: 0.8719
+test  Loss: 1.1797 Acc: 0.5923 Embedding-Loss: 0.0000 Classification-Loss: 1.1797
+Training complete in 18m 17s
+Best val Acc: 0.593500
+Accuracy of the network on the 10000 test images: 59.00
+Accuracy of horse : 60.20
+Accuracy of car   : 73.50
+Accuracy of deer  : 48.30
+Accuracy of dog   : 47.10
+Accuracy of frog  : 73.70
+Accuracy of cat   : 40.40
+Accuracy of plane : 69.40
+Accuracy of truck : 59.50
+Accuracy of ship  : 69.10
+Accuracy of bird  : 52.30

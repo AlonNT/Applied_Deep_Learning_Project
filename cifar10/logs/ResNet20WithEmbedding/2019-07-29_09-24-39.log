@@ -1,0 +1,77 @@
+Using device: cuda:0
+Training with the following hyper-patameters:
+learning-rate = 0.01
+batch-size = 16
+momentum = 0.9
+Files already downloaded and verified
+Files already downloaded and verified
+Epoch 1/20
+----------
+train Loss: 14.5056 Acc: 0.1126
+test  Loss: 14.4853 Acc: 0.1291
+Epoch 2/20
+----------
+train Loss: 14.4636 Acc: 0.1373
+test  Loss: 14.3620 Acc: 0.1507
+Epoch 3/20
+----------
+train Loss: 14.3961 Acc: 0.1593
+test  Loss: 14.2806 Acc: 0.1738
+Epoch 4/20
+----------
+train Loss: 14.3342 Acc: 0.1723
+test  Loss: 14.3101 Acc: 0.1700
+Epoch 5/20
+----------
+train Loss: 14.3654 Acc: 0.1803
+test  Loss: 14.4240 Acc: 0.1713
+Epoch 6/20
+----------
+train Loss: 14.3072 Acc: 0.1895
+test  Loss: 14.2743 Acc: 0.1790
+Epoch 7/20
+----------
+train Loss: 14.3615 Acc: 0.1977
+test  Loss: 14.5258 Acc: 0.1720
+Epoch 8/20
+----------
+train Loss: 14.3179 Acc: 0.2057
+test  Loss: 14.4402 Acc: 0.1737
+Epoch 9/20
+----------
+train Loss: 14.3303 Acc: 0.2168
+test  Loss: 14.4555 Acc: 0.1782
+Epoch 10/20
+----------
+train Loss: 14.2697 Acc: 0.2452
+test  Loss: 14.3966 Acc: 0.1724
+Epoch 11/20
+----------
+train Loss: 14.1884 Acc: 0.2549
+test  Loss: 14.6378 Acc: 0.1667
+Epoch 12/20
+----------
+train Loss: 14.1093 Acc: 0.2677
+test  Loss: 14.4251 Acc: 0.1677
+Epoch 13/20
+----------
+train Loss: 14.1386 Acc: 0.2812
+test  Loss: 14.6770 Acc: 0.1668
+Epoch 14/20
+----------
+train Loss: 14.1408 Acc: 0.2905
+test  Loss: 14.6595 Acc: 0.1607
+Epoch 15/20
+----------
+train Loss: 14.1056 Acc: 0.3035
+test  Loss: 14.4976 Acc: 0.1671
+Epoch 16/20
+----------
+train Loss: 14.0406 Acc: 0.3165
+test  Loss: 14.3460 Acc: 0.1607
+Epoch 17/20
+----------
+train Loss: 14.1723 Acc: 0.3323
+test  Loss: 14.6506 Acc: 0.1591
+Epoch 18/20
+----------

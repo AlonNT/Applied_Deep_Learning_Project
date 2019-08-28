@@ -12,6 +12,7 @@ from create_embedding import create_rgb, create_random_poly
 def get_embeddings(final_embedding_path, embedding_size, initial_embedding_path=None):
     """
     :param final_embedding_path: The path of the original embedding
+    :param embedding_size: Size the embedding matrix. Usually it's 256 or 32.
     :param initial_embedding_path: The path of the reference embedding
     :return: Two nn Embedding layers, initialized with the given ones.
     """
@@ -126,7 +127,7 @@ def main(final_embedding_path, embedding_size, initial_embedding_path=None, visu
     for p, distance in distances.items():
         if p == 0:  # print the distance as an integer with commas
             print("The l_{:3} norm between the two embeddings is {:,}".format(p, int(distance)))
-        else:  # print the distance as a float number
+        else:       # print the distance as a float number
             print("The l_{:3} norm between the two embeddings is {:.2f}".format(p, distance))
 
     if visualize:

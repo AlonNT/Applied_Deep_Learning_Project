@@ -1,39 +1,108 @@
 import torch
 import torchvision
-#import matplotlib.pyplot as plt
+import torch.nn as nn
 import numpy as np
+import matplotlib.pyplot as plt
 import time
 import copy
+
 from tqdm import tqdm as tqdm
 import datetime
 
 
-class ToTensorWithoutScaling(object):
+class ToByteTensor(object):
     """
-    Transform a PIL image to PyTorch ByteTensor, while permuting the dimensions
-    H x W x C -> C x H x W
+    Transform a PIL image to PyTorch ByteTensor,
+    while permuting the dimensions H x W x C -> C x H x W
     This is needed in order to load original uint8 images (range 0-255)
-    and not normalizing to float in range 0-1 (which is the torchvision default behaviour.
+    and not normalizing to float in range 0-1 (which is the torchvision default behaviour).
     """
     def __call__(self, picture):
         return torch.ByteTensor(np.array(picture)).permute(2, 0, 1)
 
 
-def get_data(bs=32, is_int=False):
+class FromByteTensorToScaledFloat(object):
+    """
+    Transform a PyTorch ByteTensor image to PyTorch float tensor,
+    while scaling it from  the range {0,1,...,255} to the range [0,1].
+    """
+    def __call__(self, picture):
+        return picture.float().div(255)
+
+
+class ToByteTensorShuffleColors(object):
+    """
+    Transform a PIL image to PyTorch ByteTensor,
+    while permuting the dimensions H x W x C -> C x H x W.
+    Afterwards, quantize each value (originally in the range of {0,1,...,255})
+    to the range of {0,1,...,N}, and then multiply back to get values in the range
+    {0,1,...,255}, but quantized (only N unique values, and not 256).
+    """
+
+    def __init__(self, embedding_size=32, seed=666):
+        self.embedding_size = embedding_size
+        self.seed = seed
+        np.random.seed(seed)
+
+        # Initialize as random permutation and then create the R,G,B coordinates
+        quotient = np.random.permutation(embedding_size ** 3)
+
+        quotient, r = np.divmod(quotient, embedding_size)  # R in the RGB representation
+        quotient, g = np.divmod(quotient, embedding_size)  # G in the RGB representation
+        b = np.mod(quotient, embedding_size)  # R in the RGB representation
+
+        random_colors = np.column_stack((r, g, b)).astype(np.float32)
+        random_colors = torch.tensor(random_colors)
+
+        self.embeds = nn.Embedding(embedding_size ** 3, 3)
+        self.embeds.weight.requires_grad = False
+        self.embeds.load_state_dict({'weight': random_colors})
+
+        self.factor = 256 / embedding_size
+        self.monomials = torch.tensor([embedding_size ** 0, embedding_size ** 1, embedding_size ** 2])
+
+    def __call__(self, picture):
+        # Convert the PIL image to tensor
+        x = torch.tensor(np.array(picture))
+
+        # See the full documentation and explanation regarding this calculations in the models forward function
+        # (e.g. SimpleConvNetWithEmbedding forward function).
+        H, W, C = x.shape
+        x /= self.factor
+        x = x.view(H * W, 3)
+        x = x.long()
+        x = torch.matmul(x.float(), self.monomials.float()).long()
+        x = x.view(H, W)
+        x = self.embeds(x)
+        x *= self.factor
+        x = x.byte()
+        x = x.permute(2, 0, 1)
+
+        return x
+
+
+def get_data(bs=32, is_int=False, shuffle_colors=False):
     """
     Get the CIFAR10 data.
 
     :param bs: the size of the minibatches to initialize the dataloaders
     :param is_int: whether to return the image as the original uint8,
                    or convert it to scaled float between 0 and 1.
+    :param shuffle_colors: If indicated, shuffle the colors.
     :return: image_datasets: dictionary mapping "train"/"test" to its dataset
              dataloaders:    dictionary mapping "train"/"test" to its dataloader
              dataset_sizes:  dictionary mapping "train"/"test" to its dataset size
              classes:        tuple of 10 classes names in the correct order
     """
-    # Check if we need to return the image as the original uint8,
-    # or convert it to scaled float between 0 and 1.
-    transform = ToTensorWithoutScaling() if is_int else torchvision.transforms.ToTensor()
+    if shuffle_colors:
+        transforms = [ToByteTensorShuffleColors()]
+    else:
+        transforms = [ToByteTensor()]
+
+    if not is_int:
+        transforms = transforms + [FromByteTensorToScaledFloat()]
+
+    transform = torchvision.transforms.Compose(transforms)
 
     image_datasets = {x: torchvision.datasets.CIFAR10(root='./data',
                                                       train=(x == 'train'),

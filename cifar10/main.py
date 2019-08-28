@@ -18,7 +18,7 @@ from ContinuityLoss import ContinuityLoss
 
 def main(net_type='ResNet20',
          lr=None, bs=None, momentum=None, weight_decay=None,
-         epochs=20, device_num=0,
+         epochs=20, shuffle_colors=False, device_num=0,
          use_checkpoint=False, save_model=False, verbose=False,
          embedding_size=256, embedding_continuity_loss=-1,
          feed_embedding_loss_with='random', init_embedding_as='random'):
@@ -36,7 +36,7 @@ def main(net_type='ResNet20',
     tqdm.write("Using device: {}".format(device))
 
     # Set arguments with their default values. Since it's a list which is mutable,
-    # it needs to be constructed this way and not in the function definition...
+    # it needs to be constructed this way and not in the function definition.
     if bs is None:
         bs = [32]
     if lr is None:
@@ -73,10 +73,12 @@ def main(net_type='ResNet20',
             np.save(saved_embedding_path, initial_embedding)
 
     else:
-        raise ValueError("init_embedding_as {} given is not supported!".format(init_embedding_as))
+        raise ValueError("init_embedding_as {} is not supported!".format(init_embedding_as))
 
     # models with is_int=False receive float input scaled between 0 and 1
     # models with is_int=True receive original uint8 input (between 0 and 255)
+    # The SimpleConvNet also supports embedding of smaller size that 256^3,
+    # so the embedding_size is given in the constructor.
     str_to_model = {'ResNet20': (resnet20, False),
                     'ResNet20WithEmbedding': (lambda: resnet20_with_embedding(device), True),
                     'SimpleConvNet': (SimpleConvNet, False),
@@ -99,8 +101,9 @@ def main(net_type='ResNet20',
         # Build the model, weights are initialized randomly
         model = model_constructor().to(device)
 
-        # Initialize the data-loaders to evaluate
-        image_datasets, dataloaders, dataset_sizes, classes = get_data(bs=32, is_int=is_int)
+        # Initialize the data-loaders to evaluate.
+        image_datasets, dataloaders, dataset_sizes, classes = get_data(bs=32, is_int=is_int,
+                                                                       shuffle_colors=shuffle_colors)
 
         # Load the saved model from the checkpoint and evaluate the model
         checkpoint = torch.load(checkpoint_path, map_location=device.type)
@@ -136,7 +139,7 @@ def main(net_type='ResNet20',
             model.embeds.load_state_dict({'weight': initial_embedding})
 
         # Initialize the data (data-loaders, classes names, etc...)
-        image_datasets, dataloaders, dataset_sizes, classes = get_data(curr_bs, is_int)
+        image_datasets, dataloaders, dataset_sizes, classes = get_data(curr_bs, is_int, shuffle_colors)
 
         # Define a Loss function and optimizer.
         # We use a Classification Cross-Entropy loss,
@@ -215,6 +218,9 @@ def parse_args():
     parser.add_argument('--epochs', default=5, type=int,
                         help='number of epochs [default 5].')
 
+    parser.add_argument('--shuffle_colors', action='store_true',
+                        help='If indicated - shuffle the colors of the images given to the training')
+
     parser.add_argument('--embedding_size', type=int, default=256,
                         help='Size of the embedding matrix. [Default is 256]')
     parser.add_argument('--embedding_continuity_loss', type=int, default=-1,
@@ -247,6 +253,6 @@ if __name__ == '__main__':
     args = parse_args()
 
     main(args.net_type, args.lr, args.bs, args.momentum, args.weight_decay, args.epochs,
-         args.device_num, args.use_checkpoint, args.save_model, args.verbose,
+         args.shuffle_colors, args.device_num, args.use_checkpoint, args.save_model, args.verbose,
          args.embedding_size, args.embedding_continuity_loss,
          args.feed_embedding_loss_with, args.init_embedding_as)
